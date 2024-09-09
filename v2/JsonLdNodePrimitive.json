@@ -1,0 +1,31 @@
+{
+	"anyOf": [
+		{
+			"type": "null"
+		},
+		{
+			"type": "boolean"
+		},
+		{
+			"type": "number"
+		},
+		{
+			"type": "string"
+		},
+		{
+			"$ref": "https://schema.gtsc.io/v2/JsonLdNodeObject"
+		},
+		{
+			"$ref": "https://schema.gtsc.io/v2/JsonLdGraphObject"
+		},
+		{
+			"$ref": "https://schema.gtsc.io/v2/JsonLdValueObject"
+		},
+		{
+			"$ref": "https://schema.gtsc.io/v2/JsonLdListObject"
+		},
+		{
+			"$ref": "https://schema.gtsc.io/v2/JsonLdSetObject"
+		}
+	]
+}

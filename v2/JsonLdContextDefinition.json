@@ -1,0 +1,59 @@
+{
+	"type": "object",
+	"properties": {
+		"@base": {
+			"$ref": "https://schema.gtsc.io/v2/JsonLdKeyword"
+		},
+		"@direction": {
+			"$ref": "https://schema.gtsc.io/v2/JsonLdKeyword"
+		},
+		"@import": {
+			"$ref": "https://schema.gtsc.io/v2/JsonLdKeyword"
+		},
+		"@language": {
+			"$ref": "https://schema.gtsc.io/v2/JsonLdKeyword"
+		},
+		"@propagate": {
+			"$ref": "https://schema.gtsc.io/v2/JsonLdKeyword"
+		},
+		"@protected": {
+			"$ref": "https://schema.gtsc.io/v2/JsonLdKeyword"
+		},
+		"@type": {
+			"type": "object",
+			"properties": {
+				"@container": {
+					"type": "string",
+					"const": "@set"
+				},
+				"@protected": {
+					"$ref": "https://schema.gtsc.io/v2/JsonLdKeyword"
+				}
+			},
+			"required": [
+				"@container"
+			],
+			"additionalProperties": false
+		},
+		"@version": {
+			"$ref": "https://schema.gtsc.io/v2/JsonLdKeyword"
+		},
+		"@vocab": {
+			"$ref": "https://schema.gtsc.io/v2/JsonLdKeyword"
+		}
+	},
+	"additionalProperties": {
+		"anyOf": [
+			{
+				"type": "null"
+			},
+			{
+				"type": "string"
+			},
+			{
+				"$ref": "https://schema.gtsc.io/v2/JsonLdExpandedTermDefinition"
+			}
+		]
+	},
+	"description": "A context definition defines a local context in a node object."
+}

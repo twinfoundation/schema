@@ -1,0 +1,46 @@
+{
+	"type": "object",
+	"properties": {
+		"nodeIdentity": {
+			"type": "string",
+			"description": "The identity of the node which controls the vertex."
+		},
+		"aliases": {
+			"type": "array",
+			"items": {
+				"$ref": "https://schemas.gtsc.io/v2/AuditableItemGraphAlias"
+			},
+			"description": "Alternative aliases that can be used to identify the vertex."
+		},
+		"resources": {
+			"type": "array",
+			"items": {
+				"$ref": "https://schemas.gtsc.io/v2/AuditableItemGraphResource"
+			},
+			"description": "The resources attached to the vertex."
+		},
+		"edges": {
+			"type": "array",
+			"items": {
+				"$ref": "https://schemas.gtsc.io/v2/AuditableItemGraphEdge"
+			},
+			"description": "Edges connected to the vertex."
+		},
+		"id": {
+			"type": "string",
+			"description": "The id of the element."
+		},
+		"created": {
+			"type": "number",
+			"description": "The timestamp of when the element was created."
+		},
+		"updated": {
+			"type": "number",
+			"description": "The timestamp of when the element was updated."
+		},
+		"metadata": {
+			"$ref": "https://schemas.gtsc.io/v2/JsonLdDocument"
+		}
+	},
+	"additionalProperties": false
+}

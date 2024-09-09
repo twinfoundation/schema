@@ -1,0 +1,13 @@
+{
+	"@context": {
+		"dateCreated": "https://schema.org/DateTime",
+		"dateUpdated": "https://schema.org/DateTime",
+		"id": {
+			"@id": "http://schema.org/url",
+			"@type": "@id"
+		},
+		"metadata": {
+			"@id": "http://schema.org/url"
+		}
+	}
+}

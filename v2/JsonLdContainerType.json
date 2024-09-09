@@ -1,0 +1,10 @@
+{
+	"type": "string",
+	"enum": [
+		"@language",
+		"@index",
+		"@id",
+		"@graph",
+		"@type"
+	]
+}

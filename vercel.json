@@ -1,0 +1,8 @@
+{
+	"rewrites": [
+	  {
+		"source": "/v2/:path*",
+		"destination": "https://schema.gtsc.io/v2/:path*.json"
+	  }
+	]
+  }
