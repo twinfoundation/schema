@@ -12,7 +12,7 @@
 		"patches": {
 			"type": "array",
 			"items": {
-				"$ref": "https://schemas.gtsc.io/v2/PatchOperation"
+				"$ref": "https://schema.gtsc.io/v2/PatchOperation"
 			},
 			"description": "The patches for the integrity at this epoch."
 		},

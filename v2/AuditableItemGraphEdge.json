@@ -2,7 +2,8 @@
 	"type": "object",
 	"properties": {
 		"metadata": {
-			"$ref": "https://schemas.gtsc.io/v2/JsonLdDocument"
+			"$ref": "https://schema.gtsc.io/v2/JsonLdDocument",
+			"description": "The metadata to associate with the element as JSON-LD."
 		},
 		"id": {
 			"type": "string",

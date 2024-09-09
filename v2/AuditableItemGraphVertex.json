@@ -8,21 +8,21 @@
 		"aliases": {
 			"type": "array",
 			"items": {
-				"$ref": "https://schemas.gtsc.io/v2/AuditableItemGraphAlias"
+				"$ref": "https://schema.gtsc.io/v2/AuditableItemGraphAlias"
 			},
 			"description": "Alternative aliases that can be used to identify the vertex."
 		},
 		"resources": {
 			"type": "array",
 			"items": {
-				"$ref": "https://schemas.gtsc.io/v2/AuditableItemGraphResource"
+				"$ref": "https://schema.gtsc.io/v2/AuditableItemGraphResource"
 			},
 			"description": "The resources attached to the vertex."
 		},
 		"edges": {
 			"type": "array",
 			"items": {
-				"$ref": "https://schemas.gtsc.io/v2/AuditableItemGraphEdge"
+				"$ref": "https://schema.gtsc.io/v2/AuditableItemGraphEdge"
 			},
 			"description": "Edges connected to the vertex."
 		},
@@ -39,7 +39,8 @@
 			"description": "The timestamp of when the element was updated."
 		},
 		"metadata": {
-			"$ref": "https://schemas.gtsc.io/v2/JsonLdDocument"
+			"$ref": "https://schema.gtsc.io/v2/JsonLdDocument",
+			"description": "The metadata to associate with the element as JSON-LD."
 		}
 	},
 	"additionalProperties": false
