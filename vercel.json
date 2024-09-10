@@ -1,8 +1,26 @@
 {
 	"rewrites": [
-	  {
-		"source": "/v2/:path*",
-		"destination": "https://schema.gtsc.io/v2/:path*.json"
-	  }
+		{
+			"source": "/v2/",
+			"has": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "application/ld\\+json.*"
+				}
+			],
+			"destination": "https://schema.gtsc.io/v2/types.jsonld"
+		},
+		{
+			"source": "/v2/:path*",
+			"missing": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "application/ld\\+json.*"
+				}
+			],
+			"destination": "https://schema.gtsc.io/v2/:path*.json"
+		}
 	]
-  }
+}

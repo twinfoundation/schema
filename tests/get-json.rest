@@ -1,0 +1,3 @@
+### Gets the JSON Schema representation of the AIG
+
+GET https://schema.gtsc.io/v2/AuditableItemGraphAlias
