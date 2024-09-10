@@ -26,6 +26,13 @@
 			},
 			"description": "Edges connected to the vertex."
 		},
+		"changesets": {
+			"type": "array",
+			"items": {
+				"$ref": "https://schema.gtsc.io/v2/AuditableItemGraphChangeset"
+			},
+			"description": "Changesets for the vertex."
+		},
 		"id": {
 			"type": "string",
 			"description": "The id of the element."
@@ -39,7 +46,7 @@
 			"description": "The timestamp of when the element was updated."
 		},
 		"metadata": {
-			"$ref": "https://schema.gtsc.io/v2/JsonLdDocument",
+			"$ref": "https://schema.gtsc.io/v2/JsonLdNodeObject",
 			"description": "The metadata to associate with the element as JSON-LD."
 		}
 	},

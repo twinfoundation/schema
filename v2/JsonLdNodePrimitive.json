@@ -27,5 +27,6 @@
 		{
 			"$ref": "https://schema.gtsc.io/v2/JsonLdSetObject"
 		}
-	]
+	],
+	"description": "A node primitive is a JSON-LD value which is not one of the defined NodeObject properties."
 }
