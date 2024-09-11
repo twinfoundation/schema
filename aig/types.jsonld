@@ -1,6 +1,6 @@
 {
 	"@context": {
-		"gtsc-aig": "https://schema.gtsc.io/auditable-item-graph/",
+		"gtsc-aig": "https://schema.gtsc.io/aig/",
 		"schema": "https://schema.org/",
 		"alias": {
 			"@id": "gtsc-aig:AuditableItemGraphAlias"
