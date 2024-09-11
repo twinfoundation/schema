@@ -1,0 +1,14 @@
+{
+	"type": "object",
+	"additionalProperties": {
+		"anyOf": [
+			{
+				"type": "string"
+			},
+			{
+				"$ref": "https://schema.gtsc.io/json-ld/JsonLdNodeObject"
+			}
+		]
+	},
+	"description": "A type map is used to associate an IRI with a value that allows easy programmatic access."
+}

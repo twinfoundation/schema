@@ -1,0 +1,26 @@
+{
+	"type": "object",
+	"properties": {
+		"@set": {
+			"anyOf": [
+				{
+					"$ref": "https://schema.gtsc.io/json-ld/JsonLdListOrSetItem"
+				},
+				{
+					"type": "array",
+					"items": {
+						"$ref": "https://schema.gtsc.io/json-ld/JsonLdListOrSetItem"
+					}
+				}
+			]
+		},
+		"@index": {
+			"type": "string"
+		}
+	},
+	"required": [
+		"@set"
+	],
+	"additionalProperties": false,
+	"description": "A set represents an unordered set of values."
+}

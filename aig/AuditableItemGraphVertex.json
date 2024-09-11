@@ -1,0 +1,54 @@
+{
+	"type": "object",
+	"properties": {
+		"nodeIdentity": {
+			"type": "string",
+			"description": "The identity of the node which controls the vertex."
+		},
+		"aliases": {
+			"type": "array",
+			"items": {
+				"$ref": "https://schema.gtsc.io/aig/AuditableItemGraphAlias"
+			},
+			"description": "Alternative aliases that can be used to identify the vertex."
+		},
+		"resources": {
+			"type": "array",
+			"items": {
+				"$ref": "https://schema.gtsc.io/aig/AuditableItemGraphResource"
+			},
+			"description": "The resources attached to the vertex."
+		},
+		"edges": {
+			"type": "array",
+			"items": {
+				"$ref": "https://schema.gtsc.io/aig/AuditableItemGraphEdge"
+			},
+			"description": "Edges connected to the vertex."
+		},
+		"changesets": {
+			"type": "array",
+			"items": {
+				"$ref": "https://schema.gtsc.io/aig/AuditableItemGraphChangeset"
+			},
+			"description": "Changesets for the vertex."
+		},
+		"id": {
+			"type": "string",
+			"description": "The id of the element."
+		},
+		"created": {
+			"type": "number",
+			"description": "The timestamp of when the element was created."
+		},
+		"updated": {
+			"type": "number",
+			"description": "The timestamp of when the element was updated."
+		},
+		"metadata": {
+			"$ref": "https://schema.gtsc.io/json-ld/JsonLdNodeObject",
+			"description": "The metadata to associate with the element as JSON-LD."
+		}
+	},
+	"additionalProperties": false
+}

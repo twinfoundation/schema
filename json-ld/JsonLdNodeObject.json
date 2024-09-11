@@ -1,0 +1,127 @@
+{
+	"type": "object",
+	"properties": {
+		"@context": {
+			"anyOf": [
+				{
+					"type": "null"
+				},
+				{
+					"type": "string"
+				},
+				{
+					"$ref": "https://schema.gtsc.io/json-ld/JsonLdContextDefinition"
+				},
+				{
+					"type": "array",
+					"items": {
+						"anyOf": [
+							{
+								"type": "null"
+							},
+							{
+								"type": "string"
+							},
+							{
+								"$ref": "https://schema.gtsc.io/json-ld/JsonLdContextDefinition"
+							}
+						]
+					}
+				}
+			]
+		},
+		"@id": {
+			"anyOf": [
+				{
+					"type": "string"
+				},
+				{
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				}
+			]
+		},
+		"@included": {
+			"$ref": "https://schema.gtsc.io/json-ld/JsonLdIncludedBlock"
+		},
+		"@graph": {
+			"anyOf": [
+				{
+					"$ref": "https://schema.gtsc.io/json-ld/JsonLdNodeObject"
+				},
+				{
+					"type": "array",
+					"items": {
+						"$ref": "https://schema.gtsc.io/json-ld/JsonLdNodeObject"
+					}
+				}
+			]
+		},
+		"@nest": {
+			"anyOf": [
+				{
+					"$ref": "https://schema.gtsc.io/json-ld/JsonLdJsonObject"
+				},
+				{
+					"type": "array",
+					"items": {
+						"$ref": "https://schema.gtsc.io/json-ld/JsonLdJsonObject"
+					}
+				}
+			]
+		},
+		"@type": {
+			"anyOf": [
+				{
+					"type": "string"
+				},
+				{
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				}
+			]
+		},
+		"@reverse": {
+			"type": "object",
+			"additionalProperties": {
+				"type": "string"
+			}
+		},
+		"@index": {
+			"type": "string"
+		}
+	},
+	"additionalProperties": {
+		"anyOf": [
+			{
+				"$ref": "https://schema.gtsc.io/json-ld/JsonLdNodePrimitive"
+			},
+			{
+				"type": "array",
+				"items": {
+					"$ref": "https://schema.gtsc.io/json-ld/JsonLdNodePrimitive"
+				}
+			},
+			{
+				"$ref": "https://schema.gtsc.io/json-ld/JsonLdLanguageMap"
+			},
+			{
+				"$ref": "https://schema.gtsc.io/json-ld/JsonLdIndexMap"
+			},
+			{
+				"$ref": "https://schema.gtsc.io/json-ld/JsonLdIncludedBlock"
+			},
+			{
+				"$ref": "https://schema.gtsc.io/json-ld/JsonLdIdMap"
+			},
+			{
+				"$ref": "https://schema.gtsc.io/json-ld/JsonLdTypeMap"
+			}
+		]
+	},
+	"description": "A node object represents zero or more properties of a node in the graph serialized by the JSON-LD document."
+}

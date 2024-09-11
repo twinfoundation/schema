@@ -1,0 +1,29 @@
+{
+	"anyOf": [
+		{
+			"type": "null"
+		},
+		{
+			"type": "boolean"
+		},
+		{
+			"type": "number"
+		},
+		{
+			"type": "string"
+		},
+		{
+			"$ref": "https://schema.gtsc.io/json-ld/JsonLdNodeObject"
+		},
+		{
+			"$ref": "https://schema.gtsc.io/json-ld/JsonLdValueObject"
+		},
+		{
+			"$ref": "https://schema.gtsc.io/json-ld/JsonLdListObject"
+		},
+		{
+			"$ref": "https://schema.gtsc.io/json-ld/JsonLdSetObject"
+		}
+	],
+	"description": "The items that can be stored in an index map."
+}

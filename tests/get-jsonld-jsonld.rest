@@ -1,0 +1,4 @@
+### Gets the JSON-LD representation of the JSON-LD
+
+GET https://schema.gtsc.io/json-ld/
+Accept: application/ld+json

@@ -1,0 +1,36 @@
+{
+	"type": "object",
+	"properties": {
+		"created": {
+			"type": "number",
+			"description": "The timestamp of when the changeset was created."
+		},
+		"userIdentity": {
+			"type": "string",
+			"description": "The user identity that created the changes."
+		},
+		"patches": {
+			"type": "array",
+			"items": {
+				"$ref": "https://schema.gtsc.io/aig/AuditableItemGraphPatchOperation"
+			},
+			"description": "The patches for the integrity at this epoch."
+		},
+		"hash": {
+			"type": "string",
+			"description": "The hash for the changeset."
+		},
+		"immutableStorageId": {
+			"type": "string",
+			"description": "The immutable storage id containing the signature for the changeset."
+		}
+	},
+	"required": [
+		"created",
+		"hash",
+		"patches",
+		"userIdentity"
+	],
+	"additionalProperties": false,
+	"description": "Interface describing a set of updates to the vertex."
+}

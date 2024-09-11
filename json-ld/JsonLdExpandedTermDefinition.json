@@ -1,0 +1,92 @@
+{
+	"anyOf": [
+		{
+			"type": "object",
+			"additionalProperties": false,
+			"properties": {
+				"@id": {
+					"anyOf": [
+						{
+							"$ref": "https://schema.gtsc.io/json-ld/JsonLdKeyword"
+						},
+						{
+							"type": "null"
+						}
+					]
+				},
+				"@nest": {
+					"type": "string"
+				},
+				"@container": {
+					"$ref": "https://schema.gtsc.io/json-ld/JsonLdKeyword"
+				},
+				"@type": {
+					"type": "string"
+				},
+				"@language": {
+					"$ref": "https://schema.gtsc.io/json-ld/JsonLdKeyword"
+				},
+				"@index": {
+					"$ref": "https://schema.gtsc.io/json-ld/JsonLdKeyword"
+				},
+				"@context": {
+					"$ref": "https://schema.gtsc.io/json-ld/JsonLdContextDefinition"
+				},
+				"@prefix": {
+					"$ref": "https://schema.gtsc.io/json-ld/JsonLdKeyword"
+				},
+				"@propagate": {
+					"$ref": "https://schema.gtsc.io/json-ld/JsonLdKeyword"
+				},
+				"@protected": {
+					"$ref": "https://schema.gtsc.io/json-ld/JsonLdKeyword"
+				}
+			}
+		},
+		{
+			"type": "object",
+			"additionalProperties": false,
+			"properties": {
+				"@reverse": {
+					"$ref": "https://schema.gtsc.io/json-ld/JsonLdKeyword"
+				},
+				"@container": {
+					"type": [
+						"string",
+						"null"
+					],
+					"enum": [
+						"@set",
+						"@index",
+						null
+					]
+				},
+				"@type": {
+					"type": "string"
+				},
+				"@language": {
+					"$ref": "https://schema.gtsc.io/json-ld/JsonLdKeyword"
+				},
+				"@index": {
+					"$ref": "https://schema.gtsc.io/json-ld/JsonLdKeyword"
+				},
+				"@context": {
+					"$ref": "https://schema.gtsc.io/json-ld/JsonLdContextDefinition"
+				},
+				"@prefix": {
+					"$ref": "https://schema.gtsc.io/json-ld/JsonLdKeyword"
+				},
+				"@propagate": {
+					"$ref": "https://schema.gtsc.io/json-ld/JsonLdKeyword"
+				},
+				"@protected": {
+					"$ref": "https://schema.gtsc.io/json-ld/JsonLdKeyword"
+				}
+			},
+			"required": [
+				"@reverse"
+			]
+		}
+	],
+	"description": "An expanded term definition is used to describe the mapping between a term and its expanded identifier, as well as other properties of the value associated with the term when it is used as key in a node object."
+}

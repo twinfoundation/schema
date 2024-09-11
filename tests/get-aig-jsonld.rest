@@ -1,0 +1,4 @@
+### Gets the JSON-LD representation of the AIG
+
+GET https://schema.gtsc.io/aig/
+Accept: application/ld+json

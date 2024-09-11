@@ -1,0 +1,100 @@
+{
+	"@context": {
+		"gtsc-aig": "https://schema.gtsc.io/auditable-item-graph/",
+		"schema": "https://schema.org/",
+		"alias": {
+			"@id": "gtsc-aig:AuditableItemGraphAlias"
+		},
+		"aliases": {
+			"@id": "gtsc-aig:AuditableItemGraphAliasList",
+			"@container": "@list"
+		},
+		"edge": {
+			"@id": "gtsc-aig:AuditableItemGraphEdge"
+		},
+		"edges": {
+			"@id": "gtsc-aig:AuditableItemGraphEdgeList",
+			"@container": "@list"
+		},
+		"resource": {
+			"@id": "gtsc-aig:AuditableItemGraphResource"
+		},
+		"resources": {
+			"@id": "gtsc-aig:AuditableItemGraphResourceList",
+			"@container": "@list"
+		},
+		"vertex": {
+			"@id": "gtsc-aig:AuditableItemGraphVertex"
+		},
+		"changeset": {
+			"@id": "gtsc-aig:AuditableItemGraphChangeset"
+		},
+		"changesets": {
+			"@id": "gtsc-aig:AuditableItemGraphChangesetList",
+			"@container": "@list"
+		},
+		"patch": {
+			"@id": "gtsc-aig:AuditableItemGraphPatchOperation"
+		},
+		"patches": {
+			"@id": "gtsc-aig:AuditableItemGraphPatchOperationList",
+			"@container": "@list"
+		},
+		"id": {
+			"@id": "gtsc-aig:id",
+			"@type": "schema:identifier"
+		},
+		"nodeIdentity": {
+			"@id": "gtsc-aig:nodeIdentifier",
+			"@type": "schema:identifier"
+		},
+		"userIdentity": {
+			"@id": "gtsc-aig:nodeIdentifier",
+			"@type": "schema:identifier"
+		},
+		"immutableStorageId": {
+			"@id": "gtsc-aig:immutableStorageId",
+			"@type": "schema:identifier"
+		},
+		"created": {
+			"@id": "gtsc-aig:created",
+			"@type": "schema:dateCreated"
+		},
+		"updated": {
+			"@id": "gtsc-aig:updated",
+			"@type": "schema:dateUpdated"
+		},
+		"deleted": {
+			"@id": "gtsc-aig:deleted",
+			"@type": "schema:dateDeleted"
+		},
+		"metadata": {
+			"@id": "gtsc-aig:metadata",
+			"@container": "@graph"
+		},
+		"relationship": {
+			"@id": "gtsc-aig:relationship",
+			"@type": "schema:Text"
+		},
+		"hash": {
+			"@id": "gtsc-aig:hash",
+			"@type": "schema:Text"
+		},
+		"patchOperation": {
+			"@id": "gtsc-aig:patchOperation",
+			"@type": "schema:Text"
+		},
+		"patchPath": {
+			"@id": "gtsc-aig:patchPath",
+			"@type": "schema:Text"
+		},
+		"patchFrom": {
+			"@id": "gtsc-aig:patchFrom",
+			"@type": "schema:Text"
+		},
+		"patchValue": {
+			"@id": "gtsc-aig:patchValue",
+			"@type": "@json"
+		}
+	}
+}

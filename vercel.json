@@ -1,7 +1,7 @@
 {
 	"rewrites": [
 		{
-			"source": "/v2/",
+			"source": "/aig/",
 			"has": [
 				{
 					"type": "header",
@@ -9,10 +9,10 @@
 					"value": "application/ld\\+json.*"
 				}
 			],
-			"destination": "https://schema.gtsc.io/v2/types.jsonld"
+			"destination": "https://schema.gtsc.io/aig/types.jsonld"
 		},
 		{
-			"source": "/v2/:path*",
+			"source": "/aig/:path*",
 			"missing": [
 				{
 					"type": "header",
@@ -20,7 +20,51 @@
 					"value": "application/ld\\+json.*"
 				}
 			],
-			"destination": "https://schema.gtsc.io/v2/:path*.json"
+			"destination": "https://schema.gtsc.io/aig/:path*.json"
+		},
+		{
+			"source": "/framework/",
+			"has": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "application/ld\\+json.*"
+				}
+			],
+			"destination": "https://schema.gtsc.io/framework/types.jsonld"
+		},
+		{
+			"source": "/framework/:path*",
+			"missing": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "application/ld\\+json.*"
+				}
+			],
+			"destination": "https://schema.gtsc.io/framework/:path*.json"
+		},
+		{
+			"source": "/json-ld/",
+			"has": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "application/ld\\+json.*"
+				}
+			],
+			"destination": "https://schema.gtsc.io/json-ld/types.jsonld"
+		},
+		{
+			"source": "/json-ld/:path*",
+			"missing": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "application/ld\\+json.*"
+				}
+			],
+			"destination": "https://schema.gtsc.io/json-ld/:path*.json"
 		}
 	]
 }

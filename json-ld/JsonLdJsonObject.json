@@ -1,0 +1,13 @@
+{
+	"type": "object",
+	"additionalProperties": {
+		"anyOf": [
+			{
+				"$ref": "https://schema.gtsc.io/json-ld/JsonLdJsonValue"
+			},
+			{
+				"not": {}
+			}
+		]
+	}
+}

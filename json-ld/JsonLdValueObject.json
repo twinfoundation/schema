@@ -1,0 +1,84 @@
+{
+	"anyOf": [
+		{
+			"type": "object",
+			"additionalProperties": false,
+			"properties": {
+				"@value": {
+					"$ref": "https://schema.gtsc.io/json-ld/JsonLdKeyword"
+				},
+				"@language": {
+					"$ref": "https://schema.gtsc.io/json-ld/JsonLdKeyword"
+				},
+				"@direction": {
+					"$ref": "https://schema.gtsc.io/json-ld/JsonLdKeyword"
+				},
+				"@index": {
+					"$ref": "https://schema.gtsc.io/json-ld/JsonLdKeyword"
+				},
+				"@context": {
+					"$ref": "https://schema.gtsc.io/json-ld/JsonLdKeyword"
+				}
+			},
+			"required": [
+				"@value"
+			]
+		},
+		{
+			"type": "object",
+			"additionalProperties": false,
+			"properties": {
+				"@value": {
+					"$ref": "https://schema.gtsc.io/json-ld/JsonLdKeyword"
+				},
+				"@type": {
+					"$ref": "https://schema.gtsc.io/json-ld/JsonLdKeyword"
+				},
+				"@index": {
+					"$ref": "https://schema.gtsc.io/json-ld/JsonLdKeyword"
+				},
+				"@context": {
+					"$ref": "https://schema.gtsc.io/json-ld/JsonLdKeyword"
+				}
+			},
+			"required": [
+				"@type",
+				"@value"
+			]
+		},
+		{
+			"type": "object",
+			"additionalProperties": false,
+			"properties": {
+				"@value": {
+					"anyOf": [
+						{
+							"$ref": "https://schema.gtsc.io/json-ld/JsonLdKeyword"
+						},
+						{
+							"$ref": "https://schema.gtsc.io/json-ld/JsonLdJsonObject"
+						},
+						{
+							"$ref": "https://schema.gtsc.io/json-ld/JsonLdJsonArray"
+						}
+					]
+				},
+				"@type": {
+					"type": "string",
+					"const": "@json"
+				},
+				"@index": {
+					"$ref": "https://schema.gtsc.io/json-ld/JsonLdKeyword"
+				},
+				"@context": {
+					"$ref": "https://schema.gtsc.io/json-ld/JsonLdKeyword"
+				}
+			},
+			"required": [
+				"@type",
+				"@value"
+			]
+		}
+	],
+	"description": "A value object is used to explicitly associate a type or a language with a value to create a typed value or a language-tagged string and possibly associate a base direction."
+}

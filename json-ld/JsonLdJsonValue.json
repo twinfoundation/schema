@@ -1,0 +1,13 @@
+{
+	"anyOf": [
+		{
+			"$ref": "https://schema.gtsc.io/json-ld/JsonLdJsonPrimitive"
+		},
+		{
+			"$ref": "https://schema.gtsc.io/json-ld/JsonLdJsonArray"
+		},
+		{
+			"$ref": "https://schema.gtsc.io/json-ld/JsonLdJsonObject"
+		}
+	]
+}
