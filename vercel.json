@@ -6,6 +6,17 @@
 				{
 					"type": "header",
 					"key": "Accept",
+					"value": "text/html.*"
+				}
+			],
+			"destination": "https://schema.gtsc.io/aig/types.html"
+		},
+		{
+			"source": "/aig/",
+			"has": [
+				{
+					"type": "header",
+					"key": "Accept",
 					"value": "application/ld\\+json.*"
 				}
 			],
@@ -28,6 +39,17 @@
 				{
 					"type": "header",
 					"key": "Accept",
+					"value": "text/html.*"
+				}
+			],
+			"destination": "https://schema.gtsc.io/framework/types.html"
+		},
+		{
+			"source": "/framework/",
+			"has": [
+				{
+					"type": "header",
+					"key": "Accept",
 					"value": "application/ld\\+json.*"
 				}
 			],
@@ -43,6 +65,17 @@
 				}
 			],
 			"destination": "https://schema.gtsc.io/framework/:path*.json"
+		},
+		{
+			"source": "/json-ld/",
+			"has": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "text/html.*"
+				}
+			],
+			"destination": "https://schema.gtsc.io/json-ld/types.html"
 		},
 		{
 			"source": "/json-ld/",

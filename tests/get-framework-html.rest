@@ -1,0 +1,4 @@
+### Gets the JSON Schema representation of the framework
+
+GET https://schema.gtsc.io/framework/
+Accept: text/html
