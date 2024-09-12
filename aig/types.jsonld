@@ -76,6 +76,10 @@
 			"@id": "gtsc-aig:relationship",
 			"@type": "schema:Text"
 		},
+		"format": {
+			"@id": "gtsc-aig:format",
+			"@type": "schema:Text"
+		},
 		"hash": {
 			"@id": "gtsc-aig:hash",
 			"@type": "schema:Text"
