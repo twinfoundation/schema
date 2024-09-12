@@ -3,7 +3,7 @@
 	"properties": {
 		"id": {
 			"type": "string",
-			"description": "The id of the element."
+			"description": "The id of the stream."
 		},
 		"created": {
 			"type": "number",
@@ -29,5 +29,6 @@
 			"description": "Entries in the stream."
 		}
 	},
-	"additionalProperties": false
+	"additionalProperties": false,
+	"description": "Interface describing an auditable item stream."
 }
