@@ -1,6 +1,5 @@
 {
 	"type": "object",
-	"additionalProperties": false,
 	"properties": {
 		"metadata": {
 			"$ref": "https://schema.gtsc.io/json-ld/JsonLdNodeObject",
@@ -21,8 +20,13 @@
 		"deleted": {
 			"type": "number",
 			"description": "The timestamp of when the element was deleted, as we never actually remove items."
+		},
+		"format": {
+			"type": "string",
+			"description": "The format of the id in the alias."
 		}
 	},
+	"additionalProperties": false,
 	"required": [
 		"created",
 		"id"
