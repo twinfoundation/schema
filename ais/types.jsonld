@@ -1,0 +1,44 @@
+{
+	"@context": {
+		"gtsc-ais": "https://schema.gtsc.io/ais/",
+		"schema": "https://schema.org/",
+		"entry": {
+			"@id": "gtsc-ais:AuditableItemStreamEntry"
+		},
+		"entries": {
+			"@id": "gtsc-ais:AuditableItemStreamEntryList",
+			"@container": "@list"
+		},
+		"stream": {
+			"@id": "gtsc-ais:AuditableItemStream"
+		},
+		"id": {
+			"@id": "gtsc-ais:id",
+			"@type": "schema:identifier"
+		},
+		"nodeIdentity": {
+			"@id": "gtsc-ais:nodeIdentifier",
+			"@type": "schema:identifier"
+		},
+		"userIdentity": {
+			"@id": "gtsc-ais:userIdentity",
+			"@type": "schema:identifier"
+		},
+		"created": {
+			"@id": "gtsc-ais:created",
+			"@type": "schema:dateCreated"
+		},
+		"updated": {
+			"@id": "gtsc-ais:updated",
+			"@type": "schema:dateUpdated"
+		},
+		"deleted": {
+			"@id": "gtsc-ais:deleted",
+			"@type": "schema:dateDeleted"
+		},
+		"metadata": {
+			"@id": "gtsc-ais:metadata",
+			"@container": "@graph"
+		}
+	}
+}

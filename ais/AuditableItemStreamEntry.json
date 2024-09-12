@@ -1,0 +1,35 @@
+{
+	"type": "object",
+	"properties": {
+		"id": {
+			"type": "string",
+			"description": "The id of the entry."
+		},
+		"created": {
+			"type": "number",
+			"description": "The timestamp of when the entry was created."
+		},
+		"updated": {
+			"type": "number",
+			"description": "The timestamp of when the entry was updated."
+		},
+		"deleted": {
+			"type": "number",
+			"description": "The timestamp of when the entry was deleted, as we never actually remove items."
+		},
+		"userIdentity": {
+			"type": "string",
+			"description": "The identity of the user which added the entry to the stream."
+		},
+		"metadata": {
+			"$ref": "https://schema.gtsc.io/json-ld/JsonLdNodeObject",
+			"description": "The metadata to associate with the entry as JSON-LD."
+		}
+	},
+	"required": [
+		"id",
+		"created"
+	],
+	"additionalProperties": false,
+	"description": "Interface describing an entry for the stream."
+}

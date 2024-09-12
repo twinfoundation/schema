@@ -1,0 +1,4 @@
+### Gets the JSON Schema representation of the AIS
+
+GET https://schema.gtsc.io/ais/
+Accept: text/html

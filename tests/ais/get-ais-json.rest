@@ -1,0 +1,3 @@
+### Gets the JSON Schema representation of the AIS
+
+GET https://schema.gtsc.io/ais/AuditableItemStream

@@ -34,6 +34,39 @@
 			"destination": "https://schema.gtsc.io/aig/:path*.json"
 		},
 		{
+			"source": "/ais/",
+			"has": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "text/html.*"
+				}
+			],
+			"destination": "https://schema.gtsc.io/ais/types.html"
+		},
+		{
+			"source": "/ais/",
+			"has": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "application/ld\\+json.*"
+				}
+			],
+			"destination": "https://schema.gtsc.io/ais/types.jsonld"
+		},
+		{
+			"source": "/ais/:path*",
+			"missing": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "application/ld\\+json.*"
+				}
+			],
+			"destination": "https://schema.gtsc.io/ais/:path*.json"
+		},
+		{
 			"source": "/framework/",
 			"has": [
 				{
