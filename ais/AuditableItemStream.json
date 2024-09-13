@@ -28,7 +28,7 @@
 			},
 			"description": "Entries in the stream."
 		},
-		"integrityInterval": {
+		"immutableInterval": {
 			"type": "number",
 			"description": "After how many entries do we add immutable checks."
 		}
@@ -36,7 +36,7 @@
 	"required": [
 		"id",
 		"created",
-		"integrityInterval"
+		"immutableInterval"
 	],
 	"additionalProperties": false,
 	"description": "Interface describing an auditable item stream."
