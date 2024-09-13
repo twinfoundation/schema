@@ -103,6 +103,10 @@
 		"patchValue": {
 			"@id": "gtsc-aig:patchValue",
 			"@type": "@json"
+		},
+		"integrity": {
+			"@id": "gtsc-aig:integrity",
+			"@type": "schema:Test"
 		}
 	}
 }

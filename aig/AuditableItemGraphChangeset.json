@@ -14,7 +14,7 @@
 			"items": {
 				"$ref": "https://schema.gtsc.io/aig/AuditableItemGraphPatchOperation"
 			},
-			"description": "The patches for the integrity at this epoch."
+			"description": "The patches in the changeset."
 		},
 		"hash": {
 			"type": "string",
@@ -31,10 +31,10 @@
 	},
 	"required": [
 		"created",
-		"hash",
+		"userIdentity",
 		"patches",
-		"signature",
-		"userIdentity"
+		"hash",
+		"signature"
 	],
 	"additionalProperties": false,
 	"description": "Interface describing a set of updates to the vertex."
