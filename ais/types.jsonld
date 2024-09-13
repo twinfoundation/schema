@@ -39,6 +39,22 @@
 		"metadata": {
 			"@id": "gtsc-ais:metadata",
 			"@container": "@graph"
+		},
+		"hash": {
+			"@id": "gtsc-ais:hash",
+			"@type": "schema:Text"
+		},
+		"signature": {
+			"@id": "gtsc-ais:signature",
+			"@type": "schema:Text"
+		},
+		"entryIndex": {
+			"@id": "gtsc-ais:signature",
+			"@type": "schema:Integer"
+		},
+		"immutableStorageId": {
+			"@id": "gtsc-ais:immutableStorageId",
+			"@type": "schema:identifier"
 		}
 	}
 }
