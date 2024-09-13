@@ -84,6 +84,10 @@
 			"@id": "gtsc-aig:hash",
 			"@type": "schema:Text"
 		},
+		"signature": {
+			"@id": "gtsc-aig:signature",
+			"@type": "schema:Text"
+		},
 		"patchOperation": {
 			"@id": "gtsc-aig:patchOperation",
 			"@type": "schema:Text"
