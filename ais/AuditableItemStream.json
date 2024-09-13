@@ -27,8 +27,17 @@
 				"$ref": "https://schema.gtsc.io/ais/AuditableItemStreamEntry"
 			},
 			"description": "Entries in the stream."
+		},
+		"integrityInterval": {
+			"type": "number",
+			"description": "After how many entries do we add immutable checks."
 		}
 	},
+	"required": [
+		"id",
+		"created",
+		"integrityInterval"
+	],
 	"additionalProperties": false,
 	"description": "Interface describing an auditable item stream."
 }

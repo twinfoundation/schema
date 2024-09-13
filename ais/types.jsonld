@@ -48,8 +48,12 @@
 			"@id": "gtsc-ais:signature",
 			"@type": "schema:Text"
 		},
-		"entryIndex": {
+		"index": {
 			"@id": "gtsc-ais:signature",
+			"@type": "schema:Integer"
+		},
+		"integrityInterval": {
+			"@id": "gtsc-ais:integrityInterval",
 			"@type": "schema:Integer"
 		},
 		"immutableStorageId": {

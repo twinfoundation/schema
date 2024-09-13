@@ -24,8 +24,31 @@
 		"metadata": {
 			"$ref": "https://schema.gtsc.io/json-ld/JsonLdNodeObject",
 			"description": "The metadata to associate with the entry as JSON-LD."
+		},
+		"index": {
+			"type": "number",
+			"description": "The index of the entry in the stream."
+		},
+		"hash": {
+			"type": "string",
+			"description": "The hash of the entry."
+		},
+		"signature": {
+			"type": "string",
+			"description": "The signature of the entry."
+		},
+		"immutableStorageId": {
+			"type": "string",
+			"description": "The immutable storage id containing the signature for the entry."
 		}
 	},
+	"required": [
+		"id",
+		"created",
+		"index",
+		"hash",
+		"signature"
+	],
 	"additionalProperties": false,
 	"description": "Interface describing an entry for the stream."
 }
