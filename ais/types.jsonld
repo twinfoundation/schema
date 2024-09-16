@@ -59,6 +59,10 @@
 		"immutableStorageId": {
 			"@id": "gtsc-ais:immutableStorageId",
 			"@type": "schema:identifier"
+		},
+		"cursor": {
+			"@id": "gtsc-ais:cursor",
+			"@type": "schema:Text"
 		}
 	}
 }
