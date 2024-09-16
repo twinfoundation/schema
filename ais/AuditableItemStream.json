@@ -17,6 +17,10 @@
 			"type": "string",
 			"description": "The identity of the node which controls the stream."
 		},
+		"userIdentity": {
+			"type": "string",
+			"description": "The identity of the user who created the stream."
+		},
 		"metadata": {
 			"$ref": "https://schema.gtsc.io/json-ld/JsonLdNodeObject",
 			"description": "The metadata to associate with the entry as JSON-LD."
@@ -48,6 +52,8 @@
 	"required": [
 		"id",
 		"created",
+		"nodeIdentity",
+		"userIdentity",
 		"hash",
 		"signature",
 		"immutableInterval"
