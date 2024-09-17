@@ -69,7 +69,7 @@
 			"@type": "schema:Text"
 		},
 		"verification": {
-			"@id": "gtsc-ais:verification",
+			"@id": "gtsc-ais:verification"
 		}
 	}
 }
