@@ -9,6 +9,13 @@
 			"@id": "gtsc-ais:AuditableItemStreamEntryList",
 			"@container": "@list"
 		},
+		"entriesVerification": {
+			"@id": "gtsc-ais:AuditableItemStreamVerificationList",
+			"@container": "@list"
+		},
+		"verification": {
+			"@id": "gtsc-ais:AuditableItemStreamVerification"
+		},		
 		"stream": {
 			"@id": "gtsc-ais:AuditableItemStream"
 		},
@@ -53,7 +60,7 @@
 			"@type": "schema:Text"
 		},
 		"index": {
-			"@id": "gtsc-ais:signature",
+			"@id": "gtsc-ais:index",
 			"@type": "schema:Integer"
 		},
 		"immutableInterval": {
@@ -68,8 +75,13 @@
 			"@id": "gtsc-ais:cursor",
 			"@type": "schema:Text"
 		},
-		"verification": {
-			"@id": "gtsc-ais:verification"
+		"verified": {
+			"@id": "gtsc-ais:verified",
+			"@type": "schema:Boolean"
+		},
+		"state": {
+			"@id": "gtsc-ais:state",
+			"@type": "schema:Text"
 		}
 	}
 }
