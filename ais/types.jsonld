@@ -41,7 +41,7 @@
 			"@container": "@graph"
 		},
 		"object": {
-			"@id": "gtsc-ais:metadata",
+			"@id": "gtsc-ais:object",
 			"@container": "@graph"
 		},
 		"hash": {
@@ -67,6 +67,9 @@
 		"cursor": {
 			"@id": "gtsc-ais:cursor",
 			"@type": "schema:Text"
+		},
+		"verification": {
+			"@id": "gtsc-ais:verification",
 		}
 	}
 }
