@@ -1,0 +1,18 @@
+{
+	"type": "object",
+	"properties": {
+		"id": {
+			"type": "string",
+			"description": "The id if used for an entry."
+		},
+		"state": {
+			"$ref": "https://schema.gtsc.io/ais/AuditableItemStreamVerificationState",
+			"description": "The state of the verification."
+		}
+	},
+	"required": [
+		"state"
+	],
+	"additionalProperties": {},
+	"description": "Interface describing an auditable item stream verification."
+}

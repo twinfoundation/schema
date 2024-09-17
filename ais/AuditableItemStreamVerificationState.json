@@ -1,0 +1,13 @@
+{
+	"type": "string",
+	"enum": [
+		"ok",
+		"hashMismatch",
+		"signatureNotVerified",
+		"credentialRevoked",
+		"immutableHashMismatch",
+		"immutableSignatureMismatch",
+		"indexMismatch"
+	],
+	"description": "The state of the verification."
+}

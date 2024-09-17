@@ -1,6 +1,7 @@
 {
 	"@context": {
 		"gtsc-aig": "https://schema.gtsc.io/aig/",
+		"gtsc-framework": "https://schema.gtsc.io/framework/",
 		"schema": "https://schema.org/",
 		"alias": {
 			"@id": "gtsc-aig:AuditableItemGraphAlias"
@@ -32,6 +33,13 @@
 		"changesets": {
 			"@id": "gtsc-aig:AuditableItemGraphChangesetList",
 			"@container": "@list"
+		},
+		"changesetsVerification": {
+			"@id": "gtsc-aig:AuditableItemGraphVerificationList",
+			"@container": "@list"
+		},
+		"verification": {
+			"@id": "gtsc-aig:AuditableItemGraphVerification"
 		},
 		"patch": {
 			"@id": "gtsc-aig:AuditableItemGraphPatchOperation"
@@ -107,6 +115,18 @@
 		"integrity": {
 			"@id": "gtsc-aig:integrity",
 			"@type": "schema:Test"
+		},
+		"verified": {
+			"@id": "gtsc-aig:verified",
+			"@type": "schema:Boolean"
+		},
+		"state": {
+			"@id": "gtsc-aig:state",
+			"@type": "schema:Text"
+		},
+		"epoch": {
+			"@id": "gtsc-aig:epoch",
+			"@type": "gtsc-framework:TimestampMilliseconds"
 		}
 	}
 }

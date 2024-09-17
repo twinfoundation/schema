@@ -1,0 +1,19 @@
+{
+	"type": "object",
+	"properties": {
+		"epoch": {
+			"type": "number",
+			"description": "The epoch of the verification."
+		},
+		"state": {
+			"$ref": "https://schema.gtsc.io/aig/AuditableItemGraphVerificationState",
+			"description": "The state of the verification."
+		}
+	},
+	"required": [
+		"epoch",
+		"state"
+	],
+	"additionalProperties": {},
+	"description": "Interface describing an auditable item graph verification."
+}

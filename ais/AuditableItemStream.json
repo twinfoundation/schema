@@ -49,15 +49,5 @@
 			"description": "After how many entries do we add immutable checks."
 		}
 	},
-	"required": [
-		"id",
-		"created",
-		"nodeIdentity",
-		"userIdentity",
-		"hash",
-		"signature",
-		"immutableInterval"
-	],
-	"additionalProperties": false,
-	"description": "Interface describing an auditable item stream."
+	"additionalProperties": false
 }

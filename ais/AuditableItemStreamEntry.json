@@ -21,9 +21,9 @@
 			"type": "string",
 			"description": "The identity of the user which added the entry to the stream."
 		},
-		"metadata": {
+		"object": {
 			"$ref": "https://schema.gtsc.io/json-ld/JsonLdNodeObject",
-			"description": "The metadata to associate with the entry as JSON-LD."
+			"description": "The object to associate with the entry as JSON-LD."
 		},
 		"index": {
 			"type": "number",
@@ -45,6 +45,7 @@
 	"required": [
 		"id",
 		"created",
+		"object",
 		"index",
 		"hash",
 		"signature"
