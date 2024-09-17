@@ -40,6 +40,10 @@
 			"@id": "gtsc-ais:metadata",
 			"@container": "@graph"
 		},
+		"object": {
+			"@id": "gtsc-ais:metadata",
+			"@container": "@graph"
+		},
 		"hash": {
 			"@id": "gtsc-ais:hash",
 			"@type": "schema:Text"
