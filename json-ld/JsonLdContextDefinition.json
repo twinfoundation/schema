@@ -2,22 +2,22 @@
 	"type": "object",
 	"properties": {
 		"@base": {
-			"$ref": "https://schema.gtsc.io/json-ld/JsonLdKeyword"
+			"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
 		},
 		"@direction": {
-			"$ref": "https://schema.gtsc.io/json-ld/JsonLdKeyword"
+			"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
 		},
 		"@import": {
-			"$ref": "https://schema.gtsc.io/json-ld/JsonLdKeyword"
+			"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
 		},
 		"@language": {
-			"$ref": "https://schema.gtsc.io/json-ld/JsonLdKeyword"
+			"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
 		},
 		"@propagate": {
-			"$ref": "https://schema.gtsc.io/json-ld/JsonLdKeyword"
+			"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
 		},
 		"@protected": {
-			"$ref": "https://schema.gtsc.io/json-ld/JsonLdKeyword"
+			"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
 		},
 		"@type": {
 			"type": "object",
@@ -27,7 +27,7 @@
 					"const": "@set"
 				},
 				"@protected": {
-					"$ref": "https://schema.gtsc.io/json-ld/JsonLdKeyword"
+					"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
 				}
 			},
 			"required": [
@@ -36,10 +36,10 @@
 			"additionalProperties": false
 		},
 		"@version": {
-			"$ref": "https://schema.gtsc.io/json-ld/JsonLdKeyword"
+			"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
 		},
 		"@vocab": {
-			"$ref": "https://schema.gtsc.io/json-ld/JsonLdKeyword"
+			"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
 		}
 	},
 	"additionalProperties": {
@@ -51,7 +51,7 @@
 				"type": "string"
 			},
 			{
-				"$ref": "https://schema.gtsc.io/json-ld/JsonLdExpandedTermDefinition"
+				"$ref": "https://schema.twindev.org/json-ld/JsonLdExpandedTermDefinition"
 			}
 		]
 	},

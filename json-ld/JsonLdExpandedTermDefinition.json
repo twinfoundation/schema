@@ -7,7 +7,7 @@
 				"@id": {
 					"anyOf": [
 						{
-							"$ref": "https://schema.gtsc.io/json-ld/JsonLdKeyword"
+							"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
 						},
 						{
 							"type": "null"
@@ -18,28 +18,28 @@
 					"type": "string"
 				},
 				"@container": {
-					"$ref": "https://schema.gtsc.io/json-ld/JsonLdKeyword"
+					"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
 				},
 				"@type": {
 					"type": "string"
 				},
 				"@language": {
-					"$ref": "https://schema.gtsc.io/json-ld/JsonLdKeyword"
+					"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
 				},
 				"@index": {
-					"$ref": "https://schema.gtsc.io/json-ld/JsonLdKeyword"
+					"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
 				},
 				"@context": {
-					"$ref": "https://schema.gtsc.io/json-ld/JsonLdContextDefinition"
+					"$ref": "https://schema.twindev.org/json-ld/JsonLdContextDefinition"
 				},
 				"@prefix": {
-					"$ref": "https://schema.gtsc.io/json-ld/JsonLdKeyword"
+					"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
 				},
 				"@propagate": {
-					"$ref": "https://schema.gtsc.io/json-ld/JsonLdKeyword"
+					"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
 				},
 				"@protected": {
-					"$ref": "https://schema.gtsc.io/json-ld/JsonLdKeyword"
+					"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
 				}
 			}
 		},
@@ -48,7 +48,7 @@
 			"additionalProperties": false,
 			"properties": {
 				"@reverse": {
-					"$ref": "https://schema.gtsc.io/json-ld/JsonLdKeyword"
+					"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
 				},
 				"@container": {
 					"type": [
@@ -65,22 +65,22 @@
 					"type": "string"
 				},
 				"@language": {
-					"$ref": "https://schema.gtsc.io/json-ld/JsonLdKeyword"
+					"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
 				},
 				"@index": {
-					"$ref": "https://schema.gtsc.io/json-ld/JsonLdKeyword"
+					"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
 				},
 				"@context": {
-					"$ref": "https://schema.gtsc.io/json-ld/JsonLdContextDefinition"
+					"$ref": "https://schema.twindev.org/json-ld/JsonLdContextDefinition"
 				},
 				"@prefix": {
-					"$ref": "https://schema.gtsc.io/json-ld/JsonLdKeyword"
+					"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
 				},
 				"@propagate": {
-					"$ref": "https://schema.gtsc.io/json-ld/JsonLdKeyword"
+					"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
 				},
 				"@protected": {
-					"$ref": "https://schema.gtsc.io/json-ld/JsonLdKeyword"
+					"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
 				}
 			},
 			"required": [

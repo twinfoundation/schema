@@ -6,7 +6,7 @@
 				"type": "string"
 			},
 			{
-				"$ref": "https://schema.gtsc.io/json-ld/JsonLdNodeObject"
+				"$ref": "https://schema.twindev.org/json-ld/JsonLdNodeObject"
 			}
 		]
 	},

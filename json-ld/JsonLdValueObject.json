@@ -5,19 +5,19 @@
 			"additionalProperties": false,
 			"properties": {
 				"@value": {
-					"$ref": "https://schema.gtsc.io/json-ld/JsonLdKeyword"
+					"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
 				},
 				"@language": {
-					"$ref": "https://schema.gtsc.io/json-ld/JsonLdKeyword"
+					"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
 				},
 				"@direction": {
-					"$ref": "https://schema.gtsc.io/json-ld/JsonLdKeyword"
+					"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
 				},
 				"@index": {
-					"$ref": "https://schema.gtsc.io/json-ld/JsonLdKeyword"
+					"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
 				},
 				"@context": {
-					"$ref": "https://schema.gtsc.io/json-ld/JsonLdKeyword"
+					"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
 				}
 			},
 			"required": [
@@ -29,16 +29,16 @@
 			"additionalProperties": false,
 			"properties": {
 				"@value": {
-					"$ref": "https://schema.gtsc.io/json-ld/JsonLdKeyword"
+					"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
 				},
 				"@type": {
-					"$ref": "https://schema.gtsc.io/json-ld/JsonLdKeyword"
+					"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
 				},
 				"@index": {
-					"$ref": "https://schema.gtsc.io/json-ld/JsonLdKeyword"
+					"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
 				},
 				"@context": {
-					"$ref": "https://schema.gtsc.io/json-ld/JsonLdKeyword"
+					"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
 				}
 			},
 			"required": [
@@ -53,13 +53,13 @@
 				"@value": {
 					"anyOf": [
 						{
-							"$ref": "https://schema.gtsc.io/json-ld/JsonLdKeyword"
+							"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
 						},
 						{
-							"$ref": "https://schema.gtsc.io/json-ld/JsonLdJsonObject"
+							"$ref": "https://schema.twindev.org/json-ld/JsonLdJsonObject"
 						},
 						{
-							"$ref": "https://schema.gtsc.io/json-ld/JsonLdJsonArray"
+							"$ref": "https://schema.twindev.org/json-ld/JsonLdJsonArray"
 						}
 					]
 				},
@@ -68,10 +68,10 @@
 					"const": "@json"
 				},
 				"@index": {
-					"$ref": "https://schema.gtsc.io/json-ld/JsonLdKeyword"
+					"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
 				},
 				"@context": {
-					"$ref": "https://schema.gtsc.io/json-ld/JsonLdKeyword"
+					"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
 				}
 			},
 			"required": [

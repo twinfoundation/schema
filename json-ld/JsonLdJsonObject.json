@@ -3,7 +3,7 @@
 	"additionalProperties": {
 		"anyOf": [
 			{
-				"$ref": "https://schema.gtsc.io/json-ld/JsonLdJsonValue"
+				"$ref": "https://schema.twindev.org/json-ld/JsonLdJsonValue"
 			},
 			{
 				"not": {}

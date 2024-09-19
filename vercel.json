@@ -9,7 +9,7 @@
 					"value": "text/html.*"
 				}
 			],
-			"destination": "https://schema.gtsc.io/aig/types.html"
+			"destination": "https://schema.twindev.org/aig/types.html"
 		},
 		{
 			"source": "/aig/",
@@ -20,7 +20,7 @@
 					"value": "application/ld\\+json.*"
 				}
 			],
-			"destination": "https://schema.gtsc.io/aig/types.jsonld"
+			"destination": "https://schema.twindev.org/aig/types.jsonld"
 		},
 		{
 			"source": "/aig/:path*",
@@ -31,7 +31,7 @@
 					"value": "application/ld\\+json.*"
 				}
 			],
-			"destination": "https://schema.gtsc.io/aig/:path*.json"
+			"destination": "https://schema.twindev.org/aig/:path*.json"
 		},
 		{
 			"source": "/ais/",
@@ -42,7 +42,7 @@
 					"value": "text/html.*"
 				}
 			],
-			"destination": "https://schema.gtsc.io/ais/types.html"
+			"destination": "https://schema.twindev.org/ais/types.html"
 		},
 		{
 			"source": "/ais/",
@@ -53,7 +53,7 @@
 					"value": "application/ld\\+json.*"
 				}
 			],
-			"destination": "https://schema.gtsc.io/ais/types.jsonld"
+			"destination": "https://schema.twindev.org/ais/types.jsonld"
 		},
 		{
 			"source": "/ais/:path*",
@@ -64,7 +64,7 @@
 					"value": "application/ld\\+json.*"
 				}
 			],
-			"destination": "https://schema.gtsc.io/ais/:path*.json"
+			"destination": "https://schema.twindev.org/ais/:path*.json"
 		},
 		{
 			"source": "/framework/",
@@ -75,7 +75,7 @@
 					"value": "text/html.*"
 				}
 			],
-			"destination": "https://schema.gtsc.io/framework/types.html"
+			"destination": "https://schema.twindev.org/framework/types.html"
 		},
 		{
 			"source": "/framework/",
@@ -86,7 +86,7 @@
 					"value": "application/ld\\+json.*"
 				}
 			],
-			"destination": "https://schema.gtsc.io/framework/types.jsonld"
+			"destination": "https://schema.twindev.org/framework/types.jsonld"
 		},
 		{
 			"source": "/framework/:path*",
@@ -97,7 +97,7 @@
 					"value": "application/ld\\+json.*"
 				}
 			],
-			"destination": "https://schema.gtsc.io/framework/:path*.json"
+			"destination": "https://schema.twindev.org/framework/:path*.json"
 		},
 		{
 			"source": "/json-ld/",
@@ -108,7 +108,7 @@
 					"value": "text/html.*"
 				}
 			],
-			"destination": "https://schema.gtsc.io/json-ld/types.html"
+			"destination": "https://schema.twindev.org/json-ld/types.html"
 		},
 		{
 			"source": "/json-ld/",
@@ -119,7 +119,7 @@
 					"value": "application/ld\\+json.*"
 				}
 			],
-			"destination": "https://schema.gtsc.io/json-ld/types.jsonld"
+			"destination": "https://schema.twindev.org/json-ld/types.jsonld"
 		},
 		{
 			"source": "/json-ld/:path*",
@@ -130,7 +130,7 @@
 					"value": "application/ld\\+json.*"
 				}
 			],
-			"destination": "https://schema.gtsc.io/json-ld/:path*.json"
+			"destination": "https://schema.twindev.org/json-ld/:path*.json"
 		}
 	]
 }

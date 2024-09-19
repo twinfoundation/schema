@@ -22,7 +22,7 @@
 			"description": "The identity of the user who created the stream."
 		},
 		"metadata": {
-			"$ref": "https://schema.gtsc.io/json-ld/JsonLdNodeObject",
+			"$ref": "https://schema.twindev.org/json-ld/JsonLdNodeObject",
 			"description": "The metadata to associate with the entry as JSON-LD."
 		},
 		"hash": {
@@ -40,7 +40,7 @@
 		"entries": {
 			"type": "array",
 			"items": {
-				"$ref": "https://schema.gtsc.io/ais/AuditableItemStreamEntry"
+				"$ref": "https://schema.twindev.org/ais/AuditableItemStreamEntry"
 			},
 			"description": "Entries in the stream."
 		},

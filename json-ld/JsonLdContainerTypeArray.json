@@ -153,7 +153,7 @@
 					"const": "@set"
 				},
 				{
-					"$ref": "https://schema.gtsc.io/json-ld/JsonLdContainerType"
+					"$ref": "https://schema.twindev.org/json-ld/JsonLdContainerType"
 				}
 			],
 			"maxItems": 2
@@ -163,7 +163,7 @@
 			"minItems": 2,
 			"items": [
 				{
-					"$ref": "https://schema.gtsc.io/json-ld/JsonLdContainerType"
+					"$ref": "https://schema.twindev.org/json-ld/JsonLdContainerType"
 				},
 				{
 					"type": "string",

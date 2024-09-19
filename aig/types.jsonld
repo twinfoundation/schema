@@ -1,132 +1,132 @@
 {
 	"@context": {
-		"gtsc-aig": "https://schema.gtsc.io/aig/",
-		"gtsc-framework": "https://schema.gtsc.io/framework/",
+		"twin-aig": "https://schema.twindev.org/aig/",
+		"twin-framework": "https://schema.twindev.org/framework/",
 		"schema": "https://schema.org/",
 		"alias": {
-			"@id": "gtsc-aig:AuditableItemGraphAlias"
+			"@id": "twin-aig:AuditableItemGraphAlias"
 		},
 		"aliases": {
-			"@id": "gtsc-aig:AuditableItemGraphAliasList",
+			"@id": "twin-aig:AuditableItemGraphAliasList",
 			"@container": "@list"
 		},
 		"edge": {
-			"@id": "gtsc-aig:AuditableItemGraphEdge"
+			"@id": "twin-aig:AuditableItemGraphEdge"
 		},
 		"edges": {
-			"@id": "gtsc-aig:AuditableItemGraphEdgeList",
+			"@id": "twin-aig:AuditableItemGraphEdgeList",
 			"@container": "@list"
 		},
 		"resource": {
-			"@id": "gtsc-aig:AuditableItemGraphResource"
+			"@id": "twin-aig:AuditableItemGraphResource"
 		},
 		"resources": {
-			"@id": "gtsc-aig:AuditableItemGraphResourceList",
+			"@id": "twin-aig:AuditableItemGraphResourceList",
 			"@container": "@list"
 		},
 		"vertex": {
-			"@id": "gtsc-aig:AuditableItemGraphVertex"
+			"@id": "twin-aig:AuditableItemGraphVertex"
 		},
 		"changeset": {
-			"@id": "gtsc-aig:AuditableItemGraphChangeset"
+			"@id": "twin-aig:AuditableItemGraphChangeset"
 		},
 		"changesets": {
-			"@id": "gtsc-aig:AuditableItemGraphChangesetList",
+			"@id": "twin-aig:AuditableItemGraphChangesetList",
 			"@container": "@list"
 		},
 		"changesetsVerification": {
-			"@id": "gtsc-aig:AuditableItemGraphVerificationList",
+			"@id": "twin-aig:AuditableItemGraphVerificationList",
 			"@container": "@list"
 		},
 		"verification": {
-			"@id": "gtsc-aig:AuditableItemGraphVerification"
+			"@id": "twin-aig:AuditableItemGraphVerification"
 		},
 		"patch": {
-			"@id": "gtsc-aig:AuditableItemGraphPatchOperation"
+			"@id": "twin-aig:AuditableItemGraphPatchOperation"
 		},
 		"patches": {
-			"@id": "gtsc-aig:AuditableItemGraphPatchOperationList",
+			"@id": "twin-aig:AuditableItemGraphPatchOperationList",
 			"@container": "@list"
 		},
 		"id": {
-			"@id": "gtsc-aig:id",
+			"@id": "twin-aig:id",
 			"@type": "schema:identifier"
 		},
 		"nodeIdentity": {
-			"@id": "gtsc-aig:nodeIdentifier",
+			"@id": "twin-aig:nodeIdentifier",
 			"@type": "schema:identifier"
 		},
 		"userIdentity": {
-			"@id": "gtsc-aig:userIdentity",
+			"@id": "twin-aig:userIdentity",
 			"@type": "schema:identifier"
 		},
 		"immutableStorageId": {
-			"@id": "gtsc-aig:immutableStorageId",
+			"@id": "twin-aig:immutableStorageId",
 			"@type": "schema:identifier"
 		},
 		"created": {
-			"@id": "gtsc-aig:created",
+			"@id": "twin-aig:created",
 			"@type": "schema:dateCreated"
 		},
 		"updated": {
-			"@id": "gtsc-aig:updated",
+			"@id": "twin-aig:updated",
 			"@type": "schema:dateUpdated"
 		},
 		"deleted": {
-			"@id": "gtsc-aig:deleted",
+			"@id": "twin-aig:deleted",
 			"@type": "schema:dateDeleted"
 		},
 		"metadata": {
-			"@id": "gtsc-aig:metadata",
+			"@id": "twin-aig:metadata",
 			"@container": "@graph"
 		},
 		"relationship": {
-			"@id": "gtsc-aig:relationship",
+			"@id": "twin-aig:relationship",
 			"@type": "schema:Text"
 		},
 		"format": {
-			"@id": "gtsc-aig:format",
+			"@id": "twin-aig:format",
 			"@type": "schema:Text"
 		},
 		"hash": {
-			"@id": "gtsc-aig:hash",
+			"@id": "twin-aig:hash",
 			"@type": "schema:Text"
 		},
 		"signature": {
-			"@id": "gtsc-aig:signature",
+			"@id": "twin-aig:signature",
 			"@type": "schema:Text"
 		},
 		"patchOperation": {
-			"@id": "gtsc-aig:patchOperation",
+			"@id": "twin-aig:patchOperation",
 			"@type": "schema:Text"
 		},
 		"patchPath": {
-			"@id": "gtsc-aig:patchPath",
+			"@id": "twin-aig:patchPath",
 			"@type": "schema:Text"
 		},
 		"patchFrom": {
-			"@id": "gtsc-aig:patchFrom",
+			"@id": "twin-aig:patchFrom",
 			"@type": "schema:Text"
 		},
 		"patchValue": {
-			"@id": "gtsc-aig:patchValue",
+			"@id": "twin-aig:patchValue",
 			"@type": "@json"
 		},
 		"integrity": {
-			"@id": "gtsc-aig:integrity",
+			"@id": "twin-aig:integrity",
 			"@type": "schema:Test"
 		},
 		"verified": {
-			"@id": "gtsc-aig:verified",
+			"@id": "twin-aig:verified",
 			"@type": "schema:Boolean"
 		},
 		"state": {
-			"@id": "gtsc-aig:state",
+			"@id": "twin-aig:state",
 			"@type": "schema:Text"
 		},
 		"epoch": {
-			"@id": "gtsc-aig:epoch",
-			"@type": "gtsc-framework:TimestampMilliseconds"
+			"@id": "twin-aig:epoch",
+			"@type": "twin-framework:TimestampMilliseconds"
 		}
 	}
 }

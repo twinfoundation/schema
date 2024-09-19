@@ -10,7 +10,7 @@
 					"type": "string"
 				},
 				{
-					"$ref": "https://schema.gtsc.io/json-ld/JsonLdContextDefinition"
+					"$ref": "https://schema.twindev.org/json-ld/JsonLdContextDefinition"
 				},
 				{
 					"type": "array",
@@ -23,7 +23,7 @@
 								"type": "string"
 							},
 							{
-								"$ref": "https://schema.gtsc.io/json-ld/JsonLdContextDefinition"
+								"$ref": "https://schema.twindev.org/json-ld/JsonLdContextDefinition"
 							}
 						]
 					}
@@ -44,17 +44,17 @@
 			]
 		},
 		"@included": {
-			"$ref": "https://schema.gtsc.io/json-ld/JsonLdIncludedBlock"
+			"$ref": "https://schema.twindev.org/json-ld/JsonLdIncludedBlock"
 		},
 		"@graph": {
 			"anyOf": [
 				{
-					"$ref": "https://schema.gtsc.io/json-ld/JsonLdNodeObject"
+					"$ref": "https://schema.twindev.org/json-ld/JsonLdNodeObject"
 				},
 				{
 					"type": "array",
 					"items": {
-						"$ref": "https://schema.gtsc.io/json-ld/JsonLdNodeObject"
+						"$ref": "https://schema.twindev.org/json-ld/JsonLdNodeObject"
 					}
 				}
 			]
@@ -62,12 +62,12 @@
 		"@nest": {
 			"anyOf": [
 				{
-					"$ref": "https://schema.gtsc.io/json-ld/JsonLdJsonObject"
+					"$ref": "https://schema.twindev.org/json-ld/JsonLdJsonObject"
 				},
 				{
 					"type": "array",
 					"items": {
-						"$ref": "https://schema.gtsc.io/json-ld/JsonLdJsonObject"
+						"$ref": "https://schema.twindev.org/json-ld/JsonLdJsonObject"
 					}
 				}
 			]
@@ -98,28 +98,28 @@
 	"additionalProperties": {
 		"anyOf": [
 			{
-				"$ref": "https://schema.gtsc.io/json-ld/JsonLdNodePrimitive"
+				"$ref": "https://schema.twindev.org/json-ld/JsonLdNodePrimitive"
 			},
 			{
 				"type": "array",
 				"items": {
-					"$ref": "https://schema.gtsc.io/json-ld/JsonLdNodePrimitive"
+					"$ref": "https://schema.twindev.org/json-ld/JsonLdNodePrimitive"
 				}
 			},
 			{
-				"$ref": "https://schema.gtsc.io/json-ld/JsonLdLanguageMap"
+				"$ref": "https://schema.twindev.org/json-ld/JsonLdLanguageMap"
 			},
 			{
-				"$ref": "https://schema.gtsc.io/json-ld/JsonLdIndexMap"
+				"$ref": "https://schema.twindev.org/json-ld/JsonLdIndexMap"
 			},
 			{
-				"$ref": "https://schema.gtsc.io/json-ld/JsonLdIncludedBlock"
+				"$ref": "https://schema.twindev.org/json-ld/JsonLdIncludedBlock"
 			},
 			{
-				"$ref": "https://schema.gtsc.io/json-ld/JsonLdIdMap"
+				"$ref": "https://schema.twindev.org/json-ld/JsonLdIdMap"
 			},
 			{
-				"$ref": "https://schema.gtsc.io/json-ld/JsonLdTypeMap"
+				"$ref": "https://schema.twindev.org/json-ld/JsonLdTypeMap"
 			}
 		]
 	},

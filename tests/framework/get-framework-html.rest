@@ -1,4 +1,4 @@
 ### Gets the JSON Schema representation of the framework
 
-GET https://schema.gtsc.io/framework/
+GET https://schema.twindev.org/framework/
 Accept: text/html

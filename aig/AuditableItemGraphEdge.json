@@ -2,7 +2,7 @@
 	"type": "object",
 	"properties": {
 		"metadata": {
-			"$ref": "https://schema.gtsc.io/json-ld/JsonLdNodeObject",
+			"$ref": "https://schema.twindev.org/json-ld/JsonLdNodeObject",
 			"description": "The metadata to associate with the element as JSON-LD."
 		},
 		"id": {
