@@ -1,4 +1,4 @@
 ### Gets the JSON-LD representation of the AIS
 
-GET https://schema.gtsc.io/ais/
+GET https://schema.twindev.org/ais/
 Accept: application/ld+json

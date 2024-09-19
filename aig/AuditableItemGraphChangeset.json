@@ -12,7 +12,7 @@
 		"patches": {
 			"type": "array",
 			"items": {
-				"$ref": "https://schema.gtsc.io/aig/AuditableItemGraphPatchOperation"
+				"$ref": "https://schema.twindev.org/aig/AuditableItemGraphPatchOperation"
 			},
 			"description": "The patches in the changeset."
 		},

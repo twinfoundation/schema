@@ -1,86 +1,86 @@
 {
 	"@context": {
-		"gtsc-ais": "https://schema.gtsc.io/ais/",
+		"twin-ais": "https://schema.twindev.org/ais/",
 		"schema": "https://schema.org/",
 		"entry": {
-			"@id": "gtsc-ais:AuditableItemStreamEntry"
+			"@id": "twin-ais:AuditableItemStreamEntry"
 		},
 		"entries": {
-			"@id": "gtsc-ais:AuditableItemStreamEntryList",
+			"@id": "twin-ais:AuditableItemStreamEntryList",
 			"@container": "@list"
 		},
 		"entriesVerification": {
-			"@id": "gtsc-ais:AuditableItemStreamVerificationList",
+			"@id": "twin-ais:AuditableItemStreamVerificationList",
 			"@container": "@list"
 		},
 		"verification": {
-			"@id": "gtsc-ais:AuditableItemStreamVerification"
+			"@id": "twin-ais:AuditableItemStreamVerification"
 		},		
 		"stream": {
-			"@id": "gtsc-ais:AuditableItemStream"
+			"@id": "twin-ais:AuditableItemStream"
 		},
 		"id": {
-			"@id": "gtsc-ais:id",
+			"@id": "twin-ais:id",
 			"@type": "schema:identifier"
 		},
 		"nodeIdentity": {
-			"@id": "gtsc-ais:nodeIdentifier",
+			"@id": "twin-ais:nodeIdentifier",
 			"@type": "schema:identifier"
 		},
 		"userIdentity": {
-			"@id": "gtsc-ais:userIdentity",
+			"@id": "twin-ais:userIdentity",
 			"@type": "schema:identifier"
 		},
 		"created": {
-			"@id": "gtsc-ais:created",
+			"@id": "twin-ais:created",
 			"@type": "schema:dateCreated"
 		},
 		"updated": {
-			"@id": "gtsc-ais:updated",
+			"@id": "twin-ais:updated",
 			"@type": "schema:dateUpdated"
 		},
 		"deleted": {
-			"@id": "gtsc-ais:deleted",
+			"@id": "twin-ais:deleted",
 			"@type": "schema:dateDeleted"
 		},
 		"metadata": {
-			"@id": "gtsc-ais:metadata",
+			"@id": "twin-ais:metadata",
 			"@container": "@graph"
 		},
 		"object": {
-			"@id": "gtsc-ais:object",
+			"@id": "twin-ais:object",
 			"@container": "@graph"
 		},
 		"hash": {
-			"@id": "gtsc-ais:hash",
+			"@id": "twin-ais:hash",
 			"@type": "schema:Text"
 		},
 		"signature": {
-			"@id": "gtsc-ais:signature",
+			"@id": "twin-ais:signature",
 			"@type": "schema:Text"
 		},
 		"index": {
-			"@id": "gtsc-ais:index",
+			"@id": "twin-ais:index",
 			"@type": "schema:Integer"
 		},
 		"immutableInterval": {
-			"@id": "gtsc-ais:immutableInterval",
+			"@id": "twin-ais:immutableInterval",
 			"@type": "schema:Integer"
 		},
 		"immutableStorageId": {
-			"@id": "gtsc-ais:immutableStorageId",
+			"@id": "twin-ais:immutableStorageId",
 			"@type": "schema:identifier"
 		},
 		"cursor": {
-			"@id": "gtsc-ais:cursor",
+			"@id": "twin-ais:cursor",
 			"@type": "schema:Text"
 		},
 		"verified": {
-			"@id": "gtsc-ais:verified",
+			"@id": "twin-ais:verified",
 			"@type": "schema:Boolean"
 		},
 		"state": {
-			"@id": "gtsc-ais:state",
+			"@id": "twin-ais:state",
 			"@type": "schema:Text"
 		}
 	}

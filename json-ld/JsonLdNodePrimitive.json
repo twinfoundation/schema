@@ -13,19 +13,19 @@
 			"type": "string"
 		},
 		{
-			"$ref": "https://schema.gtsc.io/json-ld/JsonLdNodeObject"
+			"$ref": "https://schema.twindev.org/json-ld/JsonLdNodeObject"
 		},
 		{
-			"$ref": "https://schema.gtsc.io/json-ld/JsonLdGraphObject"
+			"$ref": "https://schema.twindev.org/json-ld/JsonLdGraphObject"
 		},
 		{
-			"$ref": "https://schema.gtsc.io/json-ld/JsonLdValueObject"
+			"$ref": "https://schema.twindev.org/json-ld/JsonLdValueObject"
 		},
 		{
-			"$ref": "https://schema.gtsc.io/json-ld/JsonLdListObject"
+			"$ref": "https://schema.twindev.org/json-ld/JsonLdListObject"
 		},
 		{
-			"$ref": "https://schema.gtsc.io/json-ld/JsonLdSetObject"
+			"$ref": "https://schema.twindev.org/json-ld/JsonLdSetObject"
 		}
 	],
 	"description": "A node primitive is a JSON-LD value which is not one of the defined NodeObject properties."

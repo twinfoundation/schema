@@ -1,12 +1,12 @@
 {
 	"anyOf": [
 		{
-			"$ref": "https://schema.gtsc.io/json-ld/JsonLdNodeObject"
+			"$ref": "https://schema.twindev.org/json-ld/JsonLdNodeObject"
 		},
 		{
 			"type": "array",
 			"items": {
-				"$ref": "https://schema.gtsc.io/json-ld/JsonLdNodeObject"
+				"$ref": "https://schema.twindev.org/json-ld/JsonLdNodeObject"
 			}
 		},
 		{
@@ -21,7 +21,7 @@
 							"type": "string"
 						},
 						{
-							"$ref": "https://schema.gtsc.io/json-ld/JsonLdContextDefinition"
+							"$ref": "https://schema.twindev.org/json-ld/JsonLdContextDefinition"
 						},
 						{
 							"type": "array",
@@ -34,7 +34,7 @@
 										"type": "string"
 									},
 									{
-										"$ref": "https://schema.gtsc.io/json-ld/JsonLdContextDefinition"
+										"$ref": "https://schema.twindev.org/json-ld/JsonLdContextDefinition"
 									}
 								]
 							}
@@ -44,20 +44,20 @@
 				"@graph": {
 					"anyOf": [
 						{
-							"$ref": "https://schema.gtsc.io/json-ld/JsonLdValueObject"
+							"$ref": "https://schema.twindev.org/json-ld/JsonLdValueObject"
 						},
 						{
-							"$ref": "https://schema.gtsc.io/json-ld/JsonLdNodeObject"
+							"$ref": "https://schema.twindev.org/json-ld/JsonLdNodeObject"
 						},
 						{
 							"type": "array",
 							"items": {
 								"anyOf": [
 									{
-										"$ref": "https://schema.gtsc.io/json-ld/JsonLdValueObject"
+										"$ref": "https://schema.twindev.org/json-ld/JsonLdValueObject"
 									},
 									{
-										"$ref": "https://schema.gtsc.io/json-ld/JsonLdNodeObject"
+										"$ref": "https://schema.twindev.org/json-ld/JsonLdNodeObject"
 									}
 								]
 							}

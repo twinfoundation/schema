@@ -6,7 +6,7 @@
 			"description": "The epoch of the verification."
 		},
 		"state": {
-			"$ref": "https://schema.gtsc.io/aig/AuditableItemGraphVerificationState",
+			"$ref": "https://schema.twindev.org/aig/AuditableItemGraphVerificationState",
 			"description": "The state of the verification."
 		}
 	},

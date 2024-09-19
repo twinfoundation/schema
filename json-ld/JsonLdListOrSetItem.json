@@ -13,10 +13,10 @@
 			"type": "string"
 		},
 		{
-			"$ref": "https://schema.gtsc.io/json-ld/JsonLdNodeObject"
+			"$ref": "https://schema.twindev.org/json-ld/JsonLdNodeObject"
 		},
 		{
-			"$ref": "https://schema.gtsc.io/json-ld/JsonLdValueObject"
+			"$ref": "https://schema.twindev.org/json-ld/JsonLdValueObject"
 		}
 	],
 	"description": "A list or set item can be a null, boolean, number, string, node object, or value object."

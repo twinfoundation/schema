@@ -22,7 +22,7 @@
 			"description": "The identity of the user which added the entry to the stream."
 		},
 		"object": {
-			"$ref": "https://schema.gtsc.io/json-ld/JsonLdNodeObject",
+			"$ref": "https://schema.twindev.org/json-ld/JsonLdNodeObject",
 			"description": "The object to associate with the entry as JSON-LD."
 		},
 		"index": {

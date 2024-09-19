@@ -1,3 +1,3 @@
-# GTSC Schemas
+# TWIN Schemas
 
-This repository contains the content for schemas published at [https://schema.gtsc.io](https://schema.gtsc.io)
+This repository contains the content for schemas published at [https://schema.twindev.org](https://schema.twindev.org)

@@ -1,4 +1,4 @@
 ### Gets the JSON-LD representation of the framework
 
-GET https://schema.gtsc.io/framework/
+GET https://schema.twindev.org/framework/
 Accept: application/ld+json

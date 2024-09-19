@@ -3,12 +3,12 @@
 	"additionalProperties": {
 		"anyOf": [
 			{
-				"$ref": "https://schema.gtsc.io/json-ld/JsonLdIndexMapItem"
+				"$ref": "https://schema.twindev.org/json-ld/JsonLdIndexMapItem"
 			},
 			{
 				"type": "array",
 				"items": {
-					"$ref": "https://schema.gtsc.io/json-ld/JsonLdIndexMapItem"
+					"$ref": "https://schema.twindev.org/json-ld/JsonLdIndexMapItem"
 				}
 			}
 		]

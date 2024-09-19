@@ -1,5 +1,5 @@
 {
 	"@context": {
-		"gtsc-jsonld": "https://schema.gtsc.io/json-ld/"
+		"twin-jsonld": "https://schema.twindev.org/json-ld/"
 	}
 }
