@@ -2,33 +2,7 @@
 	"type": "object",
 	"properties": {
 		"@context": {
-			"anyOf": [
-				{
-					"type": "null"
-				},
-				{
-					"type": "string"
-				},
-				{
-					"$ref": "https://schema.twindev.org/json-ld/JsonLdContextDefinition"
-				},
-				{
-					"type": "array",
-					"items": {
-						"anyOf": [
-							{
-								"type": "null"
-							},
-							{
-								"type": "string"
-							},
-							{
-								"$ref": "https://schema.twindev.org/json-ld/JsonLdContextDefinition"
-							}
-						]
-					}
-				}
-			]
+			"$ref": "https://schema.twindev.org/json-ld/JsonLdContextDefinitionRoot"
 		},
 		"@id": {
 			"anyOf": [

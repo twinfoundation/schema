@@ -26,11 +26,7 @@
 			"description": "The relationship between the two vertices."
 		}
 	},
-	"required": [
-		"created",
-		"id",
-		"relationship"
-	],
+	"required": ["created", "id", "relationship"],
 	"additionalProperties": false,
 	"description": "Interface describing an edge between two vertices in an auditable item graph."
 }

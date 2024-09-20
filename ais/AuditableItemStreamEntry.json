@@ -42,14 +42,7 @@
 			"description": "The immutable storage id containing the signature for the entry."
 		}
 	},
-	"required": [
-		"id",
-		"created",
-		"object",
-		"index",
-		"hash",
-		"signature"
-	],
+	"required": ["id", "created", "object", "index", "hash", "signature"],
 	"additionalProperties": false,
 	"description": "Interface describing an entry for the stream."
 }

@@ -1,6 +1,6 @@
 {
 	"name": "@twin.org/schema",
-	"version": "0.0.1-next.3",
+	"version": "0.0.1-next.4",
 	"description": "Schema",
 	"repository": {
 		"type": "git",
@@ -8,8 +8,13 @@
 	},
 	"author": "martyn.janes@iota.org",
 	"license": "Apache-2.0",
-	"private": true,
+	"scripts": {
+		"format": "prettier --write ."
+	},
 	"engines": {
 		"node": ">=20.0.0"
+	},
+	"devDependencies": {
+		"prettier": "^3.3.3"
 	}
 }

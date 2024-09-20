@@ -10,10 +10,7 @@
 			"description": "The state of the verification."
 		}
 	},
-	"required": [
-		"epoch",
-		"state"
-	],
+	"required": ["epoch", "state"],
 	"additionalProperties": {},
 	"description": "Interface describing an auditable item graph verification."
 }

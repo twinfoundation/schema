@@ -1,65 +1,92 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>TWIN Schemas</title>
+		<link rel="stylesheet" href="style.css" type="text/css" />
+		<link rel="icon" href="https://schema.twindev.org/images/favicon.png" />
+	</head>
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport"
-		  content="width=device-width, initial-scale=1.0">
-	<title>TWIN Schemas</title>
-	<link rel="stylesheet"
-		  href="style.css"
-		  type="text/css">
-	<link rel="icon"
-		  href="https://schema.twindev.org/images/favicon.png">
-</head>
-
-<body>
-	<div style="display:flex; align-items: center;gap:10px">
-		<img src="./images/logo.svg"
-			 alt="TWIN Logo"
-			 width="32px"
-			 height="32px" />
-		<h1>TWIN Schemas</h1>
-	</div>
-	<hr />
-	<br />
-	For more information about the TWIN project, visit the <a href="https://www.twin.org">TWIN website</a>.
-	<br />
-	<br />
-	Information about developing using the TWIN technologies can be found at the <a href="https://www.twindev.org">TWIN Developer website</a>.
-	<br />
-	<br />
-	<br />
-	<h2>Schemas</h2>
-	<br />
-	<ul>
-		<li><a href="./framework/types.html">Framework</a></li>
-		<li><a href="./aig/types.html">Auditable Item Graph</a></li>
-		<li><a href="./ais/types.html">Auditable Item Stream</a></li>
-		<li><a href="./json-ld/types.html">JSON-LD</a></li>
-	</ul>
-	<br />
-	<hr />
-	<br />
-	<h2>Namespaces</h2>
-	<br />
-	<p>The root namespace for the packages are <b>https://schema.twindev.org/package-name/</b>.</p>
-	<br />
-	<p>e.g. <b>https://schema.twindev.org/framework/</b></p>
-	<br />
-	<p>The JSON schema definitions for each type can be found at <b>https://schema.twindev.org/package-name/type</b>.</p>
-	<br />
-	<p>e.g. <a href="https://schema.twindev.org/aig/AuditableItemGraphVertex">https://schema.twindev.org/aig/AuditableItemGraphVertex</a></p>
-	<br />
-	<p>Performing requests to the root namespace with the request <b>Accept</b> header set to <b>application/ld+json</b>
-		will return the <b>JSON-LD</b> version of the types. </p>
-	<br />
-	<p>
-		This performs a redirect to <b>https://schema.twindev.org/package-name/types.jsonld</b>
-	</p>
-	<br />
-	<p>e.g. <a href="https://schema.twindev.org/aig/types.jsonld">https://schema.twindev.org/aig/types.jsonld</a>
-	</p>
-</body>
-
+	<body>
+		<header>
+			<img src="./images/logo.svg" alt="TWIN Logo" width="32px" height="32px" />
+			<h1>TWIN Schemas</h1>
+		</header>
+		<main>
+			For more information about the TWIN project, visit the
+			<a href="https://www.twin.org">TWIN website</a>
+			.
+			<br />
+			<br />
+			Information about developing using the TWIN technologies can be found at the
+			<a href="https://www.twindev.org">TWIN Developer website</a>
+			.
+			<br />
+			<br />
+			<br />
+			<h2>Schemas</h2>
+			<br />
+			<ul>
+				<li><a href="./framework/types.html">Framework</a></li>
+				<li><a href="./aig/types.html">Auditable Item Graph</a></li>
+				<li><a href="./ais/types.html">Auditable Item Stream</a></li>
+				<li><a href="./json-ld/types.html">JSON-LD</a></li>
+			</ul>
+			<br />
+			<hr />
+			<br />
+			<h2>Namespaces</h2>
+			<br />
+			<p>
+				The root namespace for the packages are
+				<b>https://schema.twindev.org/package-name/</b>
+				.
+			</p>
+			<br />
+			<p>
+				e.g.
+				<b>https://schema.twindev.org/framework/</b>
+			</p>
+			<br />
+			<p>
+				The JSON schema definitions for each type can be found at
+				<b>https://schema.twindev.org/package-name/type</b>
+				.
+			</p>
+			<br />
+			<p>
+				e.g.
+				<a href="https://schema.twindev.org/aig/AuditableItemGraphVertex">
+					https://schema.twindev.org/aig/AuditableItemGraphVertex
+				</a>
+			</p>
+			<br />
+			<p>
+				Performing requests to the root namespace with the request
+				<b>Accept</b>
+				header set to
+				<b>application/ld+json</b>
+				will return the
+				<b>JSON-LD</b>
+				version of the types.
+			</p>
+			<br />
+			<p>
+				This performs a redirect to
+				<b>https://schema.twindev.org/package-name/types.jsonld</b>
+			</p>
+			<br />
+			<p>
+				e.g.
+				<a href="https://schema.twindev.org/aig/types.jsonld">
+					https://schema.twindev.org/aig/types.jsonld
+				</a>
+			</p>
+		</main>
+		<footer>
+			<span>v0.0.1-next.4</span>
+			<span>&copy; TWIN Foundation 2024</span>
+		</footer>
+	</body>
 </html>

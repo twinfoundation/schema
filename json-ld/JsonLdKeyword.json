@@ -2,10 +2,7 @@
 	"type": "object",
 	"properties": {
 		"@base": {
-			"type": [
-				"string",
-				"null"
-			]
+			"type": ["string", "null"]
 		},
 		"@container": {
 			"anyOf": [
@@ -47,44 +44,11 @@
 			]
 		},
 		"@context": {
-			"anyOf": [
-				{
-					"type": "null"
-				},
-				{
-					"type": "string"
-				},
-				{
-					"$ref": "https://schema.twindev.org/json-ld/JsonLdContextDefinition"
-				},
-				{
-					"type": "array",
-					"items": {
-						"anyOf": [
-							{
-								"type": "null"
-							},
-							{
-								"type": "string"
-							},
-							{
-								"$ref": "https://schema.twindev.org/json-ld/JsonLdContextDefinition"
-							}
-						]
-					}
-				}
-			]
+			"$ref": "https://schema.twindev.org/json-ld/JsonLdContextDefinitionRoot"
 		},
 		"@direction": {
-			"type": [
-				"string",
-				"null"
-			],
-			"enum": [
-				"ltr",
-				"rtl",
-				null
-			]
+			"type": ["string", "null"],
+			"enum": ["ltr", "rtl", null]
 		},
 		"@graph": {
 			"anyOf": [
@@ -187,22 +151,14 @@
 			"type": "string"
 		},
 		"@value": {
-			"type": [
-				"null",
-				"boolean",
-				"number",
-				"string"
-			]
+			"type": ["null", "boolean", "number", "string"]
 		},
 		"@version": {
 			"type": "string",
 			"const": "1.1"
 		},
 		"@vocab": {
-			"type": [
-				"string",
-				"null"
-			]
+			"type": ["string", "null"]
 		}
 	},
 	"required": [

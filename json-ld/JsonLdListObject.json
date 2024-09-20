@@ -18,9 +18,7 @@
 			"type": "string"
 		}
 	},
-	"required": [
-		"@list"
-	],
+	"required": ["@list"],
 	"additionalProperties": false,
 	"description": "A list represents an ordered set of values."
 }

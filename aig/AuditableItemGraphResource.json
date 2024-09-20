@@ -23,9 +23,6 @@
 			"description": "The timestamp of when the element was deleted, as we never actually remove items."
 		}
 	},
-	"required": [
-		"created",
-		"id"
-	],
+	"required": ["created", "id"],
 	"description": "Interface describing an auditable item graph vertex resource."
 }

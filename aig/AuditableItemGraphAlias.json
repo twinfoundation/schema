@@ -27,9 +27,6 @@
 		}
 	},
 	"additionalProperties": false,
-	"required": [
-		"created",
-		"id"
-	],
+	"required": ["created", "id"],
 	"description": "Interface describing an alias for a vertex."
 }

@@ -18,9 +18,7 @@
 			"type": "string"
 		}
 	},
-	"required": [
-		"@set"
-	],
+	"required": ["@set"],
 	"additionalProperties": false,
 	"description": "A set represents an unordered set of values."
 }

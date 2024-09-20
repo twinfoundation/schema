@@ -30,9 +30,7 @@
 					"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
 				}
 			},
-			"required": [
-				"@container"
-			],
+			"required": ["@container"],
 			"additionalProperties": false
 		},
 		"@version": {

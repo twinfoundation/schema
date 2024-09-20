@@ -1,65 +1,74 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>TWIN Schemas - JSON-LD</title>
+		<link rel="stylesheet" href="../style.css" type="text/css" />
+		<link rel="icon" href="https://schema.twindev.org/images/favicon.png" />
+	</head>
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport"
-		  content="width=device-width, initial-scale=1.0">
-	<title>TWIN Schemas - JSON-LD</title>
-	<link rel="stylesheet"
-		  href="../style.css"
-		  type="text/css">
-	<link rel="icon"
-		  href="https://schema.twindev.org/images/favicon.png">
-</head>
-
-<body>
-	<div style="display:flex; align-items: center;gap:10px">
-		<a href="/"><img src="../images/logo.svg"
-				 alt="TWIN Logo"
-				 width="32px"
-				 height="32px" /></a>
-
-		<h1><a href="/">TWIN Schemas - JSON-LD</a></h1>
-	</div>
-	<hr />
-	<br />
-	<h2>JSON Schemas</h2>
-	<br />
-	<p><b>Root namespace:</b> https://schema.twindev.org/json-ld/</p>
-	<br />
-	<ul>
-		<li><a href="./JsonLdDocument.json">JsonLdDocument</a></li>
-		<li><a href="./JsonLdContextDefinition.json">JsonLdContextDefinition</a></li>
-		<li><a href="./JsonLdNodeObject.json">JsonLdNodeObject</a></li>
-		<li><a href="./JsonLdJsonLdNodePrimitive.json">JsonLdNodePrimitive</a></li>
-		<li><a href="./JsonLdGraphObject.json">JsonLdGraphObject</a></li>
-		<li><a href="./JsonLdValueObject.json">JsonLdValueObject</a></li>
-		<li><a href="./JsonLdListObject.json">JsonLdListObject</a></li>
-		<li><a href="./JsonLdSetObject.json">JsonLdSetObject</a></li>
-		<li><a href="./JsonLdLanguageMap.json">JsonLdLanguageMap</a></li>
-		<li><a href="./JsonLdIndexMap.json">JsonLdIndexMap</a></li>
-		<li><a href="./JsonLdIndexMapItem.json">JsonLdIndexMapItem</a></li>
-		<li><a href="./JsonLdIdMap.json">JsonLdIdMap</a></li>
-		<li><a href="./JsonLdTypeMap.json">JsonLdTypeMap</a></li>
-		<li><a href="./JsonLdIncludedBlock.json">JsonLdIncludedBlock</a></li>
-		<li><a href="./JsonLdExpandedTermDefinition.json">JsonLdExpandedTermDefinition</a></li>
-		<li><a href="./JsonLdKeyword.json">JsonLdKeyword</a></li>
-		<li><a href="./JsonLdListOrSetItem.json">JsonLdListOrSetItem</a></li>
-		<li><a href="./JsonLdContainerType.json">JsonLdContainerType</a></li>
-		<li><a href="./JsonLdContainerTypeArray.json">JsonLdContainerTypeArray</a></li>
-		<li><a href="./JsonLdJsonPrimitive.json">JsonLdJsonPrimitive</a></li>
-		<li><a href="./JsonLdJsonArray.json">JsonLdJsonArray</a></li>
-		<li><a href="./JsonLdJsonObject.json">JsonLdJsonObject</a></li>
-		<li><a href="./JsonLdJsonValue.json">JsonLdJsonValue</a></li>
-	</ul>
-	<br />
-	<hr />
-	<br />
-	<h2>JSON-LD</h2>
-	<br />
-	<p><a href="./types.jsonld">https://schema.twindev.org/json-ld/types.jsonld</a></p>
-
-</body>
-
+	<body>
+		<header>
+			<img src="../images/logo.svg" alt="TWIN Logo" width="32px" height="32px" />
+			<h1>TWIN Schemas - JSON-LD</h1>
+		</header>
+		<main>
+			<h2>JSON Schemas</h2>
+			<br />
+			<p>
+				<b>Root namespace:</b>
+				https://schema.twindev.org/json-ld/
+			</p>
+			<br />
+			<ul>
+				<li><a href="./JsonLdDocument.json">JsonLdDocument</a></li>
+				<li>
+					<a href="./JsonLdContextDefinition.json">JsonLdContextDefinition</a>
+				</li>
+				<li>
+					<a href="./JsonLdContextDefinitionElement.json">JsonLdContextDefinitionElement</a>
+				</li>
+				<li>
+					<a href="./JsonLdContextDefinitionRoot.json">JsonLdContextDefinitionRoot</a>
+				</li>
+				<li><a href="./JsonLdNodeObject.json">JsonLdNodeObject</a></li>
+				<li>
+					<a href="./JsonLdJsonLdNodePrimitive.json">JsonLdNodePrimitive</a>
+				</li>
+				<li><a href="./JsonLdGraphObject.json">JsonLdGraphObject</a></li>
+				<li><a href="./JsonLdValueObject.json">JsonLdValueObject</a></li>
+				<li><a href="./JsonLdListObject.json">JsonLdListObject</a></li>
+				<li><a href="./JsonLdSetObject.json">JsonLdSetObject</a></li>
+				<li><a href="./JsonLdLanguageMap.json">JsonLdLanguageMap</a></li>
+				<li><a href="./JsonLdIndexMap.json">JsonLdIndexMap</a></li>
+				<li><a href="./JsonLdIndexMapItem.json">JsonLdIndexMapItem</a></li>
+				<li><a href="./JsonLdIdMap.json">JsonLdIdMap</a></li>
+				<li><a href="./JsonLdTypeMap.json">JsonLdTypeMap</a></li>
+				<li><a href="./JsonLdIncludedBlock.json">JsonLdIncludedBlock</a></li>
+				<li>
+					<a href="./JsonLdExpandedTermDefinition.json">JsonLdExpandedTermDefinition</a>
+				</li>
+				<li><a href="./JsonLdKeyword.json">JsonLdKeyword</a></li>
+				<li><a href="./JsonLdListOrSetItem.json">JsonLdListOrSetItem</a></li>
+				<li><a href="./JsonLdContainerType.json">JsonLdContainerType</a></li>
+				<li>
+					<a href="./JsonLdContainerTypeArray.json">JsonLdContainerTypeArray</a>
+				</li>
+				<li><a href="./JsonLdJsonPrimitive.json">JsonLdJsonPrimitive</a></li>
+				<li><a href="./JsonLdJsonArray.json">JsonLdJsonArray</a></li>
+				<li><a href="./JsonLdJsonObject.json">JsonLdJsonObject</a></li>
+				<li><a href="./JsonLdJsonValue.json">JsonLdJsonValue</a></li>
+			</ul>
+			<br />
+			<hr />
+			<br />
+			<h2>JSON-LD</h2>
+			<br />
+			<p>
+				<a href="./types.jsonld">https://schema.twindev.org/json-ld/types.jsonld</a>
+			</p>
+		</main>
+		<footer>&copy; TWIN Foundation 2024 - v0.0.1-next.4</footer>
+	</body>
 </html>

@@ -10,9 +10,7 @@
 			"description": "The state of the verification."
 		}
 	},
-	"required": [
-		"state"
-	],
+	"required": ["state"],
 	"additionalProperties": {},
 	"description": "Interface describing an auditable item stream verification."
 }
