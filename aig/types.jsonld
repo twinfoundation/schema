@@ -3,54 +3,52 @@
 		"twin-aig": "https://schema.twindev.org/aig/",
 		"twin-framework": "https://schema.twindev.org/framework/",
 		"schema": "https://schema.org/",
-		"alias": {
+		"id": "@id",
+        "type": "@type",
+		"Alias": {
 			"@id": "twin-aig:AuditableItemGraphAlias"
 		},
-		"aliases": {
+		"Aliases": {
 			"@id": "twin-aig:AuditableItemGraphAliasList",
 			"@container": "@list"
 		},
-		"edge": {
+		"Edge": {
 			"@id": "twin-aig:AuditableItemGraphEdge"
 		},
-		"edges": {
+		"Edges": {
 			"@id": "twin-aig:AuditableItemGraphEdgeList",
 			"@container": "@list"
 		},
-		"resource": {
+		"Resource": {
 			"@id": "twin-aig:AuditableItemGraphResource"
 		},
-		"resources": {
+		"Resources": {
 			"@id": "twin-aig:AuditableItemGraphResourceList",
 			"@container": "@list"
 		},
-		"vertex": {
+		"Vertex": {
 			"@id": "twin-aig:AuditableItemGraphVertex"
 		},
-		"changeset": {
+		"Changeset": {
 			"@id": "twin-aig:AuditableItemGraphChangeset"
 		},
-		"changesets": {
+		"Changesets": {
 			"@id": "twin-aig:AuditableItemGraphChangesetList",
 			"@container": "@list"
 		},
-		"changesetsVerification": {
+		"ChangesetsVerification": {
 			"@id": "twin-aig:AuditableItemGraphVerificationList",
 			"@container": "@list"
 		},
-		"verification": {
+		"Verification": {
 			"@id": "twin-aig:AuditableItemGraphVerification"
 		},
-		"patch": {
+		"Patch": {
 			"@id": "twin-aig:AuditableItemGraphPatchOperation"
 		},
-		"patches": {
+		"Patches": {
 			"@id": "twin-aig:AuditableItemGraphPatchOperationList",
 			"@container": "@list"
-		},
-		"id": {
-			"@id": "twin-aig:id",
-			"@type": "schema:identifier"
 		},
 		"nodeIdentity": {
 			"@id": "twin-aig:nodeIdentifier",

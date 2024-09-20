@@ -1,5 +1,7 @@
 {
 	"@context": {
-		"twin-jsonld": "https://schema.twindev.org/json-ld/"
+		"twin-jsonld": "https://schema.twindev.org/json-ld/",
+		"id": "@id",
+        "type": "@type"
 	}
 }

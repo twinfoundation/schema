@@ -2,26 +2,24 @@
 	"@context": {
 		"twin-ais": "https://schema.twindev.org/ais/",
 		"schema": "https://schema.org/",
-		"entry": {
+		"id": "@id",
+        "type": "@type",
+		"Entry": {
 			"@id": "twin-ais:AuditableItemStreamEntry"
 		},
-		"entries": {
+		"Entries": {
 			"@id": "twin-ais:AuditableItemStreamEntryList",
 			"@container": "@list"
 		},
-		"entriesVerification": {
+		"EntriesVerification": {
 			"@id": "twin-ais:AuditableItemStreamVerificationList",
 			"@container": "@list"
 		},
-		"verification": {
+		"Verification": {
 			"@id": "twin-ais:AuditableItemStreamVerification"
 		},		
-		"stream": {
+		"Stream": {
 			"@id": "twin-ais:AuditableItemStream"
-		},
-		"id": {
-			"@id": "twin-ais:id",
-			"@type": "schema:identifier"
 		},
 		"nodeIdentity": {
 			"@id": "twin-ais:nodeIdentifier",

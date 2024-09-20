@@ -1,5 +1,7 @@
 {
 	"@context": {
-		"twin-framework": "https://schema.twindev.org/framework/"
+		"twin-framework": "https://schema.twindev.org/framework/",
+		"id": "@id",
+        "type": "@type"
 	}
 }
