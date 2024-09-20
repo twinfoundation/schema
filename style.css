@@ -126,13 +126,14 @@ html {
 	font-family: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
 		'Segoe UI Symbol', 'Noto Color Emoji';
 	height: 100vh;
+	display: flex;
 }
 
 body {
 	display: flex;
 	margin: 10px;
 	flex-direction: column;
-	height: 100vh;
+	flex: 1;
 }
 
 header {
