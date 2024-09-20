@@ -9,21 +9,21 @@
 		"Alias": {
 			"@id": "twin-aig:AuditableItemGraphAlias"
 		},
-		"Aliases": {
+		"aliases": {
 			"@id": "twin-aig:AuditableItemGraphAliasList",
 			"@container": "@list"
 		},
 		"Edge": {
 			"@id": "twin-aig:AuditableItemGraphEdge"
 		},
-		"Edges": {
+		"edges": {
 			"@id": "twin-aig:AuditableItemGraphEdgeList",
 			"@container": "@list"
 		},
 		"Resource": {
 			"@id": "twin-aig:AuditableItemGraphResource"
 		},
-		"Resources": {
+		"resources": {
 			"@id": "twin-aig:AuditableItemGraphResourceList",
 			"@container": "@list"
 		},
@@ -33,11 +33,11 @@
 		"Changeset": {
 			"@id": "twin-aig:AuditableItemGraphChangeset"
 		},
-		"Changesets": {
+		"changesets": {
 			"@id": "twin-aig:AuditableItemGraphChangesetList",
 			"@container": "@list"
 		},
-		"ChangesetsVerification": {
+		"changesetsVerification": {
 			"@id": "twin-aig:AuditableItemGraphVerificationList",
 			"@container": "@list"
 		},
@@ -47,7 +47,7 @@
 		"Patch": {
 			"@id": "twin-aig:AuditableItemGraphPatchOperation"
 		},
-		"Patches": {
+		"patches": {
 			"@id": "twin-aig:AuditableItemGraphPatchOperationList",
 			"@container": "@list"
 		},

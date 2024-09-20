@@ -8,11 +8,11 @@
 		"Entry": {
 			"@id": "twin-ais:AuditableItemStreamEntry"
 		},
-		"Entries": {
+		"entries": {
 			"@id": "twin-ais:AuditableItemStreamEntryList",
 			"@container": "@list"
 		},
-		"EntriesVerification": {
+		"entriesVerification": {
 			"@id": "twin-ais:AuditableItemStreamVerificationList",
 			"@container": "@list"
 		},
