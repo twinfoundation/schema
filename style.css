@@ -172,7 +172,7 @@ b {
 	font-weight: bold;
 }
 
-h1 > a {
+header > a {
 	color: inherit;
 }
 
