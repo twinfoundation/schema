@@ -9,12 +9,18 @@
 	"author": "martyn.janes@iota.org",
 	"license": "Apache-2.0",
 	"scripts": {
-		"format": "prettier --write ."
+		"format": "prettier --write .",
+		"lint:format": "prettier --config .prettierrc --check .",
+		"lint:markdown": "markdownlint **/*.md --ignore **/node_modules/** --ignore **/docs/reference/**",
+		"lint:spell": "cspell ** --no-progress",
+		"lint": "npm run lint:format && npm run lint:markdown && npm run lint:spell"
 	},
 	"engines": {
 		"node": ">=20.0.0"
 	},
 	"devDependencies": {
+		"cspell": "8.14.4",
+		"markdownlint-cli": "0.41.0",
 		"prettier": "^3.3.3"
 	}
 }
