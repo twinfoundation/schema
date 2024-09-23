@@ -1,54 +1,41 @@
 {
 	"@context": {
 		"@version": 1.1,
+		"@protected": true,
 		"twin-aig": "https://schema.twindev.org/aig/",
 		"twin-framework": "https://schema.twindev.org/framework/",
-		"schema": "https://schema.org/",
+		"schema": "http://schema.org/",
 		"id": "@id",
         "type": "@type",
-		"Alias": {
-			"@id": "twin-aig:AuditableItemGraphAlias"
-		},
+		"Alias": "twin-aig:AuditableItemGraphAlias",
+		"Edge": "twin-aig:AuditableItemGraphEdge",
+		"Resource": "twin-aig:AuditableItemGraphResource",
+		"Vertex": "twin-aig:AuditableItemGraphVertex",
+		"Changeset": "twin-aig:AuditableItemGraphChangeset",
+		"Verification": "twin-aig:AuditableItemGraphVerification",
+		"Patch": "twin-aig:AuditableItemGraphPatchOperation",
 		"aliases": {
-			"@id": "twin-aig:AuditableItemGraphAliasList",
+			"@id": "twin-aig:aliases",
 			"@container": "@list"
-		},
-		"Edge": {
-			"@id": "twin-aig:AuditableItemGraphEdge"
 		},
 		"edges": {
-			"@id": "twin-aig:AuditableItemGraphEdgeList",
+			"@id": "twin-aig:edges",
 			"@container": "@list"
-		},
-		"Resource": {
-			"@id": "twin-aig:AuditableItemGraphResource"
 		},
 		"resources": {
-			"@id": "twin-aig:AuditableItemGraphResourceList",
+			"@id": "twin-aig:resources",
 			"@container": "@list"
 		},
-		"Vertex": {
-			"@id": "twin-aig:AuditableItemGraphVertex"
-		},
-		"Changeset": {
-			"@id": "twin-aig:AuditableItemGraphChangeset"
-		},
 		"changesets": {
-			"@id": "twin-aig:AuditableItemGraphChangesetList",
+			"@id": "twin-aig:changesets",
 			"@container": "@list"
 		},
 		"changesetsVerification": {
-			"@id": "twin-aig:AuditableItemGraphVerificationList",
+			"@id": "twin-aig:changesetsVerification",
 			"@container": "@list"
 		},
-		"Verification": {
-			"@id": "twin-aig:AuditableItemGraphVerification"
-		},
-		"Patch": {
-			"@id": "twin-aig:AuditableItemGraphPatchOperation"
-		},
 		"patches": {
-			"@id": "twin-aig:AuditableItemGraphPatchOperationList",
+			"@id": "twin-aig:patches",
 			"@container": "@list"
 		},
 		"nodeIdentity": {
@@ -63,24 +50,12 @@
 			"@id": "twin-aig:immutableStorageId",
 			"@type": "schema:identifier"
 		},
-		"created": {
-			"@id": "twin-aig:created",
-			"@type": "schema:dateCreated"
-		},
-		"updated": {
-			"@id": "twin-aig:updated",
-			"@type": "schema:dateUpdated"
-		},
-		"deleted": {
-			"@id": "twin-aig:deleted",
-			"@type": "schema:dateDeleted"
-		},
 		"metadata": {
 			"@id": "twin-aig:metadata",
 			"@container": "@graph"
 		},
-		"relationship": {
-			"@id": "twin-aig:relationship",
+		"edgeRelationship": {
+			"@id": "twin-aig:edgeRelationship",
 			"@type": "schema:Text"
 		},
 		"format": {

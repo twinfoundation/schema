@@ -10,7 +10,7 @@
 		"Verification": "twin-ais:AuditableItemStreamVerification",
 		"Stream": "twin-ais:AuditableItemStream",
 		"entries": {
-			"@id": "twin-ais:Entry",
+			"@id": "twin-ais:entries",
 			"@container": "@list"
 		},
 		"streamVerification": {
