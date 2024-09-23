@@ -1,26 +1,27 @@
 {
 	"@context": {
 		"@version": 1.1,
+		"@protected": true,
 		"twin-ais": "https://schema.twindev.org/ais/",
-		"schema": "https://schema.org/",
+		"schema": "http://schema.org/",
 		"id": "@id",
         "type": "@type",
-		"Entry": {
-			"@id": "twin-ais:AuditableItemStreamEntry"
-		},
+		"Entry": "twin-ais:AuditableItemStreamEntry",
+		"Verification": "twin-ais:AuditableItemStreamVerification",
+		"Stream": "twin-ais:AuditableItemStream",
 		"entries": {
-			"@id": "twin-ais:AuditableItemStreamEntryList",
+			"@id": "twin-ais:Entry",
 			"@container": "@list"
+		},
+		"streamVerification": {
+			"@id": "twin-ais:streamVerification"
+		},
+		"entryVerification": {
+			"@id": "twin-ais:entryVerification"
 		},
 		"entriesVerification": {
-			"@id": "twin-ais:AuditableItemStreamVerificationList",
+			"@id": "twin-ais:entriesVerification",
 			"@container": "@list"
-		},
-		"Verification": {
-			"@id": "twin-ais:AuditableItemStreamVerification"
-		},		
-		"Stream": {
-			"@id": "twin-ais:AuditableItemStream"
 		},
 		"nodeIdentity": {
 			"@id": "twin-ais:nodeIdentifier",
@@ -30,24 +31,12 @@
 			"@id": "twin-ais:userIdentity",
 			"@type": "schema:identifier"
 		},
-		"created": {
-			"@id": "twin-ais:created",
-			"@type": "schema:dateCreated"
-		},
-		"updated": {
-			"@id": "twin-ais:updated",
-			"@type": "schema:dateUpdated"
-		},
-		"deleted": {
-			"@id": "twin-ais:deleted",
-			"@type": "schema:dateDeleted"
-		},
 		"metadata": {
 			"@id": "twin-ais:metadata",
 			"@container": "@graph"
 		},
-		"object": {
-			"@id": "twin-ais:object",
+		"entryObject": {
+			"@id": "twin-ais:entryObject",
 			"@container": "@graph"
 		},
 		"hash": {
