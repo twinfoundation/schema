@@ -31,13 +31,13 @@
 			"@id": "twin-ais:userIdentity",
 			"@type": "schema:identifier"
 		},
-		"metadata": {
-			"@id": "twin-ais:metadata",
-			"@container": "@graph"
+		"streamObject": {
+			"@id": "twin-ais:streamObject",
+			"@type": "@json"
 		},
 		"entryObject": {
 			"@id": "twin-ais:entryObject",
-			"@container": "@graph"
+			"@type": "@json"
 		},
 		"hash": {
 			"@id": "twin-ais:hash",
