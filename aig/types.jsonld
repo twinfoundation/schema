@@ -106,6 +106,22 @@
 		"created": {
 			"@id": "twin-aig:created",
 			"@type": "twin-framework:TimestampMilliseconds"
+		},
+		"vertexObject": {
+			"@id": "twin-aig:vertexObject",
+			"@type": "@json"
+		},
+		"resourceObject": {
+			"@id": "twin-aig:resourceObject",
+			"@type": "@json"
+		},
+		"edgeObject": {
+			"@id": "twin-aig:edgeObject",
+			"@type": "@json"
+		},
+		"aliasObject": {
+			"@id": "twin-aig:aliasObject",
+			"@type": "@json"
 		}
 	}
 }
