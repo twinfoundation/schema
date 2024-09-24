@@ -13,7 +13,8 @@
 		"Vertex": "twin-aig:AuditableItemGraphVertex",
 		"Changeset": "twin-aig:AuditableItemGraphChangeset",
 		"Verification": "twin-aig:AuditableItemGraphVerification",
-		"Patch": "twin-aig:AuditableItemGraphPatchOperation",
+		"PatchOperation": "twin-aig:AuditableItemGraphPatchOperation",
+		"Credential": "twin-aig:AuditableItemGraphCredential",
 		"aliases": {
 			"@id": "twin-aig:aliases",
 			"@container": "@list"
@@ -88,7 +89,7 @@
 		},
 		"integrity": {
 			"@id": "twin-aig:integrity",
-			"@type": "schema:Test"
+			"@type": "schema:Text"
 		},
 		"verified": {
 			"@id": "twin-aig:verified",
@@ -100,6 +101,10 @@
 		},
 		"epoch": {
 			"@id": "twin-aig:epoch",
+			"@type": "twin-framework:TimestampMilliseconds"
+		},
+		"created": {
+			"@id": "twin-aig:created",
 			"@type": "twin-framework:TimestampMilliseconds"
 		}
 	}
