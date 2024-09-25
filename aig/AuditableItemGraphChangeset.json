@@ -1,9 +1,36 @@
 {
 	"type": "object",
 	"properties": {
-		"created": {
-			"type": "number",
-			"description": "The timestamp of when the changeset was created."
+		"@context": {
+			"anyOf": [
+				{
+					"type": "string",
+					"const": "https://schema.twindev.org/aig/"
+				},
+				{
+					"type": "array",
+					"minItems": 1,
+					"items": [
+						{
+							"type": "string",
+							"const": "https://schema.twindev.org/aig/"
+						}
+					],
+					"additionalItems": {
+						"type": "string"
+					}
+				}
+			],
+			"description": "JSON-LD Context."
+		},
+		"type": {
+			"type": "string",
+			"const": "AuditableItemGraphChangeset",
+			"description": "JSON-LD Type."
+		},
+		"dateCreated": {
+			"type": "string",
+			"description": "The date/time of when the changeset was created."
 		},
 		"userIdentity": {
 			"type": "string",
@@ -29,7 +56,7 @@
 			"description": "The immutable storage id containing the signature for the changeset."
 		}
 	},
-	"required": ["created", "userIdentity", "patches", "hash", "signature"],
+	"required": ["@context", "type", "dateCreated", "userIdentity", "patches", "hash", "signature"],
 	"additionalProperties": false,
 	"description": "Interface describing a set of updates to the vertex."
 }

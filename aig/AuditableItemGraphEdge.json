@@ -1,32 +1,59 @@
 {
 	"type": "object",
 	"properties": {
-		"metadata": {
-			"$ref": "https://schema.twindev.org/json-ld/JsonLdNodeObject",
-			"description": "The metadata to associate with the element as JSON-LD."
-		},
 		"id": {
 			"type": "string",
 			"description": "The id of the element."
 		},
-		"created": {
-			"type": "number",
-			"description": "The timestamp of when the element was created."
+		"dateCreated": {
+			"type": "string",
+			"description": "The date/time of when the element was created."
 		},
-		"updated": {
-			"type": "number",
-			"description": "The timestamp of when the element was updated."
+		"dateModified": {
+			"type": "string",
+			"description": "The date/time of when the element was modified."
 		},
-		"deleted": {
-			"type": "number",
-			"description": "The timestamp of when the element was deleted, as we never actually remove items."
+		"dateDeleted": {
+			"type": "string",
+			"description": "The date/time of when the element was deleted, as we never actually remove items."
 		},
-		"relationship": {
+		"@context": {
+			"anyOf": [
+				{
+					"type": "string",
+					"const": "https://schema.twindev.org/aig/"
+				},
+				{
+					"type": "array",
+					"minItems": 1,
+					"items": [
+						{
+							"type": "string",
+							"const": "https://schema.twindev.org/aig/"
+						}
+					],
+					"additionalItems": {
+						"type": "string"
+					}
+				}
+			],
+			"description": "JSON-LD Context."
+		},
+		"type": {
+			"type": "string",
+			"const": "AuditableItemGraphEdge",
+			"description": "JSON-LD Type."
+		},
+		"edgeObject": {
+			"$ref": "https://schema.twindev.org/json-ld/JsonLdNodeObject",
+			"description": "The JSON-LD object for the edge."
+		},
+		"edgeRelationship": {
 			"type": "string",
 			"description": "The relationship between the two vertices."
 		}
 	},
-	"required": ["created", "id", "relationship"],
+	"required": ["@context", "dateCreated", "edgeRelationship", "id", "type"],
 	"additionalProperties": false,
 	"description": "Interface describing an edge between two vertices in an auditable item graph."
 }

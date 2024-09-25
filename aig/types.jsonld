@@ -7,14 +7,14 @@
 		"schema": "http://schema.org/",
 		"id": "@id",
         "type": "@type",
-		"Alias": "twin-aig:AuditableItemGraphAlias",
-		"Edge": "twin-aig:AuditableItemGraphEdge",
-		"Resource": "twin-aig:AuditableItemGraphResource",
-		"Vertex": "twin-aig:AuditableItemGraphVertex",
-		"Changeset": "twin-aig:AuditableItemGraphChangeset",
-		"Verification": "twin-aig:AuditableItemGraphVerification",
-		"PatchOperation": "twin-aig:AuditableItemGraphPatchOperation",
-		"Credential": "twin-aig:AuditableItemGraphCredential",
+		"AuditableItemGraphAlias": "twin-aig:AuditableItemGraphAlias",
+		"AuditableItemGraphEdge": "twin-aig:AuditableItemGraphEdge",
+		"AuditableItemGraphResource": "twin-aig:AuditableItemGraphResource",
+		"AuditableItemGraphVertex": "twin-aig:AuditableItemGraphVertex",
+		"AuditableItemGraphChangeset": "twin-aig:AuditableItemGraphChangeset",
+		"AuditableItemGraphVerification": "twin-aig:AuditableItemGraphVerification",
+		"AuditableItemGraphPatchOperation": "twin-aig:AuditableItemGraphPatchOperation",
+		"AuditableItemGraphCredential": "twin-aig:AuditableItemGraphCredential",
 		"aliases": {
 			"@id": "twin-aig:aliases",
 			"@container": "@list"
@@ -39,6 +39,10 @@
 			"@id": "twin-aig:patches",
 			"@container": "@list"
 		},
+		"vertices": {
+			"@id": "twin-aig:vertices",
+			"@container": "@list"
+		},
 		"nodeIdentity": {
 			"@id": "twin-aig:nodeIdentifier",
 			"@type": "schema:identifier"
@@ -51,16 +55,12 @@
 			"@id": "twin-aig:immutableStorageId",
 			"@type": "schema:identifier"
 		},
-		"metadata": {
-			"@id": "twin-aig:metadata",
-			"@container": "@graph"
-		},
 		"edgeRelationship": {
 			"@id": "twin-aig:edgeRelationship",
 			"@type": "schema:Text"
 		},
-		"format": {
-			"@id": "twin-aig:format",
+		"aliasFormat": {
+			"@id": "twin-aig:aliasFormat",
 			"@type": "schema:Text"
 		},
 		"hash": {
@@ -99,29 +99,9 @@
 			"@id": "twin-aig:state",
 			"@type": "schema:Text"
 		},
-		"epoch": {
-			"@id": "twin-aig:epoch",
-			"@type": "twin-framework:TimestampMilliseconds"
-		},
-		"created": {
-			"@id": "twin-aig:created",
-			"@type": "twin-framework:TimestampMilliseconds"
-		},
-		"vertexObject": {
-			"@id": "twin-aig:vertexObject",
-			"@type": "@json"
-		},
-		"resourceObject": {
-			"@id": "twin-aig:resourceObject",
-			"@type": "@json"
-		},
-		"edgeObject": {
-			"@id": "twin-aig:edgeObject",
-			"@type": "@json"
-		},
-		"aliasObject": {
-			"@id": "twin-aig:aliasObject",
-			"@type": "@json"
-		}
+		"vertexObject": "twin-aig:vertexObject",
+		"resourceObject": "twin-aig:resourceObject",
+		"edgeObject": "twin-aig:edgeObject",
+		"aliasObject": "twin-aig:aliasObject"
 	}
 }

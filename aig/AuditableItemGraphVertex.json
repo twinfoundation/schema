@@ -1,9 +1,56 @@
 {
 	"type": "object",
 	"properties": {
+		"id": {
+			"type": "string",
+			"description": "The id of the element."
+		},
+		"dateCreated": {
+			"type": "string",
+			"description": "The date/time of when the element was created."
+		},
+		"dateModified": {
+			"type": "string",
+			"description": "The date/time of when the element was modified."
+		},
+		"dateDeleted": {
+			"type": "string",
+			"description": "The date/time of when the element was deleted, as we never actually remove items."
+		},
+		"@context": {
+			"anyOf": [
+				{
+					"type": "string",
+					"const": "https://schema.twindev.org/aig/"
+				},
+				{
+					"type": "array",
+					"minItems": 1,
+					"items": [
+						{
+							"type": "string",
+							"const": "https://schema.twindev.org/aig/"
+						}
+					],
+					"additionalItems": {
+						"type": "string"
+					}
+				}
+			],
+			"description": "JSON-LD Context."
+		},
+		"type": {
+			"type": "string",
+			"const": "AuditableItemGraphVertex",
+			"description": "JSON-LD Type."
+		},
 		"nodeIdentity": {
 			"type": "string",
 			"description": "The identity of the node which controls the vertex."
+		},
+		"vertexObject": {
+			"$ref": "https://schema.twindev.org/json-ld/JsonLdNodeObject",
+			"description": "The JSON-LD object for the vertex."
 		},
 		"aliases": {
 			"type": "array",
@@ -33,22 +80,19 @@
 			},
 			"description": "Changesets for the vertex."
 		},
-		"id": {
-			"type": "string",
-			"description": "The id of the element."
+		"verified": {
+			"type": "boolean",
+			"description": "Is the vertex verified, will only be populated when verification is requested."
 		},
-		"created": {
-			"type": "number",
-			"description": "The timestamp of when the element was created."
-		},
-		"updated": {
-			"type": "number",
-			"description": "The timestamp of when the element was updated."
-		},
-		"metadata": {
-			"$ref": "https://schema.twindev.org/json-ld/JsonLdNodeObject",
-			"description": "The metadata to associate with the element as JSON-LD."
+		"changesetsVerification": {
+			"type": "array",
+			"items": {
+				"$ref": "https://schema.twindev.org/aig/AuditableItemGraphVerification"
+			},
+			"description": "The verification state of the changesets, will only be populated when changesets are requested."
 		}
 	},
-	"additionalProperties": false
+	"required": ["@context", "dateCreated", "id", "type"],
+	"additionalProperties": false,
+	"description": "Interface describing an auditable item graph vertex."
 }

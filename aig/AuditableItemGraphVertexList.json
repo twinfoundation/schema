@@ -25,24 +25,22 @@
 		},
 		"type": {
 			"type": "string",
-			"const": "AuditableItemGraphVerification",
+			"const": "AuditableItemGraphVertexList",
 			"description": "JSON-LD Type."
 		},
-		"dateCreated": {
+		"vertices": {
+			"type": "array",
+			"items": {
+				"$ref": "https://schema.twindev.org/aig/AuditableItemGraphVertex"
+			},
+			"description": "The list of vertices."
+		},
+		"cursor": {
 			"type": "string",
-			"description": "The date/time of the verification."
-		},
-		"state": {
-			"$ref": "https://schema.twindev.org/aig/AuditableItemGraphVerificationState",
-			"description": "The state of the verification."
-		},
-		"stateProperties": {
-			"type": "object",
-			"additionalProperties": {},
-			"description": "The state properties."
+			"description": "The cursor to get the next chunk of vertices."
 		}
 	},
-	"required": ["@context", "type", "dateCreated", "state"],
+	"required": ["@context", "type", "vertices"],
 	"additionalProperties": false,
-	"description": "Interface describing an auditable item graph verification."
+	"description": "Interface describing an auditable item graph vertex list."
 }

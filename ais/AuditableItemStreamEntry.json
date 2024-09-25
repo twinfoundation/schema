@@ -1,27 +1,46 @@
 {
 	"type": "object",
 	"properties": {
+		"@context": {
+			"type": "array",
+			"minItems": 1,
+			"items": [
+				{
+					"type": "string",
+					"const": "https://schema.twindev.org/ais/"
+				}
+			],
+			"additionalItems": {
+				"type": "string"
+			},
+			"description": "JSON-LD Context."
+		},
+		"type": {
+			"type": "string",
+			"const": "AuditableItemStreamEntry",
+			"description": "JSON-LD Type."
+		},
 		"id": {
 			"type": "string",
 			"description": "The id of the entry."
 		},
-		"created": {
-			"type": "number",
-			"description": "The timestamp of when the entry was created."
+		"dateCreated": {
+			"type": "string",
+			"description": "The date/time of when the entry was created."
 		},
-		"updated": {
-			"type": "number",
-			"description": "The timestamp of when the entry was updated."
+		"dateModified": {
+			"type": "string",
+			"description": "The date/time of when the entry was modified."
 		},
-		"deleted": {
-			"type": "number",
-			"description": "The timestamp of when the entry was deleted, as we never actually remove items."
+		"dateDeleted": {
+			"type": "string",
+			"description": "The date/time of when the entry was deleted, as we never actually remove items."
 		},
 		"userIdentity": {
 			"type": "string",
 			"description": "The identity of the user which added the entry to the stream."
 		},
-		"object": {
+		"entryObject": {
 			"$ref": "https://schema.twindev.org/json-ld/JsonLdNodeObject",
 			"description": "The object to associate with the entry as JSON-LD."
 		},
@@ -42,7 +61,16 @@
 			"description": "The immutable storage id containing the signature for the entry."
 		}
 	},
-	"required": ["id", "created", "object", "index", "hash", "signature"],
+	"required": [
+		"@context",
+		"type",
+		"id",
+		"dateCreated",
+		"entryObject",
+		"index",
+		"hash",
+		"signature"
+	],
 	"additionalProperties": false,
 	"description": "Interface describing an entry for the stream."
 }
