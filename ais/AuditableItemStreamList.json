@@ -1,0 +1,38 @@
+{
+	"type": "object",
+	"properties": {
+		"@context": {
+			"type": "array",
+			"minItems": 1,
+			"items": [
+				{
+					"type": "string",
+					"const": "https://schema.twindev.org/ais/"
+				}
+			],
+			"additionalItems": {
+				"type": "string"
+			},
+			"description": "JSON-LD Context."
+		},
+		"type": {
+			"type": "string",
+			"const": "AuditableItemStreamList",
+			"description": "JSON-LD Type."
+		},
+		"streams": {
+			"type": "array",
+			"items": {
+				"$ref": "https://schema.twindev.org/ais/AuditableItemStream"
+			},
+			"description": "The streams."
+		},
+		"cursor": {
+			"type": "string",
+			"description": "Cursor for the next chunk of streams."
+		}
+	},
+	"required": ["@context", "type", "streams"],
+	"additionalProperties": false,
+	"description": "Interface describing an auditable item stream list."
+}

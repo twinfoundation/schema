@@ -56,6 +56,10 @@
 			"type": "string",
 			"description": "The immutable storage id."
 		},
+		"immutableInterval": {
+			"type": "number",
+			"description": "After how many entries do we add immutable checks."
+		},
 		"entries": {
 			"type": "array",
 			"items": {
@@ -63,10 +67,26 @@
 			},
 			"description": "Entries in the stream."
 		},
-		"immutableInterval": {
-			"type": "number",
-			"description": "After how many entries do we add immutable checks."
+		"cursor": {
+			"type": "string",
+			"description": "The cursor for the stream entries."
+		},
+		"streamVerification": {
+			"$ref": "https://schema.twindev.org/ais/AuditableItemStreamVerification",
+			"description": "The verification of the stream."
 		}
 	},
-	"additionalProperties": false
+	"required": [
+		"@context",
+		"type",
+		"id",
+		"dateCreated",
+		"nodeIdentity",
+		"userIdentity",
+		"hash",
+		"signature",
+		"immutableInterval"
+	],
+	"additionalProperties": false,
+	"description": "Interface describing an auditable item stream."
 }

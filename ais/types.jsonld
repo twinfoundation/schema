@@ -6,23 +6,28 @@
 		"schema": "http://schema.org/",
 		"id": "@id",
         "type": "@type",
-		"Entry": "twin-ais:AuditableItemStreamEntry",
-		"Verification": "twin-ais:AuditableItemStreamVerification",
-		"Stream": "twin-ais:AuditableItemStream",
+		"AuditableItemStream": "twin-ais:AuditableItemStream",
+		"AuditableItemStreamEntry": "twin-ais:AuditableItemStreamEntry",
+		"AuditableItemStreamVerification": "twin-ais:AuditableItemStreamVerification",
+		"AuditableItemStreamList": "twin-ais:AuditableItemStreamList",
+		"AuditableItemStreamEntryList": "twin-ais:AuditableItemStreamEntryList",
+		"AuditableItemStreamEntryObjectList": "twin-ais:AuditableItemStreamEntryObjectList",
+		"streams": {
+			"@id": "twin-ais:streams",
+			"@container": "@list"
+		},
 		"entries": {
 			"@id": "twin-ais:entries",
 			"@container": "@list"
 		},
-		"streamVerification": {
-			"@id": "twin-ais:streamVerification"
-		},
-		"entryVerification": {
-			"@id": "twin-ais:entryVerification"
-		},
-		"entriesVerification": {
-			"@id": "twin-ais:entriesVerification",
+		"entryObjects": {
+			"@id": "twin-ais:entryObjects",
 			"@container": "@list"
 		},
+		"streamObject": "twin-ais:streamObject",
+		"entryObject": "twin-ais:entryObject",
+		"streamVerification": "twin-ais:streamVerification",
+		"entryVerification": "twin-ais:entryVerification",
 		"nodeIdentity": {
 			"@id": "twin-ais:nodeIdentifier",
 			"@type": "schema:identifier"
@@ -30,14 +35,6 @@
 		"userIdentity": {
 			"@id": "twin-ais:userIdentity",
 			"@type": "schema:identifier"
-		},
-		"streamObject": {
-			"@id": "twin-ais:streamObject",
-			"@type": "@json"
-		},
-		"entryObject": {
-			"@id": "twin-ais:entryObject",
-			"@type": "@json"
 		},
 		"hash": {
 			"@id": "twin-ais:hash",
@@ -62,10 +59,6 @@
 		"cursor": {
 			"@id": "twin-ais:cursor",
 			"@type": "schema:Text"
-		},
-		"verified": {
-			"@id": "twin-ais:verified",
-			"@type": "schema:Boolean"
 		},
 		"state": {
 			"@id": "twin-ais:state",

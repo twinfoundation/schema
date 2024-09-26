@@ -59,6 +59,10 @@
 		"immutableStorageId": {
 			"type": "string",
 			"description": "The immutable storage id containing the signature for the entry."
+		},
+		"entryVerification": {
+			"$ref": "https://schema.twindev.org/ais/AuditableItemStreamVerification",
+			"description": "The verification of the entry."
 		}
 	},
 	"required": [
