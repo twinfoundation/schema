@@ -2,17 +2,25 @@
 	"type": "object",
 	"properties": {
 		"@context": {
-			"type": "array",
-			"minItems": 1,
-			"items": [
+			"anyOf": [
 				{
 					"type": "string",
 					"const": "https://schema.twindev.org/ais/"
+				},
+				{
+					"type": "array",
+					"minItems": 1,
+					"items": [
+						{
+							"type": "string",
+							"const": "https://schema.twindev.org/ais/"
+						}
+					],
+					"additionalItems": {
+						"type": "string"
+					}
 				}
 			],
-			"additionalItems": {
-				"type": "string"
-			},
 			"description": "JSON-LD Context."
 		},
 		"type": {
