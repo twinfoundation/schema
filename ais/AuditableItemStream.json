@@ -41,7 +41,7 @@
 			"description": "The identity of the user who created the stream."
 		},
 		"streamObject": {
-			"$ref": "https://schema.twindev.org/json-ld/JsonLdNodeObject",
+			"$ref": "https://schema.twindev.org/json-ld/JsonLdObject",
 			"description": "The object to associate with the entry as JSON-LD."
 		},
 		"hash": {
