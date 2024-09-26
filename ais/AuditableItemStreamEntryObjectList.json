@@ -31,7 +31,7 @@
 		"entryObjects": {
 			"type": "array",
 			"items": {
-				"$ref": "https://schema.twindev.org/json-ld/JsonLdNodeObject"
+				"$ref": "https://schema.twindev.org/json-ld/JsonLdObject"
 			},
 			"description": "The entry objects in the stream."
 		},
