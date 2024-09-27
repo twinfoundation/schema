@@ -32,6 +32,10 @@
 		"verificationFailure": {
 			"@id": "twin-attestation:verificationFailure",
 			"@type": "schema:Text"
+		},
+		"encoding": {
+			"@id": "twin-attestation:encoding",
+			"@type": "schema:Text"
 		}
 	}
 }
