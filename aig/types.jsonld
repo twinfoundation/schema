@@ -31,10 +31,6 @@
 			"@id": "twin-aig:changesets",
 			"@container": "@list"
 		},
-		"changesetsVerification": {
-			"@id": "twin-aig:changesetsVerification",
-			"@container": "@list"
-		},
 		"patches": {
 			"@id": "twin-aig:patches",
 			"@container": "@list"
@@ -59,6 +55,7 @@
 			"@id": "twin-aig:aliasObject",
 			"@type": "@json"
 		},
+		"changesetVerification": "twin-aig:changesetVerification",
 		"nodeIdentity": {
 			"@id": "twin-aig:nodeIdentifier",
 			"@type": "schema:identifier"

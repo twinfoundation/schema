@@ -54,6 +54,10 @@
 		"immutableStorageId": {
 			"type": "string",
 			"description": "The immutable storage id containing the signature for the changeset."
+		},
+		"changesetVerification": {
+			"$ref": "https://schema.twindev.org/aig/AuditableItemGraphVerification",
+			"description": "The verification for the changeset."
 		}
 	},
 	"required": ["@context", "type", "dateCreated", "userIdentity", "patches", "hash", "signature"],

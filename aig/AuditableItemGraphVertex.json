@@ -83,13 +83,6 @@
 		"verified": {
 			"type": "boolean",
 			"description": "Is the vertex verified, will only be populated when verification is requested."
-		},
-		"changesetsVerification": {
-			"type": "array",
-			"items": {
-				"$ref": "https://schema.twindev.org/aig/AuditableItemGraphVerification"
-			},
-			"description": "The verification state of the changesets, will only be populated when changesets are requested."
 		}
 	},
 	"required": ["@context", "dateCreated", "id", "type"],
