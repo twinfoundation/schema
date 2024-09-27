@@ -28,16 +28,16 @@
 			"const": "Proof",
 			"description": "JSON-LD Type."
 		},
-		"encoding": {
+		"proofFormat": {
 			"type": "string",
-			"description": "The encoding of the proof."
+			"description": "The format of the proof."
 		},
 		"value": {
 			"type": "string",
 			"description": "The value of the proof."
 		}
 	},
-	"required": ["@context", "type", "encoding", "value"],
+	"required": ["@context", "type", "proofFormat", "value"],
 	"additionalProperties": false,
 	"description": "Interface describing an attestation proof."
 }
