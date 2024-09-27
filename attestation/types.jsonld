@@ -7,7 +7,7 @@
 		"id": "@id",
 		"type": "@type",
 		"AuditableInformation": "twin-attestation:AuditableInformation",
-		"AuditableProof": "twin-attestation:AuditableProof",
+		"AuditableJwtProof": "twin-attestation:AuditableJwtProof",
 		"dateTransferred": {
 			"@id": "twin-attestation:dateTransferred",
 			"@type": "schema:Date"
