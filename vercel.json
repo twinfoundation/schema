@@ -1,6 +1,39 @@
 {
 	"rewrites": [
 		{
+			"source": "/attestation/",
+			"has": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "text/html.*"
+				}
+			],
+			"destination": "https://schema.twindev.org/attestation/types.html"
+		},
+		{
+			"source": "/attestation/",
+			"has": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "application/ld\\+json.*"
+				}
+			],
+			"destination": "https://schema.twindev.org/attestation/types.jsonld"
+		},
+		{
+			"source": "/attestation/:path*",
+			"missing": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "application/ld\\+json.*"
+				}
+			],
+			"destination": "https://schema.twindev.org/attestation/:path*.json"
+		},
+		{
 			"source": "/aig/",
 			"has": [
 				{

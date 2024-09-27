@@ -1,0 +1,34 @@
+{
+	"type": "object",
+	"properties": {
+		"id": {
+			"type": "string",
+			"description": "The unique identifier of the attestation."
+		},
+		"dateCreated": {
+			"type": "string",
+			"description": "Created date/time of the attestation in ISO format."
+		},
+		"dateTransferred": {
+			"type": "string",
+			"description": "Transferred date/time of the attestation in ISO format, can be blank if holder identity is owner."
+		},
+		"ownerIdentity": {
+			"type": "string",
+			"description": "The identity of the owner."
+		},
+		"holderIdentity": {
+			"type": "string",
+			"description": "The identity of the current holder, can be undefined if owner is still the holder."
+		},
+		"attestationObject": {
+			"$ref": "https://schema.twindev.org/json-ld/JsonLdNodeObject",
+			"description": "The data that was attested."
+		},
+		"proof": {
+			"$ref": "https://schema.twindev.org/attestation/AttestationProof",
+			"description": "The proof for the attested data."
+		}
+	},
+	"additionalProperties": false
+}
