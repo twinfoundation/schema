@@ -1,0 +1,3 @@
+### Gets the JSON Schema representation of the attestation
+
+GET https://schema.twindev.org/attestation/AttestationInformation
