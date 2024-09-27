@@ -53,7 +53,7 @@
 			"description": "The data that was attested."
 		},
 		"proof": {
-			"$ref": "https://schema.twindev.org/attestation/AttestationProof",
+			"$ref": "https://schema.twindev.org/json-ld/JsonLdNodeObject",
 			"description": "The proof for the attested data."
 		},
 		"verified": {
