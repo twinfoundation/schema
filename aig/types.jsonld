@@ -55,7 +55,7 @@
 			"@id": "twin-aig:aliasObject",
 			"@type": "@json"
 		},
-		"changesetVerification": "twin-aig:changesetVerification",
+		"verification": "twin-aig:verification",
 		"nodeIdentity": {
 			"@id": "twin-aig:nodeIdentifier",
 			"@type": "schema:identifier"
