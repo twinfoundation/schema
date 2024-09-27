@@ -28,6 +28,14 @@
 		"proof": {
 			"$ref": "https://schema.twindev.org/attestation/AttestationProof",
 			"description": "The proof for the attested data."
+		},
+		"verified": {
+			"type": "boolean",
+			"description": "Whether the attestation has been verified."
+		},
+		"verificationFailure": {
+			"type": "string",
+			"description": "The verification failure message."
 		}
 	},
 	"additionalProperties": false

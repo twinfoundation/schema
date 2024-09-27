@@ -24,6 +24,14 @@
 			"@id": "twin-attestation:attestationObject",
 			"@type": "@json"
 		},
-		"proof": "twin-attestation:proof"
+		"proof": "twin-attestation:proof",
+		"verified": {
+			"@id": "twin-attestation:verified",
+			"@type": "schema:Boolean"
+		},
+		"verificationFailure": {
+			"@id": "twin-attestation:verificationFailure",
+			"@type": "schema:Text"
+		}
 	}
 }
