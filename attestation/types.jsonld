@@ -32,10 +32,6 @@
 		"verificationFailure": {
 			"@id": "twin-attestation:verificationFailure",
 			"@type": "schema:Text"
-		},
-		"proofFormat": {
-			"@id": "twin-attestation:proofFormat",
-			"@type": "schema:Text"
 		}
 	}
 }
