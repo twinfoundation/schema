@@ -1,16 +1,39 @@
 {
 	"type": "object",
 	"properties": {
+		"@context": {
+			"anyOf": [
+				{
+					"type": "string",
+					"const": "https://schema.twindev.org/attestation/"
+				},
+				{
+					"type": "array",
+					"minItems": 1,
+					"items": [
+						{
+							"type": "string",
+							"const": "https://schema.twindev.org/attestation/"
+						}
+					],
+					"additionalItems": {
+						"type": "string"
+					}
+				}
+			],
+			"description": "JSON-LD Context."
+		},
 		"type": {
 			"type": "string",
-			"description": "The type of the proof."
+			"const": "Proof",
+			"description": "JSON-LD Type."
 		},
 		"value": {
 			"type": "string",
 			"description": "The value of the proof."
 		}
 	},
-	"required": ["type", "value"],
+	"required": ["@context", "type", "value"],
 	"additionalProperties": false,
 	"description": "Interface describing an attestation proof."
 }
