@@ -6,7 +6,7 @@
 		"twin-framework": "https://schema.twindev.org/framework/",
 		"schema": "http://schema.org/",
 		"id": "@id",
-        "type": "@type",
+		"type": "@type",
 		"AuditableItemGraphAlias": "twin-aig:AuditableItemGraphAlias",
 		"AuditableItemGraphEdge": "twin-aig:AuditableItemGraphEdge",
 		"AuditableItemGraphResource": "twin-aig:AuditableItemGraphResource",
@@ -43,10 +43,22 @@
 			"@id": "twin-aig:vertices",
 			"@container": "@list"
 		},
-		"vertexObject": "twin-aig:vertexObject",
-		"resourceObject": "twin-aig:resourceObject",
-		"edgeObject": "twin-aig:edgeObject",
-		"aliasObject": "twin-aig:aliasObject",
+		"vertexObject": {
+			"@id": "twin-aig:vertexObject",
+			"@type": "@json"
+		},
+		"resourceObject": {
+			"@id": "twin-aig:resourceObject",
+			"@type": "@json"
+		},
+		"edgeObject": {
+			"@id": "twin-aig:edgeObject",
+			"@type": "@json"
+		},
+		"aliasObject": {
+			"@id": "twin-aig:aliasObject",
+			"@type": "@json"
+		},
 		"nodeIdentity": {
 			"@id": "twin-aig:nodeIdentifier",
 			"@type": "schema:identifier"

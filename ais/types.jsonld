@@ -24,8 +24,14 @@
 			"@id": "twin-ais:entryObjects",
 			"@container": "@list"
 		},
-		"streamObject": "twin-ais:streamObject",
-		"entryObject": "twin-ais:entryObject",
+		"streamObject": {
+			"@id": "twin-ais:streamObject",
+			"@type": "@json"
+		},
+		"entryObject": {
+			"@id": "twin-ais:entryObject",
+			"@type": "@json"
+		},
 		"streamVerification": "twin-ais:streamVerification",
 		"entryVerification": "twin-ais:entryVerification",
 		"nodeIdentity": {
