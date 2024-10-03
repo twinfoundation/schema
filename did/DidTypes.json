@@ -1,0 +1,12 @@
+{
+	"type": "string",
+	"enum": [
+		"VerifiableCredential",
+		"VerifiablePresentation",
+		"DataIntegrityProof",
+		"Ed25519VerificationKey2020",
+		"JsonWebKey2020",
+		"LinkedDomains"
+	],
+	"description": "The types for DIDs."
+}

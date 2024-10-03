@@ -1,0 +1,5 @@
+{
+	"type": "string",
+	"enum": ["eddsa-jcs-2022", "eddsa-rdfc-2022"],
+	"description": "The types for DID Proof crypto suites."
+}
