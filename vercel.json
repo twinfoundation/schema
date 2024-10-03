@@ -34,6 +34,39 @@
 			"destination": "https://schema.twindev.org/attestation/:path*.json"
 		},
 		{
+			"source": "/immutable-proof/",
+			"has": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "text/html.*"
+				}
+			],
+			"destination": "https://schema.twindev.org/immutable-proof/types.html"
+		},
+		{
+			"source": "/immutable-proof/",
+			"has": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "application/ld\\+json.*"
+				}
+			],
+			"destination": "https://schema.twindev.org/immutable-proof/types.jsonld"
+		},
+		{
+			"source": "/immutable-proof/:path*",
+			"missing": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "application/ld\\+json.*"
+				}
+			],
+			"destination": "https://schema.twindev.org/immutable-proof/:path*.json"
+		},
+		{
 			"source": "/aig/",
 			"has": [
 				{

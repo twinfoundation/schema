@@ -1,0 +1,47 @@
+{
+	"type": "object",
+	"properties": {
+		"@context": {
+			"anyOf": [
+				{
+					"type": "string",
+					"const": "https://schema.twindev.org/immutable-proof/"
+				},
+				{
+					"type": "array",
+					"minItems": 1,
+					"items": [
+						{
+							"type": "string",
+							"const": "https://schema.twindev.org/immutable-proof/"
+						}
+					],
+					"additionalItems": {
+						"type": "string"
+					}
+				}
+			],
+			"description": "JSON-LD Context."
+		},
+		"type": {
+			"type": "string",
+			"const": "ImmutableProof",
+			"description": "JSON-LD Type."
+		},
+		"id": {
+			"type": "string",
+			"description": "The id of the proof."
+		},
+		"associatedId": {
+			"type": "string",
+			"description": "The id of the object associated with the proof."
+		},
+		"proof": {
+			"$ref": "https://w3id.org/security#proof",
+			"description": "The proof which can be undefined if it has not yet been issued."
+		}
+	},
+	"required": ["@context", "type", "id", "associatedId"],
+	"additionalProperties": false,
+	"description": "Interface describing an immutable proof state."
+}

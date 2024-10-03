@@ -1,0 +1,9 @@
+{
+	"@context": {
+		"@version": 1.1,
+		"@protected": true,
+		"twin-did": "https://schema.twindev.org/did/",
+		"id": "@id",
+        "type": "@type"
+	}
+}

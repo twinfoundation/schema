@@ -1,0 +1,15 @@
+{
+	"anyOf": [
+		{
+			"type": "string",
+			"const": "HS256",
+			"description": "HMAC using SHA-256."
+		},
+		{
+			"type": "string",
+			"const": "EdDSA",
+			"description": "EdDSA using Ed25519."
+		}
+	],
+	"description": "The cryptographic algorithms supported for JSON Web Tokens and JSON Web Keys."
+}

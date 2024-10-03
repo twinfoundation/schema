@@ -1,0 +1,4 @@
+### Gets the JSON Schema representation of the immutable proof
+
+GET https://schema.twindev.org/immutable-proof/
+Accept: text/html

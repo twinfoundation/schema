@@ -1,0 +1,40 @@
+{
+	"type": "object",
+	"properties": {
+		"id": {
+			"type": "string",
+			"description": "The id of the service."
+		},
+		"type": {
+			"anyOf": [
+				{
+					"type": "string"
+				},
+				{
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				}
+			],
+			"description": "The type of the service."
+		},
+		"serviceEndpoint": {
+			"anyOf": [
+				{
+					"type": "string"
+				},
+				{
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				}
+			],
+			"description": "The endpoint for the service."
+		}
+	},
+	"required": ["id", "type", "serviceEndpoint"],
+	"additionalProperties": false,
+	"description": "Interface describing a did document service."
+}

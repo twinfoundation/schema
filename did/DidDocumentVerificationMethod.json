@@ -1,0 +1,32 @@
+{
+	"type": "object",
+	"properties": {
+		"id": {
+			"type": "string",
+			"description": "The id of the entry."
+		},
+		"controller": {
+			"type": "string",
+			"description": "The controller for the entry."
+		},
+		"type": {
+			"type": "string",
+			"description": "The type of the entry."
+		},
+		"publicKeyMultibase": {
+			"type": "string",
+			"description": "The public key for the entry. Spec https://datatracker.ietf.org/doc/html/draft-multiformats-multibase-03 ."
+		},
+		"publicKeyJwk": {
+			"$ref": "https://schema.twindev.org/framework/Jwk",
+			"description": "The public key for the entry as a JWK. Spec https://datatracker.ietf.org/doc/html/rfc7517 ."
+		},
+		"revocation": {
+			"type": "string",
+			"description": "Multi key partial revocation."
+		}
+	},
+	"required": ["id", "controller", "type"],
+	"additionalProperties": false,
+	"description": "Interface describing a DID document verification method."
+}

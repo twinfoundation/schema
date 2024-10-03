@@ -1,0 +1,65 @@
+{
+	"type": "object",
+	"properties": {
+		"alg": {
+			"$ref": "https://schema.twindev.org/framework/JwtAlgorithms",
+			"description": "The cryptographic algorithm for the key."
+		},
+		"use": {
+			"type": "string",
+			"description": "The intended use for the key."
+		},
+		"key_ops": {
+			"type": "array",
+			"items": {
+				"type": "string"
+			},
+			"description": "The operation(s) that the key is intended to be used for."
+		},
+		"kty": {
+			"type": "string",
+			"description": "The key type parameter."
+		},
+		"n": {
+			"type": "string",
+			"description": "The public key parameters."
+		},
+		"e": {
+			"type": "string",
+			"description": "Exponent parameter."
+		},
+		"d": {
+			"type": "string",
+			"description": "The private key parameters."
+		},
+		"p": {
+			"type": "string",
+			"description": "The private key parameters."
+		},
+		"q": {
+			"type": "string",
+			"description": "The private key parameters."
+		},
+		"dp": {
+			"type": "string",
+			"description": "The private key parameters."
+		},
+		"dq": {
+			"type": "string",
+			"description": "The private key parameters."
+		},
+		"qi": {
+			"type": "string",
+			"description": "The private key parameters."
+		},
+		"kid": {
+			"type": "string",
+			"description": "The key ID."
+		}
+	},
+	"required": ["kty"],
+	"additionalProperties": {
+		"description": "Additional fields in the key."
+	},
+	"description": "The fields in a JSON Web Key."
+}

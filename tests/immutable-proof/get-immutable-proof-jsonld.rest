@@ -1,0 +1,4 @@
+### Gets the JSON-LD representation of the immutable proof
+
+GET https://schema.twindev.org/immutable-proof/
+Accept: application/ld+json

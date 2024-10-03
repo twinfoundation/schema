@@ -1,0 +1,135 @@
+{
+	"type": "object",
+	"properties": {
+		"@context": {
+			"$ref": "https://schema.twindev.org/json-ld/JsonLdContextDefinitionRoot",
+			"description": "The context for the document."
+		},
+		"id": {
+			"type": "string",
+			"description": "The id for the document."
+		},
+		"alsoKnownAs": {
+			"anyOf": [
+				{
+					"type": "string"
+				},
+				{
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				}
+			],
+			"description": "Aliases for the document."
+		},
+		"controller": {
+			"anyOf": [
+				{
+					"type": "string"
+				},
+				{
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				}
+			],
+			"description": "The controller for the document."
+		},
+		"verificationMethod": {
+			"type": "array",
+			"items": {
+				"anyOf": [
+					{
+						"type": "string"
+					},
+					{
+						"$ref": "https://schema.twindev.org/did/DidDocumentVerificationMethod"
+					}
+				]
+			},
+			"description": "The verification methods."
+		},
+		"authentication": {
+			"type": "array",
+			"items": {
+				"anyOf": [
+					{
+						"type": "string"
+					},
+					{
+						"$ref": "https://schema.twindev.org/did/DidDocumentVerificationMethod"
+					}
+				]
+			},
+			"description": "The authentication methods."
+		},
+		"assertionMethod": {
+			"type": "array",
+			"items": {
+				"anyOf": [
+					{
+						"type": "string"
+					},
+					{
+						"$ref": "https://schema.twindev.org/did/DidDocumentVerificationMethod"
+					}
+				]
+			},
+			"description": "The assertion methods."
+		},
+		"keyAgreement": {
+			"type": "array",
+			"items": {
+				"anyOf": [
+					{
+						"type": "string"
+					},
+					{
+						"$ref": "https://schema.twindev.org/did/DidDocumentVerificationMethod"
+					}
+				]
+			},
+			"description": "The key agreements."
+		},
+		"capabilityInvocation": {
+			"type": "array",
+			"items": {
+				"anyOf": [
+					{
+						"type": "string"
+					},
+					{
+						"$ref": "https://schema.twindev.org/did/DidDocumentVerificationMethod"
+					}
+				]
+			},
+			"description": "The capability invocations."
+		},
+		"capabilityDelegation": {
+			"type": "array",
+			"items": {
+				"anyOf": [
+					{
+						"type": "string"
+					},
+					{
+						"$ref": "https://schema.twindev.org/did/DidDocumentVerificationMethod"
+					}
+				]
+			},
+			"description": "The capability delegations."
+		},
+		"service": {
+			"type": "array",
+			"items": {
+				"$ref": "https://schema.twindev.org/did/DidService"
+			},
+			"description": "The services."
+		}
+	},
+	"required": ["id"],
+	"additionalProperties": false,
+	"description": "Interface describing a DID Document. Spec https://www.w3.org/TR/did-core/#did-document-properties."
+}

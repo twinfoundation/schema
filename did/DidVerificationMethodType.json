@@ -1,0 +1,12 @@
+{
+	"type": "string",
+	"enum": [
+		"verificationMethod",
+		"authentication",
+		"assertionMethod",
+		"keyAgreement",
+		"capabilityInvocation",
+		"capabilityDelegation"
+	],
+	"description": "The types of verification method."
+}
