@@ -56,33 +56,16 @@
 			"type": "number",
 			"description": "The index of the entry in the stream."
 		},
-		"hash": {
+		"proofId": {
 			"type": "string",
-			"description": "The hash of the entry."
+			"description": "The if of the immutable proof."
 		},
-		"signature": {
-			"type": "string",
-			"description": "The signature of the entry."
-		},
-		"immutableStorageId": {
-			"type": "string",
-			"description": "The immutable storage id containing the signature for the entry."
-		},
-		"entryVerification": {
-			"$ref": "https://schema.twindev.org/ais/AuditableItemStreamVerification",
+		"verification": {
+			"$ref": "https://schema.twindev.org/immutable-proof/ImmutableProofVerification",
 			"description": "The verification of the entry."
 		}
 	},
-	"required": [
-		"@context",
-		"type",
-		"id",
-		"dateCreated",
-		"entryObject",
-		"index",
-		"hash",
-		"signature"
-	],
+	"required": ["@context", "type", "id", "dateCreated", "entryObject", "index"],
 	"additionalProperties": false,
 	"description": "Interface describing an entry for the stream."
 }

@@ -1,0 +1,43 @@
+{
+	"type": "object",
+	"properties": {
+		"@context": {
+			"anyOf": [
+				{
+					"type": "string",
+					"const": "https://schema.twindev.org/immutable-proof/"
+				},
+				{
+					"type": "array",
+					"minItems": 1,
+					"items": [
+						{
+							"type": "string",
+							"const": "https://schema.twindev.org/immutable-proof/"
+						}
+					],
+					"additionalItems": {
+						"type": "string"
+					}
+				}
+			],
+			"description": "JSON-LD Context."
+		},
+		"type": {
+			"type": "string",
+			"const": "ImmutableProofVerification",
+			"description": "JSON-LD Type."
+		},
+		"verified": {
+			"type": "boolean",
+			"description": "Was the verification successful."
+		},
+		"failure": {
+			"$ref": "https://schema.twindev.org/immutable-proof/ImmutableProofFailure",
+			"description": "If the verification was unsuccessful the failure reason."
+		}
+	},
+	"required": ["@context", "type", "verified"],
+	"additionalProperties": false,
+	"description": "Interface describing an immutable proof verification."
+}

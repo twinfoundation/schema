@@ -52,17 +52,9 @@
 			"$ref": "https://schema.twindev.org/json-ld/JsonLdNodeObject",
 			"description": "The object to associate with the entry as JSON-LD."
 		},
-		"hash": {
+		"proofId": {
 			"type": "string",
-			"description": "The hash of the stream."
-		},
-		"signature": {
-			"type": "string",
-			"description": "The signature of the stream."
-		},
-		"immutableStorageId": {
-			"type": "string",
-			"description": "The immutable storage id."
+			"description": "The id of the immutable proof for the stream."
 		},
 		"immutableInterval": {
 			"type": "number",
@@ -79,8 +71,8 @@
 			"type": "string",
 			"description": "The cursor for the stream entries."
 		},
-		"streamVerification": {
-			"$ref": "https://schema.twindev.org/ais/AuditableItemStreamVerification",
+		"verification": {
+			"$ref": "https://schema.twindev.org/immutable-proof/ImmutableProofVerification",
 			"description": "The verification of the stream."
 		}
 	},
@@ -91,8 +83,6 @@
 		"dateCreated",
 		"nodeIdentity",
 		"userIdentity",
-		"hash",
-		"signature",
 		"immutableInterval"
 	],
 	"additionalProperties": false,
