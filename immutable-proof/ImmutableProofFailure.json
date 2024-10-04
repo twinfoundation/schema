@@ -1,5 +1,11 @@
 {
 	"type": "string",
-	"enum": ["proofMissing", "signatureMismatch"],
+	"enum": [
+		"notIssued",
+		"proofMissing",
+		"cryptoSuiteMismatch",
+		"proofTypeMismatch",
+		"signatureMismatch"
+	],
 	"description": "The failure reason of the proof."
 }

@@ -32,16 +32,24 @@
 			"type": "string",
 			"description": "The id of the proof."
 		},
-		"associatedId": {
+		"userIdentity": {
+			"type": "string",
+			"description": "The id of the user who created the proof."
+		},
+		"proofObjectId": {
 			"type": "string",
 			"description": "The id of the object associated with the proof."
 		},
+		"proofObjectHash": {
+			"type": "string",
+			"description": "The hash of the object associated with the proof."
+		},
 		"proof": {
-			"$ref": "https://w3id.org/security#proof",
+			"$ref": "https://schema.twindev.org/did/DidProof",
 			"description": "The proof which can be undefined if it has not yet been issued."
 		}
 	},
-	"required": ["@context", "type", "id", "associatedId"],
+	"required": ["@context", "type", "id", "userIdentity", "proofObjectHash"],
 	"additionalProperties": false,
 	"description": "Interface describing an immutable proof state."
 }

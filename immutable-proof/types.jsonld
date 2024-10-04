@@ -6,8 +6,16 @@
 		"id": "@id",
 		"type": "@type",
 		"ImmutableProof": "https://schema.twindev.org/immutable-proof/ImmutableProof",
-		"associatedId": {
-			"@id": "twin-immutable-proof:associatedId",
+		"proofObjectId": {
+			"@id": "twin-immutable-proof:proofObjectId",
+			"@type": "schema:Text"
+		},
+		"proofObjectHash": {
+			"@id": "twin-immutable-proof:proofObjectHash",
+			"@type": "schema:Text"
+		},
+		"userIdentity": {
+			"@id": "twin-immutable-proof:userIdentity",
 			"@type": "schema:Text"
 		},
 		"proof": {
