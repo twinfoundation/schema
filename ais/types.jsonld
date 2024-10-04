@@ -42,14 +42,6 @@
 			"@id": "twin-ais:userIdentity",
 			"@type": "schema:identifier"
 		},
-		"hash": {
-			"@id": "twin-ais:hash",
-			"@type": "schema:Text"
-		},
-		"signature": {
-			"@id": "twin-ais:signature",
-			"@type": "schema:Text"
-		},
 		"index": {
 			"@id": "twin-ais:index",
 			"@type": "schema:Integer"
@@ -58,8 +50,8 @@
 			"@id": "twin-ais:immutableInterval",
 			"@type": "schema:Integer"
 		},
-		"immutableStorageId": {
-			"@id": "twin-ais:immutableStorageId",
+		"proofId": {
+			"@id": "twin-ais:proofId",
 			"@type": "schema:identifier"
 		},
 		"cursor": {
