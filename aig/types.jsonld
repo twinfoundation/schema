@@ -12,9 +12,7 @@
 		"AuditableItemGraphResource": "twin-aig:AuditableItemGraphResource",
 		"AuditableItemGraphVertex": "twin-aig:AuditableItemGraphVertex",
 		"AuditableItemGraphChangeset": "twin-aig:AuditableItemGraphChangeset",
-		"AuditableItemGraphVerification": "twin-aig:AuditableItemGraphVerification",
 		"AuditableItemGraphPatchOperation": "twin-aig:AuditableItemGraphPatchOperation",
-		"AuditableItemGraphCredential": "twin-aig:AuditableItemGraphCredential",
 		"aliases": {
 			"@id": "twin-aig:aliases",
 			"@container": "@list"
@@ -56,32 +54,12 @@
 			"@type": "@json"
 		},
 		"verification": "twin-aig:verification",
-		"nodeIdentity": {
-			"@id": "twin-aig:nodeIdentifier",
-			"@type": "schema:identifier"
-		},
-		"userIdentity": {
-			"@id": "twin-aig:userIdentity",
-			"@type": "schema:identifier"
-		},
-		"immutableStorageId": {
-			"@id": "twin-aig:immutableStorageId",
-			"@type": "schema:identifier"
-		},
 		"edgeRelationship": {
 			"@id": "twin-aig:edgeRelationship",
 			"@type": "schema:Text"
 		},
 		"aliasFormat": {
 			"@id": "twin-aig:aliasFormat",
-			"@type": "schema:Text"
-		},
-		"hash": {
-			"@id": "twin-aig:hash",
-			"@type": "schema:Text"
-		},
-		"signature": {
-			"@id": "twin-aig:signature",
 			"@type": "schema:Text"
 		},
 		"patchOperation": {
@@ -99,18 +77,6 @@
 		"patchValue": {
 			"@id": "twin-aig:patchValue",
 			"@type": "@json"
-		},
-		"integrity": {
-			"@id": "twin-aig:integrity",
-			"@type": "schema:Text"
-		},
-		"verified": {
-			"@id": "twin-aig:verified",
-			"@type": "schema:Boolean"
-		},
-		"state": {
-			"@id": "twin-aig:state",
-			"@type": "schema:Text"
 		}
 	}
 }

@@ -43,24 +43,12 @@
 			},
 			"description": "The patches in the changeset."
 		},
-		"hash": {
-			"type": "string",
-			"description": "The hash for the changeset."
-		},
-		"signature": {
-			"type": "string",
-			"description": "The signature for the changeset."
-		},
-		"immutableStorageId": {
-			"type": "string",
-			"description": "The immutable storage id containing the signature for the changeset."
-		},
 		"verification": {
-			"$ref": "https://schema.twindev.org/aig/AuditableItemGraphVerification",
+			"$ref": "https://schema.twindev.org/aig/ImmutableProofVerification",
 			"description": "The verification for the changeset."
 		}
 	},
-	"required": ["@context", "type", "dateCreated", "userIdentity", "patches", "hash", "signature"],
+	"required": ["@context", "type", "dateCreated", "userIdentity", "patches"],
 	"additionalProperties": false,
 	"description": "Interface describing a set of updates to the vertex."
 }
