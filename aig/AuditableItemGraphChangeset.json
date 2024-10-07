@@ -52,7 +52,7 @@
 			"description": "The immutable proof id which contains the signature for this changeset."
 		},
 		"verification": {
-			"$ref": "https://schema.twindev.org/aig/ImmutableProofVerification",
+			"$ref": "https://schema.twindev.org/immutable-proof/ImmutableProofVerification",
 			"description": "The verification for the changeset."
 		}
 	},
