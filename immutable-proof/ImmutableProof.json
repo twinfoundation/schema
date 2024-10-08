@@ -44,16 +44,16 @@
 			"type": "string",
 			"description": "The hash of the object associated with the proof."
 		},
-		"immutableReceipt": {
-			"$ref": "https://schema.twindev.org/json-ld/JsonLdNodeObject",
-			"description": "The immutable receipt."
-		},
 		"proof": {
 			"$ref": "https://schema.twindev.org/did/DidProof",
 			"description": "The proof which can be undefined if it has not yet been issued."
+		},
+		"immutableReceipt": {
+			"$ref": "https://schema.twindev.org/json-ld/JsonLdNodeObject",
+			"description": "The immutable receipt."
 		}
 	},
-	"required": ["@context", "type", "id", "userIdentity", "proofObjectHash", "immutableReceipt"],
+	"required": ["@context", "type", "id", "userIdentity", "proofObjectHash"],
 	"additionalProperties": false,
 	"description": "Interface describing an immutable proof state."
 }
