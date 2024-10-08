@@ -28,10 +28,7 @@
 			"@type": "@id",
 			"@container": "@graph"
 		},
-		"immutableReceipt": {
-			"@id": "twin-immutable-proof:immutableReceipt",
-			"@type": "@json"
-		},
+		"immutableReceipt": "twin-immutable-proof:immutableReceipt",
 		"verified": {
 			"@id": "twin-immutable-proof:verified",
 			"@type": "schema:Boolean"
