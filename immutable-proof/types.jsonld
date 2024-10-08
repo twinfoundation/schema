@@ -28,6 +28,10 @@
 			"@type": "@id",
 			"@container": "@graph"
 		},
+		"receipt": {
+			"@id": "twin-immutable-proof:receipt",
+			"@type": "@json"
+		},
 		"verified": {
 			"@id": "twin-immutable-proof:verified",
 			"@type": "schema:Boolean"
