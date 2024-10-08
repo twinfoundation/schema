@@ -28,8 +28,8 @@
 			"@type": "@id",
 			"@container": "@graph"
 		},
-		"receipt": {
-			"@id": "twin-immutable-proof:receipt",
+		"immutableReceipt": {
+			"@id": "twin-immutable-proof:immutableReceipt",
 			"@type": "@json"
 		},
 		"verified": {
