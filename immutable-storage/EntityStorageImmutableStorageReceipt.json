@@ -1,0 +1,18 @@
+{
+	"type": "object",
+	"properties": {
+		"@context": {
+			"type": "string",
+			"const": "https://schema.twindev.org/immutable-storage/",
+			"description": "JSON-LD Context."
+		},
+		"type": {
+			"type": "string",
+			"const": "EntityStorageReceipt",
+			"description": "JSON-LD Type."
+		}
+	},
+	"required": ["@context", "type"],
+	"additionalProperties": false,
+	"description": "Receipt for the entity storage Immutable Storage connector."
+}

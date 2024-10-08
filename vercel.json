@@ -67,6 +67,39 @@
 			"destination": "https://schema.twindev.org/immutable-proof/:path*.json"
 		},
 		{
+			"source": "/immutable-storage/",
+			"has": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "text/html.*"
+				}
+			],
+			"destination": "https://schema.twindev.org/immutable-storage/types.html"
+		},
+		{
+			"source": "/immutable-storage/",
+			"has": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "application/ld\\+json.*"
+				}
+			],
+			"destination": "https://schema.twindev.org/immutable-storage/types.jsonld"
+		},
+		{
+			"source": "/immutable-storage/:path*",
+			"missing": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "application/ld\\+json.*"
+				}
+			],
+			"destination": "https://schema.twindev.org/immutable-storage/:path*.json"
+		},
+		{
 			"source": "/aig/",
 			"has": [
 				{
