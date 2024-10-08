@@ -5,8 +5,8 @@
 		"twin-immutable-storage": "https://schema.twindev.org/immutable-storage/",
 		"id": "@id",
 		"type": "@type",
-		"IotaImmutableStorageReceipt": "https://schema.twindev.org/immutable-storage/IotaImmutableStorageReceipt",
-		"EntityStorageImmutableStorageReceipt": "https://schema.twindev.org/immutable-storage/EntityStorageImmutableStorageReceipt",
+		"ImmutableStorageIotaReceipt": "https://schema.twindev.org/immutable-storage/ImmutableStorageIotaReceipt",
+		"ImmutableStorageEntityStorageReceipt": "https://schema.twindev.org/immutable-storage/ImmutableStorageEntityStorageReceipt",
 		"milestoneIndexBooked": {
 			"@id": "twin-immutable-storage:milestoneIndexBooked",
 			"@type": "schema:Integer"
