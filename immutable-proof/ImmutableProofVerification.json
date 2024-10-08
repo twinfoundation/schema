@@ -2,25 +2,8 @@
 	"type": "object",
 	"properties": {
 		"@context": {
-			"anyOf": [
-				{
-					"type": "string",
-					"const": "https://schema.twindev.org/immutable-proof/"
-				},
-				{
-					"type": "array",
-					"minItems": 1,
-					"items": [
-						{
-							"type": "string",
-							"const": "https://schema.twindev.org/immutable-proof/"
-						}
-					],
-					"additionalItems": {
-						"type": "string"
-					}
-				}
-			],
+			"type": "string",
+			"const": "https://schema.twindev.org/immutable-proof/",
 			"description": "JSON-LD Context."
 		},
 		"type": {
