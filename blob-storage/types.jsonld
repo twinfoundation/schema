@@ -1,0 +1,32 @@
+{
+	"@context": {
+		"@version": 1.1,
+		"@protected": true,
+		"twin-blob-storage": "https://schema.twindev.org/blob-storage/",
+		"schema": "http://schema.org/",
+		"id": "@id",
+		"type": "@type",
+		"BlobStorageEntry": "https://schema.twindev.org/blob-storage/BlobStorageEntry",
+		"BlobStorageEntryList": "https://schema.twindev.org/blob-storage/BlobStorageEntryList",
+		"metadata": {
+			"@id": "twin-blob-storage:metadata",
+			"@type": "@json"
+		},
+		"blobSize": {
+			"@id": "twin-blob-storage:blobSize",
+			"@type": "schema:Number"
+		},
+		"fileExtension": {
+			"@id": "twin-blob-storage:fileExtension",
+			"@type": "schema:Text"
+		},
+		"cursor": {
+			"@id": "twin-blob-storage:cursor",
+			"@type": "schema:Text"
+		},
+		"entries": {
+			"@id": "twin-blob-storage:entries",
+			"@container": "@list"
+		}
+	}
+}

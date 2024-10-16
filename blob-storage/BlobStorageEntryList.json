@@ -1,0 +1,46 @@
+{
+	"type": "object",
+	"properties": {
+		"@context": {
+			"anyOf": [
+				{
+					"type": "string",
+					"const": "https://schema.twindev.org/blob-storage/"
+				},
+				{
+					"type": "array",
+					"minItems": 1,
+					"items": [
+						{
+							"type": "string",
+							"const": "https://schema.twindev.org/blob-storage/"
+						}
+					],
+					"additionalItems": {
+						"type": "string"
+					}
+				}
+			],
+			"description": "JSON-LD Context."
+		},
+		"type": {
+			"type": "string",
+			"const": "BlobStorageEntryList",
+			"description": "JSON-LD Type."
+		},
+		"entries": {
+			"type": "array",
+			"items": {
+				"$ref": "https://schema.twindev.org/blob-storage/BlobStorageEntry"
+			},
+			"description": "The list of entries."
+		},
+		"cursor": {
+			"type": "string",
+			"description": "The cursor to get the next chunk of entries."
+		}
+	},
+	"required": ["@context", "type", "entries"],
+	"additionalProperties": false,
+	"description": "Interface describing an blob storage entry list."
+}
