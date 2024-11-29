@@ -15,6 +15,18 @@
 		"milestoneTimestampBooked": {
 			"@id": "twin-immutable-storage:milestoneTimestampBooked",
 			"@type": "schema:Integer"
+		},
+		"transactionId": {
+			"@id": "twin-immutable-storage:transactionId",
+			"@type": "schema:identifier"
+		},
+		"network": {
+			"@id": "twin-immutable-storage:network",
+			"@type": "schema:identifier"
+		},
+		"entityStorageId": {
+			"@id": "twin-immutable-storage:entityStorageId",
+			"@type": "schema:identifier"
 		}
 	}
 }

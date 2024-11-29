@@ -18,9 +18,24 @@
 		"milestoneTimestampBooked": {
 			"type": "number",
 			"description": "The timestamp of the milestone that the item was booked in to the ledger."
+		},
+		"network": {
+			"type": "string",
+			"description": "The network for the receipt."
+		},
+		"transactionId": {
+			"type": "string",
+			"description": "The transaction for the receipt."
 		}
 	},
-	"required": ["@context", "type", "milestoneIndexBooked", "milestoneTimestampBooked"],
+	"required": [
+		"@context",
+		"type",
+		"milestoneIndexBooked",
+		"milestoneTimestampBooked",
+		"network",
+		"transactionId"
+	],
 	"additionalProperties": false,
 	"description": "Receipt for the IOTA Immutable Storage connector."
 }

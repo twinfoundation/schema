@@ -10,9 +10,13 @@
 			"type": "string",
 			"const": "ImmutableStorageEntityStorageReceipt",
 			"description": "JSON-LD Type."
+		},
+		"entityStorageId": {
+			"type": "string",
+			"description": "The entity storage Id."
 		}
 	},
-	"required": ["@context", "type"],
+	"required": ["@context", "type", "entityStorageId"],
 	"additionalProperties": false,
 	"description": "Receipt for the entity storage Immutable Storage connector."
 }
