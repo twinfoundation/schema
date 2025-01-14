@@ -44,9 +44,9 @@
 			"const": "AuditableItemGraphAlias",
 			"description": "JSON-LD Type."
 		},
-		"aliasObject": {
+		"annotationObject": {
 			"$ref": "https://schema.twindev.org/json-ld/JsonLdNodeObject",
-			"description": "The JSON-LD object for the alias."
+			"description": "The JSON-LD annotation object for the alias."
 		},
 		"aliasFormat": {
 			"type": "string",

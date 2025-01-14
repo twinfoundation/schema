@@ -44,9 +44,9 @@
 			"const": "AuditableItemGraphEdge",
 			"description": "JSON-LD Type."
 		},
-		"edgeObject": {
+		"annotationObject": {
 			"$ref": "https://schema.twindev.org/json-ld/JsonLdNodeObject",
-			"description": "The JSON-LD object for the edge."
+			"description": "The JSON-LD annotation object for the edge."
 		},
 		"edgeRelationship": {
 			"type": "string",

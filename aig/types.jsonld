@@ -37,20 +37,12 @@
 			"@id": "twin-aig:vertices",
 			"@container": "@list"
 		},
-		"vertexObject": {
-			"@id": "twin-aig:vertexObject",
+		"annotationObject": {
+			"@id": "twin-aig:annotationObject",
 			"@type": "@json"
 		},
 		"resourceObject": {
 			"@id": "twin-aig:resourceObject",
-			"@type": "@json"
-		},
-		"edgeObject": {
-			"@id": "twin-aig:edgeObject",
-			"@type": "@json"
-		},
-		"aliasObject": {
-			"@id": "twin-aig:aliasObject",
 			"@type": "@json"
 		},
 		"verification": "twin-aig:verification",

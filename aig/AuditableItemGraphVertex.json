@@ -48,9 +48,9 @@
 			"type": "string",
 			"description": "The identity of the node which controls the vertex."
 		},
-		"vertexObject": {
+		"annotationObject": {
 			"$ref": "https://schema.twindev.org/json-ld/JsonLdNodeObject",
-			"description": "The JSON-LD object for the vertex."
+			"description": "The JSON-LD annotation object for the vertex."
 		},
 		"aliases": {
 			"type": "array",
