@@ -7,6 +7,7 @@
 		"id": "@id",
 		"type": "@type",
 		"ImmutableStorageIotaReceipt": "https://schema.twindev.org/immutable-storage/ImmutableStorageIotaReceipt",
+		"ImmutableStorageIotaStardustReceipt": "https://schema.twindev.org/immutable-storage/ImmutableStorageIotaStardustReceipt",
 		"ImmutableStorageEntityStorageReceipt": "https://schema.twindev.org/immutable-storage/ImmutableStorageEntityStorageReceipt",
 		"milestoneIndexBooked": {
 			"@id": "twin-immutable-storage:milestoneIndexBooked",
