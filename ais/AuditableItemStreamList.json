@@ -28,19 +28,19 @@
 			"const": "AuditableItemStreamList",
 			"description": "JSON-LD Type."
 		},
-		"streams": {
+		"itemStreams": {
 			"type": "array",
 			"items": {
 				"$ref": "https://schema.twindev.org/ais/AuditableItemStream"
 			},
-			"description": "The streams."
+			"description": "The item streams."
 		},
 		"cursor": {
 			"type": "string",
 			"description": "Cursor for the next chunk of streams."
 		}
 	},
-	"required": ["@context", "type", "streams"],
+	"required": ["@context", "type", "itemStreams"],
 	"additionalProperties": false,
 	"description": "Interface describing an auditable item stream list."
 }
