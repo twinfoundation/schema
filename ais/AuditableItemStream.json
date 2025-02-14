@@ -17,7 +17,7 @@
 						}
 					],
 					"additionalItems": {
-						"type": "string"
+						"$ref": "https://schema.twindev.org/json-ld/JsonLdContextDefinitionElement"
 					}
 				}
 			],
@@ -48,7 +48,7 @@
 			"type": "string",
 			"description": "The identity of the user who created the stream."
 		},
-		"streamObject": {
+		"annotationObject": {
 			"$ref": "https://schema.twindev.org/json-ld/JsonLdNodeObject",
 			"description": "The object to associate with the entry as JSON-LD."
 		},

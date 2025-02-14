@@ -17,7 +17,7 @@
 						}
 					],
 					"additionalItems": {
-						"type": "string"
+						"$ref": "https://schema.twindev.org/json-ld/JsonLdContextDefinitionElement"
 					}
 				}
 			],
@@ -58,7 +58,7 @@
 		},
 		"proofId": {
 			"type": "string",
-			"description": "The if of the immutable proof."
+			"description": "The id of the immutable proof."
 		},
 		"verification": {
 			"$ref": "https://schema.twindev.org/immutable-proof/ImmutableProofVerification",
