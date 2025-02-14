@@ -1,0 +1,35 @@
+{
+	"@context": {
+		"@version": 1.1,
+		"@protected": true,
+		"twin-documents": "https://schema.twindev.org/documents/",
+		"schema": "http://schema.org/",
+		"id": "@id",
+		"type": "@type",
+		"Document": "twin-documents:Document",
+		"documentIdFormat": {
+			"@id": "twin-documents:documentIdFormat",
+			"@type": "schema:Text"
+		},
+		"documentCode": {
+			"@id": "twin-documents:documentCode",
+			"@type": "schema:identifier"
+		},
+		"documentRevision": {
+			"@id": "twin-documents:documentRevision",
+			"@type": "schema:Integer"
+		},
+		"annotationObject": {
+			"@id": "twin-documents:annotationObject",
+			"@type": "@json"
+		},
+		"blobStorageId": {
+			"@id": "twin-documents:blobStorageId",
+			"@type": "schema:identifier"
+		},
+		"attestationId": {
+			"@id": "twin-documents:attestationId",
+			"@type": "schema:identifier"
+		}
+	}
+}

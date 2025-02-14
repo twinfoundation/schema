@@ -296,6 +296,39 @@
 				}
 			],
 			"destination": "https://schema.twindev.org/blob-storage/:path*.json"
+		},
+		{
+			"source": "/documents/",
+			"has": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "text/html.*"
+				}
+			],
+			"destination": "https://schema.twindev.org/documents/types.html"
+		},
+		{
+			"source": "/documents/",
+			"has": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "application/ld\\+json.*"
+				}
+			],
+			"destination": "https://schema.twindev.org/documents/types.jsonld"
+		},
+		{
+			"source": "/documents/:path*",
+			"missing": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "application/ld\\+json.*"
+				}
+			],
+			"destination": "https://schema.twindev.org/documents/:path*.json"
 		}
 	]
 }
