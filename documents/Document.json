@@ -37,7 +37,7 @@
 			"description": "The format of the document id."
 		},
 		"documentCode": {
-			"$ref": "https://schema.twindev.org/documents/UneceDocumentCodes",
+			"$ref": "https://vocabulary.uncefact.org/DocumentCodeList",
 			"description": "The code for the document type."
 		},
 		"documentRevision": {
@@ -52,21 +52,25 @@
 			"type": "string",
 			"description": "The blob storage id for the document."
 		},
+		"blobStorageObject": {
+			"$ref": "https://schema.twindev.org/blob-storage/BlobStorageEntry",
+			"description": "The additional JSON-LD for blob storage if it was requested."
+		},
 		"attestationId": {
 			"type": "string",
 			"description": "The attestation for the document if one was created."
 		},
+		"attestationObject": {
+			"$ref": "https://schema.twindev.org/attestation/AttestationInformation",
+			"description": "The additional JSON-LD for attestation storage if it was requested."
+		},
 		"dateCreated": {
 			"type": "string",
-			"description": "The date/time of when the element was created."
-		},
-		"dateModified": {
-			"type": "string",
-			"description": "The date/time of when the element was modified."
+			"description": "The date/time of when the document was created."
 		},
 		"dateDeleted": {
 			"type": "string",
-			"description": "The date/time of when the element was deleted, as we never actually remove items."
+			"description": "The date/time of when the document was deleted, as we never actually remove items, just flag them."
 		}
 	},
 	"required": ["@context", "id", "type", "documentCode", "blobStorageId", "dateCreated"],
