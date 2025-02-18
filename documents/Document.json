@@ -42,7 +42,7 @@
 		},
 		"documentRevision": {
 			"type": "number",
-			"description": "The revision of the document."
+			"description": "The revision of the document as a 0 based index."
 		},
 		"annotationObject": {
 			"$ref": "https://schema.twindev.org/json-ld/JsonLdNodeObject",
@@ -51,6 +51,10 @@
 		"blobStorageId": {
 			"type": "string",
 			"description": "The blob storage id for the document."
+		},
+		"blobHash": {
+			"type": "string",
+			"description": "The hash of the blob data."
 		},
 		"blobStorageObject": {
 			"$ref": "https://schema.twindev.org/blob-storage/BlobStorageEntry",
@@ -77,7 +81,15 @@
 			"description": "The date/time of when the document was deleted, as we never actually remove items."
 		}
 	},
-	"required": ["@context", "id", "type", "documentCode", "blobStorageId", "dateCreated"],
+	"required": [
+		"@context",
+		"id",
+		"type",
+		"documentCode",
+		"blobStorageId",
+		"blobHash",
+		"dateCreated"
+	],
 	"additionalProperties": false,
 	"description": "Interface describing a document."
 }

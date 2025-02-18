@@ -33,7 +33,7 @@
 						}
 					],
 					"additionalItems": {
-						"type": "string"
+						"$ref": "https://schema.twindev.org/json-ld/JsonLdContextDefinitionElement"
 					}
 				}
 			],
@@ -53,7 +53,7 @@
 			"description": "The relationship between the two vertices."
 		}
 	},
-	"required": ["@context", "dateCreated", "edgeRelationship", "id", "type"],
+	"required": ["@context", "id", "type", "edgeRelationship"],
 	"additionalProperties": false,
 	"description": "Interface describing an edge between two vertices in an auditable item graph."
 }

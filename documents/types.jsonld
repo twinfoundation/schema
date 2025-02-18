@@ -30,6 +30,10 @@
 			"@id": "twin-documents:blobStorageId",
 			"@type": "schema:identifier"
 		},
+		"blobHash": {
+			"@id": "twin-documents:blobHash",
+			"@type": "schema:Text"
+		},
 		"blobStorageObject": {
 			"@id": "twin-documents:blobStorageObject",
 			"@type": "twin-blob-storage:BlobStorageEntry"

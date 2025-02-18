@@ -33,7 +33,7 @@
 						}
 					],
 					"additionalItems": {
-						"type": "string"
+						"$ref": "https://schema.twindev.org/json-ld/JsonLdContextDefinitionElement"
 					}
 				}
 			],
@@ -53,7 +53,7 @@
 			"description": "The format of the id in the alias."
 		}
 	},
-	"required": ["@context", "dateCreated", "id", "type"],
+	"required": ["@context", "id", "type"],
 	"additionalProperties": false,
 	"description": "Interface describing an alias for a vertex."
 }
