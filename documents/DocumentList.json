@@ -1,0 +1,46 @@
+{
+	"type": "object",
+	"properties": {
+		"@context": {
+			"anyOf": [
+				{
+					"type": "string",
+					"const": "https://schema.twindev.org/documents/"
+				},
+				{
+					"type": "array",
+					"minItems": 1,
+					"items": [
+						{
+							"type": "string",
+							"const": "https://schema.twindev.org/documents/"
+						}
+					],
+					"additionalItems": {
+						"$ref": "https://schema.twindev.org/json-ld/JsonLdContextDefinitionElement"
+					}
+				}
+			],
+			"description": "JSON-LD Context."
+		},
+		"type": {
+			"type": "string",
+			"const": "DocumentList",
+			"description": "JSON-LD Type."
+		},
+		"documents": {
+			"type": "array",
+			"items": {
+				"$ref": "https://schema.twindev.org/documents/Document"
+			},
+			"description": "The list of documents."
+		},
+		"cursor": {
+			"type": "string",
+			"description": "The cursor to get the next chunk of documents."
+		}
+	},
+	"required": ["@context", "type", "documents"],
+	"additionalProperties": false,
+	"description": "Interface describing a document entry list."
+}

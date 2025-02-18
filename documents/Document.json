@@ -68,9 +68,13 @@
 			"type": "string",
 			"description": "The date/time of when the document was created."
 		},
+		"dateModified": {
+			"type": "string",
+			"description": "The date/time of when the document was modified."
+		},
 		"dateDeleted": {
 			"type": "string",
-			"description": "The date/time of when the document was deleted, as we never actually remove items, just flag them."
+			"description": "The date/time of when the document was deleted, as we never actually remove items."
 		}
 	},
 	"required": ["@context", "id", "type", "documentCode", "blobStorageId", "dateCreated"],
