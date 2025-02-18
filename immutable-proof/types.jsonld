@@ -15,14 +15,6 @@
 			"@id": "twin-immutable-proof:proofObjectHash",
 			"@type": "schema:Text"
 		},
-		"nodeIdentity": {
-			"@id": "twin-immutable-proof:nodeIdentifier",
-			"@type": "schema:identifier"
-		},
-		"userIdentity": {
-			"@id": "twin-immutable-proof:userIdentity",
-			"@type": "schema:Text"
-		},
 		"proof": {
 			"@id": "https://w3id.org/security#proof",
 			"@type": "@id",

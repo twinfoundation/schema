@@ -1,6 +1,39 @@
 {
 	"rewrites": [
 		{
+			"source": "/common/",
+			"has": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "text/html.*"
+				}
+			],
+			"destination": "https://schema.twindev.org/common/types.html"
+		},
+		{
+			"source": "/common/",
+			"has": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "application/ld\\+json.*"
+				}
+			],
+			"destination": "https://schema.twindev.org/common/types.jsonld"
+		},
+		{
+			"source": "/common/:path*",
+			"missing": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "application/ld\\+json.*"
+				}
+			],
+			"destination": "https://schema.twindev.org/common/:path*.json"
+		},
+		{
 			"source": "/attestation/",
 			"has": [
 				{
