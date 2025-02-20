@@ -22,10 +22,6 @@
 			"@id": "twin-documents:documentRevision",
 			"@type": "schema:Integer"
 		},
-		"annotationObject": {
-			"@id": "twin-documents:annotationObject",
-			"@type": "@json"
-		},
 		"blobStorageId": {
 			"@id": "twin-documents:blobStorageId",
 			"@type": "schema:identifier"

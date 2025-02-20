@@ -13,6 +13,17 @@
 		"userIdentity": {
 			"@id": "twin-common:userIdentity",
 			"@type": "schema:identifier"
+		},
+		"cursor": {
+			"@id": "twin-common:cursor",
+			"@type": "schema:Text"
+		},
+		"annotationObject": {
+			"@id": "twin-common:annotationObject"
+		},
+		"verified": {
+			"@id": "twin-common:verified",
+			"@type": "schema:Boolean"
 		}
 	}
 }

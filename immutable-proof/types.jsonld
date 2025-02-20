@@ -3,6 +3,7 @@
 		"@version": 1.1,
 		"@protected": true,
 		"twin-immutable-proof": "https://schema.twindev.org/immutable-proof/",
+		"twin-common": "https://schema.twindev.org/common/",
 		"id": "@id",
 		"type": "@type",
 		"ImmutableProof": "https://schema.twindev.org/immutable-proof/ImmutableProof",
@@ -21,10 +22,6 @@
 			"@container": "@graph"
 		},
 		"immutableReceipt": "twin-immutable-proof:immutableReceipt",
-		"verified": {
-			"@id": "twin-immutable-proof:verified",
-			"@type": "schema:Boolean"
-		},
 		"failure": {
 			"@id": "twin-immutable-proof:failure",
 			"@type": "schema:Text"

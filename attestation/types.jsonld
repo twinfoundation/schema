@@ -3,6 +3,7 @@
 		"@version": 1.1,
 		"@protected": true,
 		"twin-attestation": "https://schema.twindev.org/attestation/",
+		"twin-common": "https://schema.twindev.org/common/",
 		"schema": "http://schema.org/",
 		"id": "@id",
 		"type": "@type",
@@ -20,15 +21,8 @@
 			"@id": "twin-attestation:holderIdentity",
 			"@type": "schema:identifier"
 		},
-		"attestationObject": {
-			"@id": "twin-attestation:attestationObject",
-			"@type": "@json"
-		},
+		"attestationObject": "twin-attestation:attestationObject",
 		"proof": "twin-attestation:proof",
-		"verified": {
-			"@id": "twin-attestation:verified",
-			"@type": "schema:Boolean"
-		},
 		"verificationFailure": {
 			"@id": "twin-attestation:verificationFailure",
 			"@type": "schema:Text"

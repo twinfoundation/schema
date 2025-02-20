@@ -2,25 +2,21 @@
 	"type": "object",
 	"properties": {
 		"@context": {
-			"anyOf": [
+			"type": "array",
+			"minItems": 2,
+			"items": [
 				{
 					"type": "string",
 					"const": "https://schema.twindev.org/blob-storage/"
 				},
 				{
-					"type": "array",
-					"minItems": 1,
-					"items": [
-						{
-							"type": "string",
-							"const": "https://schema.twindev.org/blob-storage/"
-						}
-					],
-					"additionalItems": {
-						"type": "string"
-					}
+					"type": "string",
+					"const": "https://schema.twindev.org/common/"
 				}
 			],
+			"additionalItems": {
+				"$ref": "https://schema.twindev.org/json-ld/JsonLdContextDefinitionElement"
+			},
 			"description": "JSON-LD Context."
 		},
 		"type": {
@@ -44,6 +40,10 @@
 			"type": "number",
 			"description": "The size of the data in the blob."
 		},
+		"blobHash": {
+			"type": "string",
+			"description": "The hash of the data in the blob."
+		},
 		"encodingFormat": {
 			"type": "string",
 			"description": "The mime type for the blob."
@@ -52,16 +52,16 @@
 			"type": "string",
 			"description": "The extension."
 		},
-		"metadata": {
+		"annotationObject": {
 			"$ref": "https://schema.twindev.org/json-ld/JsonLdNodeObject",
-			"description": "The metadata for the blob as JSON-LD."
+			"description": "The annotation object for the blob as JSON-LD."
 		},
 		"blob": {
 			"type": "string",
-			"description": "The blob in base64 format, if the includeContent flag was set in the request."
+			"description": "The blob in base64 format, included if the includeContent flag was set in the request."
 		}
 	},
-	"required": ["@context", "type", "id", "dateCreated", "blobSize"],
+	"required": ["@context", "type", "id", "dateCreated", "blobSize", "blobHash"],
 	"additionalProperties": false,
 	"description": "Interface describing a blob storage entry."
 }

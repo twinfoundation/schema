@@ -24,13 +24,8 @@
 			"@id": "twin-ais:entryObjects",
 			"@container": "@list"
 		},
-		"annotationObject": {
-			"@id": "twin-ais:annotationObject",
-			"@type": "@json"
-		},
 		"entryObject": {
-			"@id": "twin-ais:entryObject",
-			"@type": "@json"
+			"@id": "twin-ais:entryObject"
 		},
 		"verification": "twin-ais:verification",
 		"index": {
@@ -44,10 +39,6 @@
 		"proofId": {
 			"@id": "twin-ais:proofId",
 			"@type": "schema:identifier"
-		},
-		"cursor": {
-			"@id": "twin-ais:cursor",
-			"@type": "schema:Text"
 		},
 		"state": {
 			"@id": "twin-ais:state",

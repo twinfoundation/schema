@@ -3,6 +3,7 @@
 		"@version": 1.1,
 		"@protected": true,
 		"twin-aig": "https://schema.twindev.org/aig/",
+		"twin-common": "https://schema.twindev.org/common/",
 		"schema": "http://schema.org/",
 		"id": "@id",
 		"type": "@type",
@@ -36,13 +37,8 @@
 			"@id": "twin-aig:vertices",
 			"@container": "@list"
 		},
-		"annotationObject": {
-			"@id": "twin-aig:annotationObject",
-			"@type": "@json"
-		},
 		"resourceObject": {
-			"@id": "twin-aig:resourceObject",
-			"@type": "@json"
+			"@id": "twin-aig:resourceObject"
 		},
 		"verification": "twin-aig:verification",
 		"edgeRelationship": {
@@ -68,6 +64,10 @@
 		"patchValue": {
 			"@id": "twin-aig:patchValue",
 			"@type": "@json"
+		},
+		"proofId": {
+			"@id": "twin-aig:proofId",
+			"@type": "schema:identifier"
 		}
 	}
 }
