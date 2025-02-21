@@ -3,8 +3,6 @@
 		"@version": 1.1,
 		"@protected": true,
 		"twin-documents": "https://schema.twindev.org/documents/",
-		"twin-blob-storage": "https://schema.twindev.org/blob-storage/",
-		"twin-attestation": "https://schema.twindev.org/attestation/",
 		"schema": "http://schema.org/",
 		"id": "@id",
 		"type": "@type",
@@ -26,21 +24,17 @@
 			"@id": "twin-documents:blobStorageId",
 			"@type": "schema:identifier"
 		},
-		"blobHash": {
-			"@id": "twin-documents:blobHash",
-			"@type": "schema:Text"
+		"blobStorageEntry": {
+			"@id": "twin-documents:blobStorageEntry",
+			"@type": "@json"
 		},
-		"blobStorageObject": {
-			"@id": "twin-documents:blobStorageObject",
-			"@type": "twin-blob-storage:BlobStorageEntry"
+		"attestationInformation": {
+			"@id": "twin-documents:attestationInformation",
+			"@type": "@json"
 		},
 		"attestationId": {
 			"@id": "twin-documents:attestationId",
 			"@type": "schema:identifier"
-		},
-		"attestationObject": {
-			"@id": "twin-documents:attestationObject",
-			"@type": "twin-attestation:AttestationInformation"
 		},
 		"documents": {
 			"@id": "twin-documents:documents",

@@ -12,10 +12,6 @@
 			"@id": "twin-blob-storage:blobSize",
 			"@type": "schema:Number"
 		},
-		"blobHash": {
-			"@id": "twin-blob-storage:blobHash",
-			"@type": "schema:Text"
-		},
 		"fileExtension": {
 			"@id": "twin-blob-storage:fileExtension",
 			"@type": "schema:Text"

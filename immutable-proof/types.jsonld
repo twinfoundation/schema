@@ -21,7 +21,10 @@
 			"@type": "@id",
 			"@container": "@graph"
 		},
-		"immutableReceipt": "twin-immutable-proof:immutableReceipt",
+		"immutableReceipt": {
+			"@id": "twin-immutable-proof:immutableReceipt",
+			"@type": "@json"
+		},
 		"failure": {
 			"@id": "twin-immutable-proof:failure",
 			"@type": "schema:Text"

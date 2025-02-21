@@ -38,9 +38,12 @@
 			"@container": "@list"
 		},
 		"resourceObject": {
-			"@id": "twin-aig:resourceObject"
+			"@id": "twin-aig:resourceObject",
+			"@type": "@json"
 		},
-		"verification": "twin-aig:verification",
+		"verification": {
+			"@id": "twin-aig:verification"
+		},
 		"edgeRelationship": {
 			"@id": "twin-aig:edgeRelationship",
 			"@type": "schema:Text"

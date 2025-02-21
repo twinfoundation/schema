@@ -25,7 +25,8 @@
 			"@container": "@list"
 		},
 		"entryObject": {
-			"@id": "twin-ais:entryObject"
+			"@id": "twin-ais:entryObject",
+			"@type": "@json"
 		},
 		"verification": "twin-ais:verification",
 		"index": {

@@ -21,7 +21,6 @@
 			"@id": "twin-attestation:holderIdentity",
 			"@type": "schema:identifier"
 		},
-		"attestationObject": "twin-attestation:attestationObject",
 		"proof": "twin-attestation:proof",
 		"verificationFailure": {
 			"@id": "twin-attestation:verificationFailure",

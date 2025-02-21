@@ -19,11 +19,20 @@
 			"@type": "schema:Text"
 		},
 		"annotationObject": {
-			"@id": "twin-common:annotationObject"
+			"@id": "twin-common:annotationObject",
+			"@type": "@json"
+		},
+		"attestationObject": {
+			"@id": "twin-common:attestationObject",
+			"@type": "@json"
 		},
 		"verified": {
 			"@id": "twin-common:verified",
 			"@type": "schema:Boolean"
+		},
+		"blobHash": {
+			"@id": "twin-common:blobHash",
+			"@type": "schema:Text"
 		}
 	}
 }

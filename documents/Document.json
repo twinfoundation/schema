@@ -2,25 +2,25 @@
 	"type": "object",
 	"properties": {
 		"@context": {
-			"anyOf": [
+			"type": "array",
+			"minItems": 3,
+			"items": [
 				{
 					"type": "string",
 					"const": "https://schema.twindev.org/documents/"
 				},
 				{
-					"type": "array",
-					"minItems": 1,
-					"items": [
-						{
-							"type": "string",
-							"const": "https://schema.twindev.org/documents/"
-						}
-					],
-					"additionalItems": {
-						"$ref": "https://schema.twindev.org/json-ld/JsonLdContextDefinitionElement"
-					}
+					"type": "string",
+					"const": "https://schema.twindev.org/common/"
+				},
+				{
+					"type": "string",
+					"const": "https://schema.org"
 				}
 			],
+			"additionalItems": {
+				"$ref": "https://schema.twindev.org/json-ld/JsonLdContextDefinitionElement"
+			},
 			"description": "JSON-LD Context."
 		},
 		"id": {
@@ -56,7 +56,7 @@
 			"type": "string",
 			"description": "The hash of the blob data."
 		},
-		"blobStorageObject": {
+		"blobStorageEntry": {
 			"$ref": "https://schema.twindev.org/blob-storage/BlobStorageEntry",
 			"description": "The additional JSON-LD for blob storage if it was requested."
 		},
@@ -64,7 +64,7 @@
 			"type": "string",
 			"description": "The attestation for the document if one was created."
 		},
-		"attestationObject": {
+		"attestationInformation": {
 			"$ref": "https://schema.twindev.org/attestation/AttestationInformation",
 			"description": "The additional JSON-LD for attestation storage if it was requested."
 		},
@@ -86,6 +86,7 @@
 		"id",
 		"type",
 		"documentCode",
+		"documentRevision",
 		"blobStorageId",
 		"blobHash",
 		"dateCreated"
