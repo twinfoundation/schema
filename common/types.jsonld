@@ -23,8 +23,7 @@
 			"@type": "@json"
 		},
 		"attestationObject": {
-			"@id": "twin-common:attestationObject",
-			"@type": "@json"
+			"@id": "twin-common:attestationObject"
 		},
 		"verified": {
 			"@id": "twin-common:verified",

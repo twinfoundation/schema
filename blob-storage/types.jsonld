@@ -19,6 +19,9 @@
 		"entries": {
 			"@id": "twin-blob-storage:entries",
 			"@container": "@list"
+		},
+		"metadata": {
+			"@id": "twin-blob-storage:metadata"
 		}
 	}
 }

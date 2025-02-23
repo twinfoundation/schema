@@ -25,12 +25,10 @@
 			"@type": "schema:identifier"
 		},
 		"blobStorageEntry": {
-			"@id": "twin-documents:blobStorageEntry",
-			"@type": "@json"
+			"@id": "twin-documents:blobStorageEntry"
 		},
 		"attestationInformation": {
-			"@id": "twin-documents:attestationInformation",
-			"@type": "@json"
+			"@id": "twin-documents:attestationInformation"
 		},
 		"attestationId": {
 			"@id": "twin-documents:attestationId",
