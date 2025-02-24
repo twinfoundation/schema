@@ -23,14 +23,18 @@
 			},
 			"description": "JSON-LD Context."
 		},
-		"id": {
-			"type": "string",
-			"description": "The id of the document."
-		},
 		"type": {
 			"type": "string",
 			"const": "Document",
 			"description": "JSON-LD Type."
+		},
+		"id": {
+			"type": "string",
+			"description": "The full id of the document."
+		},
+		"documentId": {
+			"type": "string",
+			"description": "The id of the document."
 		},
 		"documentIdFormat": {
 			"type": "string",
@@ -79,12 +83,24 @@
 		"dateDeleted": {
 			"type": "string",
 			"description": "The date/time of when the document was deleted, as we never actually remove items."
+		},
+		"revisions": {
+			"type": "array",
+			"items": {
+				"$ref": "https://schema.twindev.org/documents/Document"
+			},
+			"description": "The previous revisions of the document."
+		},
+		"revisionCursor": {
+			"type": "string",
+			"description": "The cursor to get the next chunk of revisions."
 		}
 	},
 	"required": [
 		"@context",
-		"id",
 		"type",
+		"id",
+		"documentId",
 		"documentCode",
 		"documentRevision",
 		"blobStorageId",
