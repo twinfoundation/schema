@@ -1,0 +1,61 @@
+{
+	"type": "object",
+	"properties": {
+		"@context": {
+			"type": "array",
+			"minItems": 3,
+			"items": [
+				{
+					"type": "string",
+					"const": "https://schema.twindev.org/documents/"
+				},
+				{
+					"type": "string",
+					"const": "https://schema.twindev.org/common/"
+				},
+				{
+					"type": "string",
+					"const": "https://schema.org"
+				}
+			],
+			"maxItems": 3,
+			"description": "JSON-LD Context."
+		},
+		"type": {
+			"type": "string",
+			"const": "DocumentAttestation",
+			"description": "JSON-LD Type."
+		},
+		"documentId": {
+			"type": "string",
+			"description": "The id of the document."
+		},
+		"documentCode": {
+			"$ref": "https://vocabulary.uncefact.org/DocumentCodeList",
+			"description": "The code for the document type."
+		},
+		"documentRevision": {
+			"type": "number",
+			"description": "The revision of the document as a 0 based index."
+		},
+		"dateCreated": {
+			"type": "string",
+			"description": "The date/time of when the document was created."
+		},
+		"blobHash": {
+			"type": "string",
+			"description": "The hash of the document being attested."
+		}
+	},
+	"required": [
+		"@context",
+		"type",
+		"documentId",
+		"documentCode",
+		"documentRevision",
+		"dateCreated",
+		"blobHash"
+	],
+	"additionalProperties": false,
+	"description": "Interface describing a document attestation."
+}

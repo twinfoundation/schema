@@ -84,6 +84,14 @@
 			"type": "string",
 			"description": "The date/time of when the document was deleted, as we never actually remove items."
 		},
+		"nodeIdentity": {
+			"type": "string",
+			"description": "The node which added the document to the graph."
+		},
+		"userIdentity": {
+			"type": "string",
+			"description": "The user who added the document to the graph."
+		},
 		"revisions": {
 			"type": "array",
 			"items": {
@@ -105,7 +113,9 @@
 		"documentRevision",
 		"blobStorageId",
 		"blobHash",
-		"dateCreated"
+		"dateCreated",
+		"nodeIdentity",
+		"userIdentity"
 	],
 	"additionalProperties": false,
 	"description": "Interface describing a document."
