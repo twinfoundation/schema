@@ -1,0 +1,76 @@
+{
+	"type": "object",
+	"properties": {
+		"@context": {
+			"anyOf": [
+				{
+					"type": "string",
+					"const": "https://www.w3.org/ns/cid/v1"
+				},
+				{
+					"type": "string",
+					"const": "https://w3id.org/security/multikey/v1"
+				},
+				{
+					"type": "array",
+					"minItems": 1,
+					"items": [
+						{
+							"type": "string",
+							"const": "https://www.w3.org/ns/cid/v1"
+						}
+					],
+					"additionalItems": {
+						"$ref": "https://schema.twindev.org/json-ld/JsonLdContextDefinitionElement"
+					}
+				},
+				{
+					"type": "array",
+					"minItems": 1,
+					"items": [
+						{
+							"type": "string",
+							"const": "https://w3id.org/security/multikey/v1"
+						}
+					],
+					"additionalItems": {
+						"$ref": "https://schema.twindev.org/json-ld/JsonLdContextDefinitionElement"
+					}
+				}
+			],
+			"description": "JSON-LD Context."
+		},
+		"id": {
+			"type": "string",
+			"description": "The id of the entry."
+		},
+		"type": {
+			"type": "string",
+			"const": "Multikey",
+			"description": "The type of the entry."
+		},
+		"controller": {
+			"type": "string",
+			"description": "The controller for the entry."
+		},
+		"publicKeyMultibase": {
+			"type": "string",
+			"description": "The public key for the entry."
+		},
+		"secretKeyMultibase": {
+			"type": "string",
+			"description": "The secret key for the entry."
+		},
+		"expires": {
+			"type": "string",
+			"description": "The date the entry expires."
+		},
+		"revoked": {
+			"type": "string",
+			"description": "The date the entry was revoked."
+		}
+	},
+	"required": ["type", "publicKeyMultibase"],
+	"additionalProperties": false,
+	"description": "Interface describing a Multikey. https://www.w3.org/TR/cid-1.0/"
+}

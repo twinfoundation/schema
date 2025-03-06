@@ -5,11 +5,7 @@
 			"anyOf": [
 				{
 					"type": "string",
-					"const": "https://w3id.org/security/data-integrity/v2"
-				},
-				{
-					"type": "string",
-					"const": "https://w3id.org/security/suites/jws-2020/v1"
+					"const": "https://www.w3.org/ns/credentials/v2"
 				},
 				{
 					"type": "array",
@@ -17,20 +13,7 @@
 					"items": [
 						{
 							"type": "string",
-							"const": "https://w3id.org/security/data-integrity/v2"
-						}
-					],
-					"additionalItems": {
-						"$ref": "https://schema.twindev.org/json-ld/JsonLdContextDefinitionElement"
-					}
-				},
-				{
-					"type": "array",
-					"minItems": 1,
-					"items": [
-						{
-							"type": "string",
-							"const": "https://w3id.org/security/suites/jws-2020/v1"
+							"const": "https://www.w3.org/ns/credentials/v2"
 						}
 					],
 					"additionalItems": {
@@ -42,6 +25,7 @@
 		},
 		"type": {
 			"type": "string",
+			"const": "DataIntegrityProof",
 			"description": "JSON-LD Type."
 		},
 		"cryptosuite": {
@@ -116,7 +100,7 @@
 			"description": "Use of this field is to increase privacy by decreasing linkability that is the result of deterministically generated signatures."
 		}
 	},
-	"required": ["type", "cryptosuite", "proofPurpose", "proofValue"],
+	"required": ["type", "cryptosuite", "proofPurpose"],
 	"additionalProperties": false,
 	"description": "Interface describing a did proof. https://www.w3.org/TR/vc-data-integrity/"
 }

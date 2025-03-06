@@ -36,12 +36,8 @@
 			"type": "string",
 			"description": "The id of the object associated with the proof."
 		},
-		"proofObjectHash": {
-			"type": "string",
-			"description": "The hash of the object associated with the proof."
-		},
 		"proof": {
-			"$ref": "https://schema.twindev.org/did/DidProof",
+			"$ref": "https://schema.twindev.org/did/DataIntegrityProof",
 			"description": "The proof which can be undefined if it has not yet been issued."
 		},
 		"immutableReceipt": {
@@ -49,7 +45,7 @@
 			"description": "The immutable receipt detail for where the proof is stored."
 		}
 	},
-	"required": ["@context", "type", "id", "userIdentity", "proofObjectHash"],
+	"required": ["@context", "type", "id", "userIdentity"],
 	"additionalProperties": false,
 	"description": "Interface describing an immutable proof state."
 }

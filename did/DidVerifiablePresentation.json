@@ -17,7 +17,7 @@
 						}
 					],
 					"additionalItems": {
-						"type": "string"
+						"$ref": "https://schema.twindev.org/json-ld/JsonLdContextDefinitionElement"
 					}
 				}
 			],
@@ -28,10 +28,17 @@
 			"description": "Provide a unique identifier for the presentation."
 		},
 		"type": {
-			"type": "array",
-			"items": {
-				"type": "string"
-			},
+			"anyOf": [
+				{
+					"type": "string"
+				},
+				{
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				}
+			],
 			"description": "The types of the data stored in the verifiable credential."
 		},
 		"verifiableCredential": {
@@ -55,19 +62,19 @@
 		"proof": {
 			"anyOf": [
 				{
-					"$ref": "https://schema.twindev.org/did/DidProof"
+					"$ref": "https://schema.twindev.org/did/Proof"
 				},
 				{
 					"type": "array",
 					"items": {
-						"$ref": "https://schema.twindev.org/did/DidProof"
+						"$ref": "https://schema.twindev.org/did/Proof"
 					}
 				}
 			],
 			"description": "Proofs that the verifiable presentation is valid. Optional if a different proof method is used, such as JWT."
 		}
 	},
-	"required": ["@context", "type", "verifiableCredential"],
+	"required": ["@context", "type"],
 	"additionalProperties": false,
 	"description": "Interface describing a verifiable presentation."
 }

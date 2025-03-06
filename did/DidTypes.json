@@ -3,10 +3,10 @@
 	"enum": [
 		"VerifiableCredential",
 		"VerifiablePresentation",
-		"DataIntegrityProof",
 		"Ed25519VerificationKey2020",
 		"JsonWebKey2020",
-		"LinkedDomains"
+		"LinkedDomains",
+		"Multikey"
 	],
 	"description": "The types for DIDs."
 }

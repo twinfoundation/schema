@@ -1,3 +1,12 @@
 {
-	"words": ["cryptosuite", "eddsa", "jsonld", "linkability", "Multibase", "rdfc", "Stiftung"]
+	"words": [
+		"cryptosuite",
+		"eddsa",
+		"jsonld",
+		"linkability",
+		"Multibase",
+		"Multikey",
+		"rdfc",
+		"Stiftung"
+	]
 }

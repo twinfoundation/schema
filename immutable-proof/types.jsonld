@@ -12,10 +12,6 @@
 			"@id": "twin-immutable-proof:proofObjectId",
 			"@type": "schema:Text"
 		},
-		"proofObjectHash": {
-			"@id": "twin-immutable-proof:proofObjectHash",
-			"@type": "schema:Text"
-		},
 		"proof": {
 			"@id": "https://w3id.org/security#proof",
 			"@type": "@id",
