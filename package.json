@@ -13,7 +13,8 @@
 		"lint:format": "prettier --config .prettierrc --check .",
 		"lint:markdown": "markdownlint **/*.md --ignore **/node_modules/** --ignore **/docs/reference/**",
 		"lint:spell": "cspell ** --no-progress",
-		"lint": "npm run lint:format && npm run lint:markdown && npm run lint:spell"
+		"lint": "npm run lint:format && npm run lint:markdown && npm run lint:spell",
+		"dist": "echo There is no dist in this package"
 	},
 	"engines": {
 		"node": ">=20.0.0"
