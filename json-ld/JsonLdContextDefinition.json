@@ -2,22 +2,23 @@
 	"type": "object",
 	"properties": {
 		"@base": {
-			"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
+			"type": ["string", "null"]
 		},
 		"@direction": {
-			"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
+			"type": ["string", "null"],
+			"enum": ["ltr", "rtl", null]
 		},
 		"@import": {
-			"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
+			"type": "string"
 		},
 		"@language": {
-			"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
+			"type": "string"
 		},
 		"@propagate": {
-			"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
+			"type": "boolean"
 		},
 		"@protected": {
-			"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
+			"type": "boolean"
 		},
 		"@type": {
 			"type": "object",
@@ -27,17 +28,18 @@
 					"const": "@set"
 				},
 				"@protected": {
-					"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
+					"type": "boolean"
 				}
 			},
 			"required": ["@container"],
 			"additionalProperties": false
 		},
 		"@version": {
-			"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
+			"type": "string",
+			"const": "1.1"
 		},
 		"@vocab": {
-			"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
+			"type": ["string", "null"]
 		}
 	},
 	"additionalProperties": {

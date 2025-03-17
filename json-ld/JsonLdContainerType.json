@@ -1,4 +1,5 @@
 {
 	"type": "string",
-	"enum": ["@language", "@index", "@id", "@graph", "@type"]
+	"enum": ["@language", "@index", "@id", "@graph", "@type"],
+	"description": "Helper Types"
 }

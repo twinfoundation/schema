@@ -2,23 +2,13 @@
 	"type": "object",
 	"properties": {
 		"@context": {
-			"$ref": "https://schema.twindev.org/json-ld/JsonLdContextDefinitionRoot"
+			"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
 		},
 		"@id": {
-			"anyOf": [
-				{
-					"type": "string"
-				},
-				{
-					"type": "array",
-					"items": {
-						"type": "string"
-					}
-				}
-			]
+			"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
 		},
 		"@included": {
-			"$ref": "https://schema.twindev.org/json-ld/JsonLdIncludedBlock"
+			"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
 		},
 		"@graph": {
 			"anyOf": [
@@ -49,12 +39,12 @@
 		"@type": {
 			"anyOf": [
 				{
-					"type": "string"
+					"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
 				},
 				{
 					"type": "array",
 					"items": {
-						"type": "string"
+						"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
 					}
 				}
 			]
@@ -62,11 +52,11 @@
 		"@reverse": {
 			"type": "object",
 			"additionalProperties": {
-				"type": "string"
+				"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
 			}
 		},
 		"@index": {
-			"type": "string"
+			"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
 		}
 	},
 	"additionalProperties": false,

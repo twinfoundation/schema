@@ -3,12 +3,12 @@
 	"properties": {
 		"@context": {
 			"type": "string",
-			"const": "https://schema.twindev.org/immutable-storage/",
+			"const": "https://schema.twindev.org/verifiable-storage/",
 			"description": "JSON-LD Context."
 		},
 		"type": {
 			"type": "string",
-			"const": "ImmutableStorageIotaStardustReceipt",
+			"const": "VerifiableStorageIotaStardustReceipt",
 			"description": "JSON-LD Type."
 		},
 		"milestoneIndexBooked": {
@@ -37,5 +37,5 @@
 		"transactionId"
 	],
 	"additionalProperties": false,
-	"description": "Receipt for the IOTA Immutable Storage connector."
+	"description": "Receipt for the IOTA Verifiable Storage connector."
 }

@@ -3,12 +3,12 @@
 	"properties": {
 		"@context": {
 			"type": "string",
-			"const": "https://schema.twindev.org/immutable-storage/",
+			"const": "https://schema.twindev.org/verifiable-storage/",
 			"description": "JSON-LD Context."
 		},
 		"type": {
 			"type": "string",
-			"const": "ImmutableStorageEntityStorageReceipt",
+			"const": "VerifiableStorageEntityStorageReceipt",
 			"description": "JSON-LD Type."
 		},
 		"entityStorageId": {
@@ -18,5 +18,5 @@
 	},
 	"required": ["@context", "type", "entityStorageId"],
 	"additionalProperties": false,
-	"description": "Receipt for the entity storage Immutable Storage connector."
+	"description": "Receipt for the entity storage Verifiable Storage connector."
 }

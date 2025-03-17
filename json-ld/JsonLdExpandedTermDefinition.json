@@ -7,7 +7,13 @@
 				"@id": {
 					"anyOf": [
 						{
-							"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
+							"type": "string"
+						},
+						{
+							"type": "array",
+							"items": {
+								"type": "string"
+							}
 						},
 						{
 							"type": "null"
@@ -18,28 +24,64 @@
 					"type": "string"
 				},
 				"@container": {
-					"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
+					"anyOf": [
+						{
+							"type": "string",
+							"const": "@list"
+						},
+						{
+							"type": "string",
+							"const": "@set"
+						},
+						{
+							"$ref": "https://schema.twindev.org/json-ld/JsonLdContainerType"
+						},
+						{
+							"type": "array",
+							"items": {
+								"anyOf": [
+									{
+										"type": "string",
+										"const": "@list"
+									},
+									{
+										"type": "string",
+										"const": "@set"
+									},
+									{
+										"$ref": "https://schema.twindev.org/json-ld/JsonLdContainerType"
+									}
+								]
+							}
+						},
+						{
+							"$ref": "https://schema.twindev.org/json-ld/JsonLdContainerTypeArray"
+						},
+						{
+							"type": "null"
+						}
+					]
 				},
 				"@type": {
 					"type": "string"
 				},
 				"@language": {
-					"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
+					"type": "string"
 				},
 				"@index": {
-					"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
+					"type": "string"
 				},
 				"@context": {
 					"$ref": "https://schema.twindev.org/json-ld/JsonLdContextDefinition"
 				},
 				"@prefix": {
-					"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
+					"type": "boolean"
 				},
 				"@propagate": {
-					"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
+					"type": "boolean"
 				},
 				"@protected": {
-					"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
+					"type": "boolean"
 				}
 			}
 		},
@@ -48,7 +90,7 @@
 			"additionalProperties": false,
 			"properties": {
 				"@reverse": {
-					"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
+					"type": "string"
 				},
 				"@container": {
 					"type": ["string", "null"],
@@ -58,22 +100,22 @@
 					"type": "string"
 				},
 				"@language": {
-					"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
+					"type": "string"
 				},
 				"@index": {
-					"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
+					"type": "string"
 				},
 				"@context": {
 					"$ref": "https://schema.twindev.org/json-ld/JsonLdContextDefinition"
 				},
 				"@prefix": {
-					"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
+					"type": "boolean"
 				},
 				"@propagate": {
-					"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
+					"type": "boolean"
 				},
 				"@protected": {
-					"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
+					"type": "boolean"
 				}
 			},
 			"required": ["@reverse"]

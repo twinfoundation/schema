@@ -9,5 +9,6 @@
 		{
 			"$ref": "https://schema.twindev.org/json-ld/JsonLdJsonObject"
 		}
-	]
+	],
+	"description": "JSON Value."
 }

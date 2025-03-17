@@ -9,5 +9,6 @@
 				"not": {}
 			}
 		]
-	}
+	},
+	"description": "JSON Type for object."
 }

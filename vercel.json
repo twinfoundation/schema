@@ -100,7 +100,7 @@
 			"destination": "https://schema.twindev.org/immutable-proof/:path*.json"
 		},
 		{
-			"source": "/immutable-storage/",
+			"source": "/verifiable-storage/",
 			"has": [
 				{
 					"type": "header",
@@ -108,10 +108,10 @@
 					"value": "text/html.*"
 				}
 			],
-			"destination": "https://schema.twindev.org/immutable-storage/types.html"
+			"destination": "https://schema.twindev.org/verifiable-storage/types.html"
 		},
 		{
-			"source": "/immutable-storage/",
+			"source": "/verifiable-storage/",
 			"has": [
 				{
 					"type": "header",
@@ -119,10 +119,10 @@
 					"value": "application/ld\\+json.*"
 				}
 			],
-			"destination": "https://schema.twindev.org/immutable-storage/types.jsonld"
+			"destination": "https://schema.twindev.org/verifiable-storage/types.jsonld"
 		},
 		{
-			"source": "/immutable-storage/:path*",
+			"source": "/verifiable-storage/:path*",
 			"missing": [
 				{
 					"type": "header",
@@ -130,7 +130,7 @@
 					"value": "application/ld\\+json.*"
 				}
 			],
-			"destination": "https://schema.twindev.org/immutable-storage/:path*.json"
+			"destination": "https://schema.twindev.org/verifiable-storage/:path*.json"
 		},
 		{
 			"source": "/aig/",

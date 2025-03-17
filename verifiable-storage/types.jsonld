@@ -1,0 +1,33 @@
+{
+	"@context": {
+		"@version": 1.1,
+		"@protected": true,
+		"twin-verifiable-storage": "https://schema.twindev.org/verifiable-storage/",
+		"schema": "http://schema.org/",
+		"id": "@id",
+		"type": "@type",
+		"VerifiableStorageIotaReceipt": "https://schema.twindev.org/verifiable-storage/VerifiableStorageIotaReceipt",
+		"VerifiableStorageIotaStardustReceipt": "https://schema.twindev.org/verifiable-storage/VerifiableStorageIotaStardustReceipt",
+		"VerifiableStorageEntityStorageReceipt": "https://schema.twindev.org/verifiable-storage/VerifiableStorageEntityStorageReceipt",
+		"milestoneIndexBooked": {
+			"@id": "twin-verifiable-storage:milestoneIndexBooked",
+			"@type": "schema:Integer"
+		},
+		"milestoneTimestampBooked": {
+			"@id": "twin-verifiable-storage:milestoneTimestampBooked",
+			"@type": "schema:Integer"
+		},
+		"transactionId": {
+			"@id": "twin-verifiable-storage:transactionId",
+			"@type": "schema:identifier"
+		},
+		"network": {
+			"@id": "twin-verifiable-storage:network",
+			"@type": "schema:identifier"
+		},
+		"entityStorageId": {
+			"@id": "twin-verifiable-storage:entityStorageId",
+			"@type": "schema:identifier"
+		}
+	}
+}

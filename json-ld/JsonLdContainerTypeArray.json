@@ -172,5 +172,6 @@
 			],
 			"maxItems": 2
 		}
-	]
+	],
+	"description": "Helper Types."
 }

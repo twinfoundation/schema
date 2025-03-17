@@ -2,5 +2,6 @@
 	"type": "array",
 	"items": {
 		"$ref": "https://schema.twindev.org/json-ld/JsonLdJsonValue"
-	}
+	},
+	"description": "JSON Type for array."
 }
