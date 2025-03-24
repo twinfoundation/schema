@@ -51,9 +51,16 @@
 		"edgeRelationship": {
 			"type": "string",
 			"description": "The relationship between the two vertices."
+		},
+		"edgeRelationships": {
+			"type": "array",
+			"items": {
+				"type": "string"
+			},
+			"description": "The relationships between the two vertices."
 		}
 	},
-	"required": ["@context", "id", "type", "edgeRelationship"],
+	"required": ["@context", "id", "type"],
 	"additionalProperties": false,
 	"description": "Interface describing an edge between two vertices in an auditable item graph."
 }

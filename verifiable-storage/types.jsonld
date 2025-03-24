@@ -28,6 +28,10 @@
 		"entityStorageId": {
 			"@id": "twin-verifiable-storage:entityStorageId",
 			"@type": "schema:identifier"
+		},
+		"verifiableStorageId": {
+			"@id": "twin-verifiable-storage:verifiableStorageId",
+			"@type": "schema:identifier"
 		}
 	}
 }

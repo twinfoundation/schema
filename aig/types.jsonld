@@ -48,6 +48,10 @@
 			"@id": "twin-aig:edgeRelationship",
 			"@type": "schema:Text"
 		},
+		"edgeRelationships": {
+			"@id": "twin-aig:edgeRelationships",
+			"@container": "@list"
+		},
 		"aliasFormat": {
 			"@id": "twin-aig:aliasFormat",
 			"@type": "schema:Text"

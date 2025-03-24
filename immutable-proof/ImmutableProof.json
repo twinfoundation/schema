@@ -28,6 +28,10 @@
 			"type": "string",
 			"description": "The id of the proof."
 		},
+		"nodeIdentity": {
+			"type": "string",
+			"description": "The id of the node who created the proof."
+		},
 		"userIdentity": {
 			"type": "string",
 			"description": "The id of the user who created the proof."
@@ -40,6 +44,10 @@
 			"type": "string",
 			"description": "The hash of the object associated with the proof."
 		},
+		"verifiableStorageId": {
+			"type": "string",
+			"description": "The verifiable storage id for where the proof is stored."
+		},
 		"proof": {
 			"$ref": "https://schema.twindev.org/did/DataIntegrityProof",
 			"description": "The proof which can be undefined if it has not yet been issued."
@@ -49,7 +57,7 @@
 			"description": "The immutable receipt detail for where the proof is stored."
 		}
 	},
-	"required": ["@context", "type", "id", "userIdentity", "proofObjectHash"],
+	"required": ["@context", "type", "id", "nodeIdentity", "userIdentity", "proofObjectHash"],
 	"additionalProperties": false,
 	"description": "Interface describing an immutable proof state."
 }
