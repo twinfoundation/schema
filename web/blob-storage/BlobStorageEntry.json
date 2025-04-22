@@ -52,9 +52,9 @@
 			"type": "string",
 			"description": "The extension."
 		},
-		"annotationObject": {
+		"metadata": {
 			"$ref": "https://schema.twindev.org/json-ld/JsonLdNodeObject",
-			"description": "The annotation object for the blob as JSON-LD."
+			"description": "The metadata for the blob as JSON-LD."
 		},
 		"blob": {
 			"type": "string",

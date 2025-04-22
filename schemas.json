@@ -1,0 +1,66 @@
+[
+	{
+		"repo": "auditable-item-graph",
+		"packages": ["auditable-item-graph-models"],
+		"title": "Auditable Item Graph",
+		"namespace": "aig"
+	},
+	{
+		"repo": "auditable-item-stream",
+		"packages": ["auditable-item-stream-models"],
+		"title": "Auditable Item Stream",
+		"namespace": "ais"
+	},
+	{
+		"repo": "attestation",
+		"packages": ["attestation-models"],
+		"title": "Attestation",
+		"namespace": "attestation"
+	},
+	{
+		"repo": "blob-storage",
+		"packages": ["blob-storage-models"],
+		"title": "Blob Storage",
+		"namespace": "blob-storage"
+	},
+	{
+		"repo": "standards",
+		"packages": ["standards-w3c-did"],
+		"title": "DID",
+		"namespace": "did"
+	},
+	{
+		"repo": "document-management",
+		"packages": ["document-management-models"],
+		"title": "Documents",
+		"namespace": "documents"
+	},
+	{
+		"repo": "data",
+		"packages": ["data-json-ld"],
+		"title": "JSON-LD",
+		"namespace": "json-ld"
+	},
+	{
+		"repo": "immutable-proof",
+		"packages": ["immutable-proof-models"],
+		"title": "Immutable Proof",
+		"namespace": "immutable-proof"
+	},
+	{
+		"repo": "verifiable-storage",
+		"packages": [
+			"verifiable-storage-connector-iota",
+			"verifiable-storage-connector-iota-stardust",
+			"verifiable-storage-connector-entity-storage"
+		],
+		"title": "Verifiable Storage",
+		"namespace": "verifiable-storage"
+	},
+	{
+		"repo": "framework",
+		"types": ["TimestampMilliseconds", "TimestampSeconds", "URN"],
+		"title": "Framework",
+		"namespace": "framework"
+	}
+]

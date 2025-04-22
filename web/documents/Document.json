@@ -91,17 +91,6 @@
 		"userIdentity": {
 			"type": "string",
 			"description": "The user who added the document to the graph."
-		},
-		"revisions": {
-			"type": "array",
-			"items": {
-				"$ref": "https://schema.twindev.org/documents/Document"
-			},
-			"description": "The previous revisions of the document."
-		},
-		"revisionCursor": {
-			"type": "string",
-			"description": "The cursor to get the next chunk of revisions."
 		}
 	},
 	"required": [

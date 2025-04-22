@@ -34,6 +34,72 @@
 			"destination": "https://schema.twindev.org/common/:path*.json"
 		},
 		{
+			"source": "/aig/",
+			"has": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "text/html.*"
+				}
+			],
+			"destination": "https://schema.twindev.org/aig/types.html"
+		},
+		{
+			"source": "/aig/",
+			"has": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "application/ld\\+json.*"
+				}
+			],
+			"destination": "https://schema.twindev.org/aig/types.jsonld"
+		},
+		{
+			"source": "/aig/:path*",
+			"missing": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "application/ld\\+json.*"
+				}
+			],
+			"destination": "https://schema.twindev.org/aig/:path*.json"
+		},
+		{
+			"source": "/ais/",
+			"has": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "text/html.*"
+				}
+			],
+			"destination": "https://schema.twindev.org/ais/types.html"
+		},
+		{
+			"source": "/ais/",
+			"has": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "application/ld\\+json.*"
+				}
+			],
+			"destination": "https://schema.twindev.org/ais/types.jsonld"
+		},
+		{
+			"source": "/ais/:path*",
+			"missing": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "application/ld\\+json.*"
+				}
+			],
+			"destination": "https://schema.twindev.org/ais/:path*.json"
+		},
+		{
 			"source": "/attestation/",
 			"has": [
 				{
@@ -65,6 +131,138 @@
 				}
 			],
 			"destination": "https://schema.twindev.org/attestation/:path*.json"
+		},
+		{
+			"source": "/blob-storage/",
+			"has": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "text/html.*"
+				}
+			],
+			"destination": "https://schema.twindev.org/blob-storage/types.html"
+		},
+		{
+			"source": "/blob-storage/",
+			"has": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "application/ld\\+json.*"
+				}
+			],
+			"destination": "https://schema.twindev.org/blob-storage/types.jsonld"
+		},
+		{
+			"source": "/blob-storage/:path*",
+			"missing": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "application/ld\\+json.*"
+				}
+			],
+			"destination": "https://schema.twindev.org/blob-storage/:path*.json"
+		},
+		{
+			"source": "/did/",
+			"has": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "text/html.*"
+				}
+			],
+			"destination": "https://schema.twindev.org/did/types.html"
+		},
+		{
+			"source": "/did/",
+			"has": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "application/ld\\+json.*"
+				}
+			],
+			"destination": "https://schema.twindev.org/did/types.jsonld"
+		},
+		{
+			"source": "/did/:path*",
+			"missing": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "application/ld\\+json.*"
+				}
+			],
+			"destination": "https://schema.twindev.org/did/:path*.json"
+		},
+		{
+			"source": "/documents/",
+			"has": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "text/html.*"
+				}
+			],
+			"destination": "https://schema.twindev.org/documents/types.html"
+		},
+		{
+			"source": "/documents/",
+			"has": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "application/ld\\+json.*"
+				}
+			],
+			"destination": "https://schema.twindev.org/documents/types.jsonld"
+		},
+		{
+			"source": "/documents/:path*",
+			"missing": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "application/ld\\+json.*"
+				}
+			],
+			"destination": "https://schema.twindev.org/documents/:path*.json"
+		},
+		{
+			"source": "/json-ld/",
+			"has": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "text/html.*"
+				}
+			],
+			"destination": "https://schema.twindev.org/json-ld/types.html"
+		},
+		{
+			"source": "/json-ld/",
+			"has": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "application/ld\\+json.*"
+				}
+			],
+			"destination": "https://schema.twindev.org/json-ld/types.jsonld"
+		},
+		{
+			"source": "/json-ld/:path*",
+			"missing": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "application/ld\\+json.*"
+				}
+			],
+			"destination": "https://schema.twindev.org/json-ld/:path*.json"
 		},
 		{
 			"source": "/immutable-proof/",
@@ -133,72 +331,6 @@
 			"destination": "https://schema.twindev.org/verifiable-storage/:path*.json"
 		},
 		{
-			"source": "/aig/",
-			"has": [
-				{
-					"type": "header",
-					"key": "Accept",
-					"value": "text/html.*"
-				}
-			],
-			"destination": "https://schema.twindev.org/aig/types.html"
-		},
-		{
-			"source": "/aig/",
-			"has": [
-				{
-					"type": "header",
-					"key": "Accept",
-					"value": "application/ld\\+json.*"
-				}
-			],
-			"destination": "https://schema.twindev.org/aig/types.jsonld"
-		},
-		{
-			"source": "/aig/:path*",
-			"missing": [
-				{
-					"type": "header",
-					"key": "Accept",
-					"value": "application/ld\\+json.*"
-				}
-			],
-			"destination": "https://schema.twindev.org/aig/:path*.json"
-		},
-		{
-			"source": "/ais/",
-			"has": [
-				{
-					"type": "header",
-					"key": "Accept",
-					"value": "text/html.*"
-				}
-			],
-			"destination": "https://schema.twindev.org/ais/types.html"
-		},
-		{
-			"source": "/ais/",
-			"has": [
-				{
-					"type": "header",
-					"key": "Accept",
-					"value": "application/ld\\+json.*"
-				}
-			],
-			"destination": "https://schema.twindev.org/ais/types.jsonld"
-		},
-		{
-			"source": "/ais/:path*",
-			"missing": [
-				{
-					"type": "header",
-					"key": "Accept",
-					"value": "application/ld\\+json.*"
-				}
-			],
-			"destination": "https://schema.twindev.org/ais/:path*.json"
-		},
-		{
 			"source": "/framework/",
 			"has": [
 				{
@@ -230,138 +362,6 @@
 				}
 			],
 			"destination": "https://schema.twindev.org/framework/:path*.json"
-		},
-		{
-			"source": "/json-ld/",
-			"has": [
-				{
-					"type": "header",
-					"key": "Accept",
-					"value": "text/html.*"
-				}
-			],
-			"destination": "https://schema.twindev.org/json-ld/types.html"
-		},
-		{
-			"source": "/json-ld/",
-			"has": [
-				{
-					"type": "header",
-					"key": "Accept",
-					"value": "application/ld\\+json.*"
-				}
-			],
-			"destination": "https://schema.twindev.org/json-ld/types.jsonld"
-		},
-		{
-			"source": "/json-ld/:path*",
-			"missing": [
-				{
-					"type": "header",
-					"key": "Accept",
-					"value": "application/ld\\+json.*"
-				}
-			],
-			"destination": "https://schema.twindev.org/json-ld/:path*.json"
-		},
-		{
-			"source": "/did/",
-			"has": [
-				{
-					"type": "header",
-					"key": "Accept",
-					"value": "text/html.*"
-				}
-			],
-			"destination": "https://schema.twindev.org/did/types.html"
-		},
-		{
-			"source": "/did/",
-			"has": [
-				{
-					"type": "header",
-					"key": "Accept",
-					"value": "application/ld\\+json.*"
-				}
-			],
-			"destination": "https://schema.twindev.org/did/types.jsonld"
-		},
-		{
-			"source": "/did/:path*",
-			"missing": [
-				{
-					"type": "header",
-					"key": "Accept",
-					"value": "application/ld\\+json.*"
-				}
-			],
-			"destination": "https://schema.twindev.org/did/:path*.json"
-		},
-		{
-			"source": "/blob-storage/",
-			"has": [
-				{
-					"type": "header",
-					"key": "Accept",
-					"value": "text/html.*"
-				}
-			],
-			"destination": "https://schema.twindev.org/blob-storage/types.html"
-		},
-		{
-			"source": "/blob-storage/",
-			"has": [
-				{
-					"type": "header",
-					"key": "Accept",
-					"value": "application/ld\\+json.*"
-				}
-			],
-			"destination": "https://schema.twindev.org/blob-storage/types.jsonld"
-		},
-		{
-			"source": "/blob-storage/:path*",
-			"missing": [
-				{
-					"type": "header",
-					"key": "Accept",
-					"value": "application/ld\\+json.*"
-				}
-			],
-			"destination": "https://schema.twindev.org/blob-storage/:path*.json"
-		},
-		{
-			"source": "/documents/",
-			"has": [
-				{
-					"type": "header",
-					"key": "Accept",
-					"value": "text/html.*"
-				}
-			],
-			"destination": "https://schema.twindev.org/documents/types.html"
-		},
-		{
-			"source": "/documents/",
-			"has": [
-				{
-					"type": "header",
-					"key": "Accept",
-					"value": "application/ld\\+json.*"
-				}
-			],
-			"destination": "https://schema.twindev.org/documents/types.jsonld"
-		},
-		{
-			"source": "/documents/:path*",
-			"missing": [
-				{
-					"type": "header",
-					"key": "Accept",
-					"value": "application/ld\\+json.*"
-				}
-			],
-			"destination": "https://schema.twindev.org/documents/:path*.json"
 		}
 	]
 }

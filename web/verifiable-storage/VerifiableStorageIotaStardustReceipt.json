@@ -23,9 +23,9 @@
 			"type": "string",
 			"description": "The network for the receipt."
 		},
-		"transactionId": {
+		"aliasId": {
 			"type": "string",
-			"description": "The transaction for the receipt."
+			"description": "The alias for the receipt."
 		}
 	},
 	"required": [
@@ -34,7 +34,7 @@
 		"milestoneIndexBooked",
 		"milestoneTimestampBooked",
 		"network",
-		"transactionId"
+		"aliasId"
 	],
 	"additionalProperties": false,
 	"description": "Receipt for the IOTA Verifiable Storage connector."

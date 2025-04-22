@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>TWIN Schemas - Blob Storage</title>
+		<title>TWIN Schemas - ${title}</title>
 		<link rel="stylesheet" href="../style.css" type="text/css" />
 		<link rel="icon" href="https://schema.twindev.org/images/favicon.png" />
 	</head>
@@ -16,23 +16,18 @@
 			<a href="../">
 				<h1>TWIN Schemas</h1>
 			</a>
-			<h1>/ Blob Storage</h1>
+			<h1>/ ${title}</h1>
 		</header>
 		<main>
 			<h2>JSON Schemas</h2>
 			<br />
 			<p>
 				<b>Root namespace:</b>
-				https://schema.twindev.org/blob-storage/
+				https://schema.twindev.org/${namespace}/
 			</p>
 			<br />
 			<ul>
-				<li>
-					<a href="./BlobStorageEntry.json">BlobStorageEntry</a>
-				</li>
-				<li>
-					<a href="./BlobStorageEntryList.json">BlobStorageEntryList</a>
-				</li>
+				${types}
 			</ul>
 			<br />
 			<hr />
@@ -40,7 +35,7 @@
 			<h2>JSON-LD</h2>
 			<br />
 			<p>
-				<a href="./types.jsonld">https://schema.twindev.org/blob-storage/types.jsonld</a>
+				<a href="./types.jsonld">https://schema.twindev.org/${namespace}/types.jsonld</a>
 			</p>
 		</main>
 		<footer>

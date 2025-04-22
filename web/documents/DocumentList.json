@@ -31,6 +31,13 @@
 			},
 			"description": "The list of documents."
 		},
+		"edges": {
+			"type": "array",
+			"items": {
+				"type": "string"
+			},
+			"description": "The ids of the other vertices which are connected to the document."
+		},
 		"cursor": {
 			"type": "string",
 			"description": "The cursor to get the next chunk of documents."
@@ -38,5 +45,5 @@
 	},
 	"required": ["@context", "type", "documents"],
 	"additionalProperties": false,
-	"description": "Interface describing a document entry list."
+	"description": "Interface describing a list of document entries."
 }
