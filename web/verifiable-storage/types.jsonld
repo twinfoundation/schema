@@ -33,8 +33,12 @@
 			"@id": "twin-verifiable-storage:verifiableStorageId",
 			"@type": "schema:identifier"
 		},
-		"timestamp": {
-			"@id": "twin-verifiable-storage:timestamp",
+		"epoch": {
+			"@id": "twin-verifiable-storage:epoch",
+			"@type": "schema:Text"
+		},
+		"digest": {
+			"@id": "twin-verifiable-storage:digest",
 			"@type": "schema:Text"
 		}
 	}
