@@ -32,6 +32,10 @@
 		"verifiableStorageId": {
 			"@id": "twin-verifiable-storage:verifiableStorageId",
 			"@type": "schema:identifier"
+		},
+		"timestamp": {
+			"@id": "twin-verifiable-storage:timestamp",
+			"@type": "schema:Text"
 		}
 	}
 }
