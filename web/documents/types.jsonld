@@ -46,6 +46,10 @@
 		"revisionCursor": {
 			"@id": "twin-documents:revisionCursor",
 			"@type": "schema:Text"
+		},
+		"extractedData": {
+			"@id": "twin-documents:extractedData",
+			"@type": "@json"
 		}
 	}
 }

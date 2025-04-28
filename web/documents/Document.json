@@ -64,6 +64,9 @@
 			"$ref": "https://schema.twindev.org/blob-storage/BlobStorageEntry",
 			"description": "The additional JSON-LD for blob storage if it was requested."
 		},
+		"extractedData": {
+			"description": "The data extracted from the document using data extraction services."
+		},
 		"attestationId": {
 			"type": "string",
 			"description": "The attestation for the document if one was created."
