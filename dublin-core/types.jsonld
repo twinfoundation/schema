@@ -19,11 +19,11 @@
         },
         "accrualPeriodicity": {
             "@id": "dcterms:accrualPeriodicity",
-            "@type": "@id"
+            "@type": "@vocab"
         },
         "accrualPolicy": {
             "@id": "dcterms:accrualPolicy",
-            "@type": "@id"
+            "@type": "@vocab"
         },
         "alternative": {
             "@id": "dcterms:alternative",
