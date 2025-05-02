@@ -7,6 +7,9 @@
 		"Multibase",
 		"Multikey",
 		"rdfc",
-		"Stiftung"
+		"Stiftung",
+		"dcterms",
+		"rdfs",
+		"dcmitype"
 	]
 }
