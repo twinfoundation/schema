@@ -1,0 +1,244 @@
+{
+    "comment": "See https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#section-1",
+    "@context": {
+        "@version": "1.1",
+
+        "dcterms": "http://purl.org/dc/terms/",
+        "dcmitype": "http://purl.org/dc/dcmitype/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+
+        "abstract": "dcterms:abstract",
+        "accessRights": {
+            "@id": "dcterms:accessRights",
+            "@type": "@id"
+        },
+        "accrualMethod": {
+            "@id": "dcterms:accrualMethod",
+            "@type": "@vocab"
+        },
+        "accrualPeriodicity": {
+            "@id": "dcterms:accrualPeriodicity",
+            "@type": "@vocab"
+        },
+        "accrualPolicy": {
+            "@id": "dcterms:accrualPolicy",
+            "@type": "@vocab"
+        },
+        "alternative": {
+            "@id": "dcterms:alternative",
+            "@type": "rdfs:Literal"
+        },
+        "audience": {
+            "@id": "dcterms:audience",
+            "@type": "@id"
+        },
+        "available": { 
+            "@id": "dcterms:available",
+            "@type": "rdfs:Literal"
+        },
+        "bibliographicCitation": { 
+            "@id": "dcterms:bibliographicCitation",
+            "@type": "rdfs:Literal"
+        },
+        "conformsTo": {
+            "@id": "dcterms:conformsTo",
+            "@type": "@id"
+        },
+        "contributor": {
+            "@id": "dcterms:contributor",
+            "@type": "@id"
+        },
+        "coverage": {
+            "@id": "dcterms:coverage",
+            "@type": "@id"
+        },
+        "created": { 
+            "@id": "dcterms:created",
+            "@type": "rdfs:Literal"
+        },
+        "creator": {
+            "@id": "dcterms:creator",
+            "@type": "@id"
+        },
+        "date": { 
+            "@id": "dcterms:date",
+            "@type": "rdfs:Literal"
+        },
+        "dateAccepted": { 
+            "@id": "dcterms:dateAccepted",
+            "@type": "rdfs:Literal"
+        },
+        "dateCopyrighted": { 
+            "@id": "dcterms:dateCopyrighted",
+            "@type": "rdfs:Literal"
+        },
+        "dateSubmitted": { 
+            "@id": "dcterms:dateSubmitted",
+            "@type": "rdfs:Literal"
+        },
+        "description": "dcterms:description",
+        "educationLevel": {
+            "@id": "dcterms:educationLevel",
+            "@type": "@id"
+        },
+        "extent": {
+            "@id": "dcterms:extent",
+            "@type": "@id"
+        },
+        "format": {
+            "@id": "dcterms:format",
+            "@type": "@id"
+        },
+        "hasFormat": {
+            "@id": "dcterms:hasFormat",
+            "@type": "@id"
+        },
+        "hasPart": {
+            "@id": "dcterms:hasPart",
+            "@type": "@id"
+        },
+        "hasVersion": {
+            "@id": "dcterms:hasVersion",
+            "@type": "@id"
+        },
+        "identifier": { 
+            "@id": "dcterms:identifier",
+            "@type": "rdfs:Literal"
+        },
+        "instructionalMethod": "dcterms:instructionalMethod",
+        "isFormatOf": {
+            "@id": "dcterms:isFormatOf",
+            "@type": "@id"
+        },
+        "isPartOf": {
+            "@id": "dcterms:isPartOf",
+            "@type": "@id"
+        },
+        "isReferencedBy": {
+            "@id": "dcterms:isReferencedBy",
+            "@type": "@id"
+        },
+        "isReplacedBy": {
+            "@id": "dcterms:isReplacedBy",
+            "@type": "@id"
+        },
+        "isRequiredBy": {
+            "@id": "dcterms:isRequiredBy",
+            "@type": "@id"
+        },
+        "issued": { 
+            "@id": "dcterms:issued",
+            "@type": "rdfs:Literal"
+        },
+        "isVersionOf": {
+            "@id": "dcterms:isVersionOf",
+            "@type": "@id"
+        },
+        "language": "dcterms:language",
+        "license": "dcterms:license",
+        "mediator": {
+            "@id": "dcterms:mediator",
+            "@type": "@id"
+        },
+        "medium": {
+            "@id": "dcterms:medium",
+            "@type": "@id"
+        },
+        "modified": { 
+            "@id": "dcterms:modified",
+            "@type": "rdfs:Literal"
+        },
+        "provenance": "dcterms:provenance",
+        "publisher": {
+            "@id": "dcterms:publisher",
+            "@type": "@id"
+        },
+        "references": "dcterms:references",
+        "relation": "dcterms:relation",
+        "replaces": {
+            "@id": "dcterms:replaces",
+            "@type": "@id"
+        },
+        "requires": {
+            "@id": "dcterms:requires",
+            "@type": "@id"
+        },
+        "rights": {
+            "@id": "dcterms:rights",
+            "@type": "@id"
+        },
+        "rightsHolder": {
+            "@id": "dcterms:rightsHolder",
+            "@type": "@id"
+        },
+        "source": "dcterms:source",
+        "spatial": {
+            "@id": "dcterms:spatial",
+            "@type": "@id"
+        },
+        "subject": {
+            "@id": "dcterms:subject",
+            "@type": "@id"
+        },
+        "tableOfContents": "dcterms:tableOfContents",
+        "temporal": {
+            "@id": "dcterms:temporal",
+            "@type": "@id"
+        },
+        "title": {
+             "@id": "dcterms:title",
+            "@type": "rdfs:Literal"
+        },
+        "valid": {
+            "@id": "dcterms:valid",
+           "@type": "rdfs:Literal"
+       },
+
+        "Agent": "dcterms:Agent",
+        "AgentClass": "dcterms:AgentClass",
+        "BibliographicResource": "dcterms:BibliographicResource",
+        "FileFormat": "dcterms:FileFormat",
+        "Frequency": "dcterms:Frequency",
+        "Jurisdiction": "dcterms:Jurisdiction",
+        "LicenseDocument": "dcterms:LicenseDocument",
+        "LinguisticSystem": "dcterms:LinguisticSystem",
+        "Location": "dcterms:Location",
+        "LocationPeriodOrJurisdiction": "dcterms:LocationPeriodOrJurisdiction",
+        "MediaTypeOrExtent": "dcterms:MediaTypeOrExtent",
+        "MethodOfAccrual": "dcterms:MethodOfAccrual",
+        "MethodOfInstruction": "dcterms:MethodOfInstruction",
+        "PeriodOfTime": "dcterms:PeriodOfTime",
+        "PhysicalMedium": "dcterms:PhysicalMedium",
+        "PhysicalResource": "dcterms:PhysicalResource",
+        "Policy": "dcterms:Policy",
+        "ProvenanceStatement": "dcterms:ProvenanceStatement",
+        "RightsStatement": "dcterms:RightsStatement",
+        "SizeOrDuration": "dcterms:SizeOrDuration",
+        "Standard": "dcterms:Standard",
+
+        "Point": "dcterms:Point",
+        "Period": "dcterms:Period",
+        "Box": "dcterms:Box",
+        "ISO3166": "dcterms:ISO3166",
+        "ISO639-2": "dcterms:ISO639-2",
+        "ISO639-3": "dcterms:ISO639-3",
+        "RFC1766": "dcterms:RFC1766",
+        "RFC5646": "dcterms:RFC5646",
+        "URI": "dcterms:URI",
+        "W3CDTF": "dcterms:W3CDTF",
+
+        "Collection": "dcmitype:Collection",
+        "Dataset": "dcmitype:Dataset",
+        "Event": "dcmitype:Event",
+        "Image": "dcmitype:Image",
+        "InteractiveResource": "dcmitype:InteractiveResource",
+        "MovingImage": "dcmitype:MovingImage",
+        "PhysicalObject": "dcmitype:PhysicalObject",
+        "Service": "dcmitype:Service",
+        "Software": "dcmitype:Software",
+        "Sound": "dcmitype:Sound",
+        "StillImage": "dcmitype:StillImage",
+        "Text": "dcmitype:Text"
+    }
+}
