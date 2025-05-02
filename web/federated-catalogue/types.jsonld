@@ -1,0 +1,43 @@
+{
+    "comment": "Specific terms used by the Federated Catalogue",    
+    "@context": {
+        "@version": 1.1,
+        "fed-cat": "https://schema.twindev.org/federated-catalogue/",
+        "idsa": "https://w3id.org/idsa/core/",
+        "schema": "https://schema.org/",
+
+        "DataSpaceConnector": "fed-cat:DataSpaceConnector",
+        "maintainer": {
+            "@id": "idsa:maintainer",
+            "@type": "@id"
+        },
+        "defaultEndpoint": {
+            "@id": "idsa:hasDefaultEndpoint",
+            "@type": "@id"
+        },
+        "subscriptionActivityEndpoint": {
+            "@id": "fed-cat:subscriptionActivityEndpoint",
+            "@type": "@id"
+        },
+        "pushActivityEndpoint": {
+            "@id": "fed-cat:pushActivityEndpoint",
+            "@type": "@id"
+        },
+        "pullActivityEndpoint": {
+            "@id": "fed-cat:pullActivityEndpoint",
+            "@type": "@id"
+        },
+        "pullDataEndpoint": {
+            "@id": "fed-cat:pushActivityEndpoint",
+            "@type": "@id"
+        },
+        "offeredResource": {
+            "@id": "idsa:offeredResource",
+            "@container": "@id"
+        },
+        "identity": {
+            "@id": "fed-cat:identity",
+            "@type": "schema:URL"
+        }
+    }
+}
