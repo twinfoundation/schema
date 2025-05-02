@@ -23,51 +23,54 @@ async function run() {
 	const schemas = await loadJson('schemas.json');
 
 	for (const schema of schemas) {
-		const packages = schema.packages;
-
-		const outputPath = path.join('web', schema.namespace);
-
-		process.stdout.write(`Schema: ${schema.title}\n`);
-
+		const packages = schema.packages ?? [];
 		let types = schema.types ?? [];
 
-		if (types.length === 0) {
-			process.stdout.write(`   Cleanup existing types\n`);
-			const existingFiles = await FastGlob(`*.json`, { cwd: outputPath });
+		const hasTypes = types.length > 0 || packages.length > 0;
 
-			for (const file of existingFiles) {
-				const filePath = path.join(outputPath, file);
-				process.stdout.write(`      Deleting: ${filePath}\n`);
-				await unlink(filePath);
-			}
-			for (const pkg of packages) {
-				const packagePath = path.resolve(path.join('../', schema.repo, 'packages', pkg));
-				process.stdout.write(`   Package: ${packagePath}\n`);
-				const tsToOpenApi = await loadJson(path.join(packagePath, 'ts-to-schema.json'));
-				types.push(...tsToOpenApi.types);
+		if (hasTypes) {
+			const outputPath = path.join('web', schema.namespace);
 
-				process.stdout.write(`      Copying types\n`);
-				for (const type of tsToOpenApi.types) {
-					const sourcePath = path.join(
-						packagePath,
-						'src',
-						'schemas',
-						`${stripInterface(type)}.json`
-					);
-					process.stdout.write(`         Copying type: ${sourcePath}\n`);
+			process.stdout.write(`Schema: ${schema.title}\n`);
 
-					const typeContent = await loadJson(sourcePath);
-					const typeOutputPath = path.join(outputPath, `${stripInterface(type)}.json`);
-					await saveJson(typeOutputPath, typeContent);
+			if (types.length === 0) {
+				process.stdout.write(`   Cleanup existing types\n`);
+				const existingFiles = await FastGlob(`*.json`, { cwd: outputPath });
+
+				for (const file of existingFiles) {
+					const filePath = path.join(outputPath, file);
+					process.stdout.write(`      Deleting: ${filePath}\n`);
+					await unlink(filePath);
+				}
+				for (const pkg of packages) {
+					const packagePath = path.resolve(path.join('../', schema.repo, 'packages', pkg));
+					process.stdout.write(`   Package: ${packagePath}\n`);
+					const tsToOpenApi = await loadJson(path.join(packagePath, 'ts-to-schema.json'));
+					types.push(...tsToOpenApi.types);
+
+					process.stdout.write(`      Copying types\n`);
+					for (const type of tsToOpenApi.types) {
+						const sourcePath = path.join(
+							packagePath,
+							'src',
+							'schemas',
+							`${stripInterface(type)}.json`
+						);
+						process.stdout.write(`         Copying type: ${sourcePath}\n`);
+
+						const typeContent = await loadJson(sourcePath);
+						const typeOutputPath = path.join(outputPath, `${stripInterface(type)}.json`);
+						await saveJson(typeOutputPath, typeContent);
+					}
 				}
 			}
+
+			const typesPage = await generateTypesPage(schema.title, schema.namespace, types);
+
+			process.stdout.write(`   Generate types page\n`);
+			await writeFile(path.join(outputPath, 'types.html'), typesPage, 'utf-8');
+			process.stdout.write('\n');
 		}
-
-		const typesPage = await generateTypesPage(schema.title, schema.namespace, types);
-
-		process.stdout.write(`   Generate types page\n`);
-		await writeFile(path.join(outputPath, 'types.html'), typesPage, 'utf-8');
-		process.stdout.write('\n');
 	}
 
 	await createRewriteRules(schemas);
@@ -109,21 +112,29 @@ async function createRewriteRules(schemas) {
 	process.stdout.write('Write rewrites file\n');
 	process.stdout.write('\n');
 
-	const rewriteNames = ['common', ...schemas.map(schema => schema.namespace)];
+	const allSchemas = [{ namespace: 'common' }, ...schemas];
 	const rewrites = [];
 
-	for (const rewriteName of rewriteNames) {
-		rewrites.push({
-			source: `/${rewriteName}/`,
-			has: [
-				{
-					type: 'header',
-					key: 'Accept',
-					value: 'text/html.*'
-				}
-			],
-			destination: `https://schema.twindev.org/${rewriteName}/types.html`
-		});
+	for (const schema of allSchemas) {
+		const rewriteName = schema.namespace;
+
+		const packages = schema.packages ?? [];
+		const types = schema.types ?? [];
+		const hasTypes = types.length > 0 || packages.length > 0;
+
+		if (hasTypes) {
+			rewrites.push({
+				source: `/${rewriteName}/`,
+				has: [
+					{
+						type: 'header',
+						key: 'Accept',
+						value: 'text/html.*'
+					}
+				],
+				destination: `https://schema.twindev.org/${rewriteName}/types.html`
+			});
+		}
 		rewrites.push({
 			source: `/${rewriteName}/`,
 			has: [
@@ -135,17 +146,19 @@ async function createRewriteRules(schemas) {
 			],
 			destination: `https://schema.twindev.org/${rewriteName}/types.jsonld`
 		});
-		rewrites.push({
-			source: `/${rewriteName}/:path*`,
-			missing: [
-				{
-					type: 'header',
-					key: 'Accept',
-					value: 'application/ld\\+json.*'
-				}
-			],
-			destination: `https://schema.twindev.org/${rewriteName}/:path*.json`
-		});
+		if (hasTypes) {
+			rewrites.push({
+				source: `/${rewriteName}/:path*`,
+				missing: [
+					{
+						type: 'header',
+						key: 'Accept',
+						value: 'application/ld\\+json.*'
+					}
+				],
+				destination: `https://schema.twindev.org/${rewriteName}/:path*.json`
+			});
+		}
 	}
 	const rewritesPath = path.join('web', 'vercel.json');
 	await saveJson(rewritesPath, { rewrites });
