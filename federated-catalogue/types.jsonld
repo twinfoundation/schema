@@ -1,8 +1,0 @@
-{
-    "comment": "Specific terms used by the "    
-    "@context": {
-        "fed-cat": "https://schema.twindev.org/federated-catalogue/",
-        "DataSpaceConnector": "fed-cat:DataSpaceConnector",
-        ""
-    }
-}
