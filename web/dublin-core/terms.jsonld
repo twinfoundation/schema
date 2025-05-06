@@ -1,10 +1,9 @@
 {
-    "comment": "See https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#section-1",
+    "comment": "See https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#section-2",
     "@context": {
         "@version": 1.1,
 
         "dcterms": "http://purl.org/dc/terms/",
-        "dcmitype": "http://purl.org/dc/dcmitype/",
         "xsd": "http://www.w3.org/2001/XMLSchema#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
 
@@ -33,11 +32,11 @@
             "@id": "dcterms:audience",
             "@type": "@id"
         },
-        "available": { 
+        "available": {
             "@id": "dcterms:available",
             "@type": "rdfs:Literal"
         },
-        "bibliographicCitation": { 
+        "bibliographicCitation": {
             "@id": "dcterms:bibliographicCitation",
             "@type": "rdfs:Literal"
         },
@@ -53,7 +52,7 @@
             "@id": "dcterms:coverage",
             "@type": "@id"
         },
-        "created": { 
+        "created": {
             "@id": "dcterms:created",
             "@type": "rdfs:Literal"
         },
@@ -61,19 +60,19 @@
             "@id": "dcterms:creator",
             "@type": "@id"
         },
-        "date": { 
+        "date": {
             "@id": "dcterms:date",
             "@type": "rdfs:Literal"
         },
-        "dateAccepted": { 
+        "dateAccepted": {
             "@id": "dcterms:dateAccepted",
             "@type": "rdfs:Literal"
         },
-        "dateCopyrighted": { 
+        "dateCopyrighted": {
             "@id": "dcterms:dateCopyrighted",
             "@type": "rdfs:Literal"
         },
-        "dateSubmitted": { 
+        "dateSubmitted": {
             "@id": "dcterms:dateSubmitted",
             "@type": "rdfs:Literal"
         },
@@ -102,7 +101,7 @@
             "@id": "dcterms:hasVersion",
             "@type": "@id"
         },
-        "identifier": { 
+        "identifier": {
             "@id": "dcterms:identifier",
             "@type": "rdfs:Literal"
         },
@@ -127,7 +126,7 @@
             "@id": "dcterms:isRequiredBy",
             "@type": "@id"
         },
-        "issued": { 
+        "issued": {
             "@id": "dcterms:issued",
             "@type": "rdfs:Literal"
         },
@@ -145,7 +144,7 @@
             "@id": "dcterms:medium",
             "@type": "@id"
         },
-        "modified": { 
+        "modified": {
             "@id": "dcterms:modified",
             "@type": "rdfs:Literal"
         },
@@ -187,13 +186,13 @@
             "@type": "@id"
         },
         "title": {
-             "@id": "dcterms:title",
+            "@id": "dcterms:title",
             "@type": "rdfs:Literal"
         },
         "valid": {
             "@id": "dcterms:valid",
-           "@type": "rdfs:Literal"
-       },
+            "@type": "rdfs:Literal"
+        },
 
         "Agent": "dcterms:Agent",
         "AgentClass": "dcterms:AgentClass",
@@ -216,7 +215,7 @@
         "RightsStatement": "dcterms:RightsStatement",
         "SizeOrDuration": "dcterms:SizeOrDuration",
         "Standard": "dcterms:Standard",
-
+        
         "Point": "dcterms:Point",
         "Period": "dcterms:Period",
         "Box": "dcterms:Box",
@@ -226,19 +225,6 @@
         "RFC1766": "dcterms:RFC1766",
         "RFC5646": "dcterms:RFC5646",
         "URI": "dcterms:URI",
-        "W3CDTF": "dcterms:W3CDTF",
-
-        "Collection": "dcmitype:Collection",
-        "Dataset": "dcmitype:Dataset",
-        "Event": "dcmitype:Event",
-        "Image": "dcmitype:Image",
-        "InteractiveResource": "dcmitype:InteractiveResource",
-        "MovingImage": "dcmitype:MovingImage",
-        "PhysicalObject": "dcmitype:PhysicalObject",
-        "Service": "dcmitype:Service",
-        "Software": "dcmitype:Software",
-        "Sound": "dcmitype:Sound",
-        "StillImage": "dcmitype:StillImage",
-        "Text": "dcmitype:Text"
+        "W3CDTF": "dcterms:W3CDTF"
     }
 }
