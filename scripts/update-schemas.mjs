@@ -121,6 +121,7 @@ async function createRewriteRules(schemas) {
 		const packages = schema.packages ?? [];
 		const types = schema.types ?? [];
 		const hasTypes = types.length > 0 || packages.length > 0;
+		const jsonLdTypes = schema.jsonLdTypes;
 
 		if (hasTypes) {
 			rewrites.push({
@@ -135,17 +136,33 @@ async function createRewriteRules(schemas) {
 				destination: `https://schema.twindev.org/${rewriteName}/types.html`
 			});
 		}
-		rewrites.push({
-			source: `/${rewriteName}/`,
-			has: [
-				{
-					type: 'header',
-					key: 'Accept',
-					value: 'application/ld\\+json.*'
-				}
-			],
-			destination: `https://schema.twindev.org/${rewriteName}/types.jsonld`
-		});
+		if (Array.isArray(jsonLdTypes)) {
+			for (const type of jsonLdTypes) {
+				rewrites.push({
+					source: `/${rewriteName}/${type}.jsonld`,
+					has: [
+						{
+							type: 'header',
+							key: 'Accept',
+							value: 'application/ld\\+json.*'
+						}
+					],
+					destination: `https://schema.twindev.org/${rewriteName}/${type}.jsonld`
+				});
+			}
+		} else {
+			rewrites.push({
+				source: `/${rewriteName}/`,
+				has: [
+					{
+						type: 'header',
+						key: 'Accept',
+						value: 'application/ld\\+json.*'
+					}
+				],
+				destination: `https://schema.twindev.org/${rewriteName}/types.jsonld`
+			});
+		}
 		if (hasTypes) {
 			rewrites.push({
 				source: `/${rewriteName}/:path*`,

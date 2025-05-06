@@ -342,7 +342,7 @@
 			"destination": "https://schema.twindev.org/framework/:path*.json"
 		},
 		{
-			"source": "/dublin-core/",
+			"source": "/dublin-core/terms.jsonld",
 			"has": [
 				{
 					"type": "header",
@@ -350,7 +350,18 @@
 					"value": "application/ld\\+json.*"
 				}
 			],
-			"destination": "https://schema.twindev.org/dublin-core/types.jsonld"
+			"destination": "https://schema.twindev.org/dublin-core/terms.jsonld"
+		},
+		{
+			"source": "/dublin-core/dcmitype.jsonld",
+			"has": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "application/ld\\+json.*"
+				}
+			],
+			"destination": "https://schema.twindev.org/dublin-core/dcmitype.jsonld"
 		}
 	]
 }

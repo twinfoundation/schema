@@ -7,16 +7,7 @@
 		"id": "@id",
 		"type": "@type",
 		"VerifiableStorageIotaReceipt": "https://schema.twindev.org/verifiable-storage/VerifiableStorageIotaReceipt",
-		"VerifiableStorageIotaStardustReceipt": "https://schema.twindev.org/verifiable-storage/VerifiableStorageIotaStardustReceipt",
 		"VerifiableStorageEntityStorageReceipt": "https://schema.twindev.org/verifiable-storage/VerifiableStorageEntityStorageReceipt",
-		"milestoneIndexBooked": {
-			"@id": "twin-verifiable-storage:milestoneIndexBooked",
-			"@type": "schema:Integer"
-		},
-		"milestoneTimestampBooked": {
-			"@id": "twin-verifiable-storage:milestoneTimestampBooked",
-			"@type": "schema:Integer"
-		},
 		"transactionId": {
 			"@id": "twin-verifiable-storage:transactionId",
 			"@type": "schema:identifier"

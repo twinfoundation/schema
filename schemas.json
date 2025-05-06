@@ -51,7 +51,6 @@
 		"repo": "verifiable-storage",
 		"packages": [
 			"verifiable-storage-connector-iota",
-			"verifiable-storage-connector-iota-stardust",
 			"verifiable-storage-connector-entity-storage"
 		],
 		"title": "Verifiable Storage",
@@ -65,6 +64,7 @@
 	},
 	{
 		"title": "Dublin Core",
-		"namespace": "dublin-core"
+		"namespace": "dublin-core",
+		"jsonLdTypes": ["terms", "dcmitype"]
 	}
 ]
