@@ -1,0 +1,21 @@
+{
+    "comment": "See https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#section-7",
+    "@context": {
+        "@version": 1.1,
+
+        "dcmitype": "http://purl.org/dc/dcmitype/",
+
+        "Collection": "dcmitype:Collection",
+        "Dataset": "dcmitype:Dataset",
+        "Event": "dcmitype:Event",
+        "Image": "dcmitype:Image",
+        "InteractiveResource": "dcmitype:InteractiveResource",
+        "MovingImage": "dcmitype:MovingImage",
+        "PhysicalObject": "dcmitype:PhysicalObject",
+        "Service": "dcmitype:Service",
+        "Software": "dcmitype:Software",
+        "Sound": "dcmitype:Sound",
+        "StillImage": "dcmitype:StillImage",
+        "Text": "dcmitype:Text"
+    }
+}
