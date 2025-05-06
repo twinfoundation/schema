@@ -65,6 +65,13 @@
 	{
 		"title": "Dublin Core",
 		"namespace": "dublin-core",
-		"jsonLdTypes": ["terms", "dcmitype"]
+		"jsonLdTypes": ["terms", "dcmitype"],
+		"description": "The JSON-LD Contexts are defined here as there is not an authoritative online resource from the DCMI body itself."
+	},
+	{
+		"repo": "federated-catalogue",
+		"title": "Federated Catalogue",
+		"namespace": "federated-catalogue",
+		"description": "Defines terms not covered by the Gaia-X, IDSA or other Vocabularies."
 	}
 ]

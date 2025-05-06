@@ -6,6 +6,17 @@
 				{
 					"type": "header",
 					"key": "Accept",
+					"value": "text/html.*"
+				}
+			],
+			"destination": "https://schema.twindev.org/common/types.html"
+		},
+		{
+			"source": "/common/",
+			"has": [
+				{
+					"type": "header",
+					"key": "Accept",
 					"value": "application/ld\\+json.*"
 				}
 			],
@@ -342,6 +353,17 @@
 			"destination": "https://schema.twindev.org/framework/:path*.json"
 		},
 		{
+			"source": "/dublin-core/",
+			"has": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "text/html.*"
+				}
+			],
+			"destination": "https://schema.twindev.org/dublin-core/types.html"
+		},
+		{
 			"source": "/dublin-core/terms.jsonld",
 			"has": [
 				{
@@ -362,6 +384,28 @@
 				}
 			],
 			"destination": "https://schema.twindev.org/dublin-core/dcmitype.jsonld"
+		},
+		{
+			"source": "/federated-catalogue/",
+			"has": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "text/html.*"
+				}
+			],
+			"destination": "https://schema.twindev.org/federated-catalogue/types.html"
+		},
+		{
+			"source": "/federated-catalogue/",
+			"has": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "application/ld\\+json.*"
+				}
+			],
+			"destination": "https://schema.twindev.org/federated-catalogue/types.jsonld"
 		}
 	]
 }

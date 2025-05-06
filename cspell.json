@@ -1,17 +1,14 @@
 {
+	"ignorePaths": ["*.jsonld", "commitlint.config.mjs", "schemas.json", "vercel.json"],
 	"words": [
-		"cryptosuite",
-		"eddsa",
-		"jsonld",
-		"linkability",
-		"Multibase",
-		"Multikey",
-		"rdfc",
 		"Stiftung",
-		"DCMI",
-		"dcterms",
-		"rdfs",
-		"dcmitype",
+		"cryptosuite",
+		"linkability",
+		"eddsa",
+		"rdfc",
+		"multibase",
+		"multikey",
+		"dcmi",
 		"idsa"
 	]
 }

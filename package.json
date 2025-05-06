@@ -17,7 +17,7 @@
 		"dist": "echo There is no dist in this package",
 		"commitlint": "commitlint --edit",
 		"prepare": "husky",
-		"update-schemas": "node scripts/update-schemas.mjs"
+		"update-schemas": "node scripts/update-schemas.mjs && npm run format"
 	},
 	"engines": {
 		"node": ">=20.0.0"

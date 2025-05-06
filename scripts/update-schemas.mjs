@@ -28,11 +28,10 @@ async function run() {
 
 		const hasTypes = types.length > 0 || packages.length > 0;
 
+		const outputPath = path.join('web', schema.namespace);
+		process.stdout.write(`Schema: ${schema.title}\n`);
+
 		if (hasTypes) {
-			const outputPath = path.join('web', schema.namespace);
-
-			process.stdout.write(`Schema: ${schema.title}\n`);
-
 			if (types.length === 0) {
 				process.stdout.write(`   Cleanup existing types\n`);
 				const existingFiles = await FastGlob(`*.json`, { cwd: outputPath });
@@ -64,13 +63,12 @@ async function run() {
 					}
 				}
 			}
-
-			const typesPage = await generateTypesPage(schema.title, schema.namespace, types);
-
-			process.stdout.write(`   Generate types page\n`);
-			await writeFile(path.join(outputPath, 'types.html'), typesPage, 'utf-8');
-			process.stdout.write('\n');
 		}
+		const typesPage = await generateTypesPage(schema, types);
+
+		process.stdout.write(`   Generate types page\n`);
+		await writeFile(path.join(outputPath, 'types.html'), typesPage, 'utf-8');
+		process.stdout.write('\n');
 	}
 
 	await createRewriteRules(schemas);
@@ -80,27 +78,61 @@ async function run() {
 
 /**
  * Generate the types page.
- * @param title The title of the page.
+ * @param schema The schema being created
  * @param namespace The namespace of the page.
  * @param types The types to include in the page.
  * @returns The generated types page.
  */
-async function generateTypesPage(title, namespace, types) {
+async function generateTypesPage(schema, types) {
 	let template = await readFile(path.join('templates', 'types.html'), 'utf-8');
-	template = template.replace(/\${title}/g, title);
-	template = template.replace(/\${namespace}/g, namespace);
-	template = template.replace(
-		/\${types}/g,
-		types
-			.map(
-				type => `\t\t\t\t<li>
-\t\t\t\t\t<a href="./${stripInterface(type)}.json">${stripInterface(type)}</a>
-\t\t\t\t</li>
-`
-			)
+	template = template.replace(/\${title}/g, schema.title);
+	template = template.replace(/\${namespace}/g, schema.namespace);
+
+	if ((schema.repo ?? '').length === 0) {
+		template = template.replace(/\${repo}/g, '');
+	} else {
+		template = template.replace(
+			/\${repo}/g,
+			`Repo: <a href="https://github.com/twinfoundation/${schema.repo}" target="_blank">https://github.com/twinfoundation/${schema.repo}</a><br /><br /><hr /><br />`
+		);
+	}
+
+	if ((schema.description ?? '').length === 0) {
+		template = template.replace(/\${description}/g, '');
+	} else {
+		template = template.replace(/\${description}/g, `<p>${schema.description}</p><br />`);
+	}
+
+	if (types.length === 0) {
+		template = template.replace(/\${jsonSchemas}/g, '');
+	} else {
+		const typesList = types
+			.map(type => `<li><a href="./${stripInterface(type)}.json">${stripInterface(type)}</a></li>`)
 			.join('')
-			.trim()
-	);
+			.trim();
+
+		const jsonSchemas = `<h2>JSON Schemas</h2>
+			<br />
+			<p>
+				<b>Root namespace:</b>
+				https://schema.twindev.org/${schema.namespace}/
+			</p>
+			<br /><ul>${typesList}</ul><br /><hr /><br /><br />`;
+
+		template = template.replace(/\${jsonSchemas}/g, jsonSchemas);
+	}
+
+	const jsonLdList = (schema.jsonLdTypes ?? ['types'])
+		.map(
+			t =>
+				`<li><a href="./${t}.jsonld">https://schema.twindev.org/${schema.namespace}/${t}.jsonld</a></li>`
+		)
+		.join('');
+
+	const jsonLd = `<h2>JSON-LD</h2><br /><ul>${jsonLdList}</ul>`;
+
+	template = template.replace(/\${jsonLd}/g, jsonLd);
+
 	return template;
 }
 
@@ -123,19 +155,17 @@ async function createRewriteRules(schemas) {
 		const hasTypes = types.length > 0 || packages.length > 0;
 		const jsonLdTypes = schema.jsonLdTypes;
 
-		if (hasTypes) {
-			rewrites.push({
-				source: `/${rewriteName}/`,
-				has: [
-					{
-						type: 'header',
-						key: 'Accept',
-						value: 'text/html.*'
-					}
-				],
-				destination: `https://schema.twindev.org/${rewriteName}/types.html`
-			});
-		}
+		rewrites.push({
+			source: `/${rewriteName}/`,
+			has: [
+				{
+					type: 'header',
+					key: 'Accept',
+					value: 'text/html.*'
+				}
+			],
+			destination: `https://schema.twindev.org/${rewriteName}/types.html`
+		});
 		if (Array.isArray(jsonLdTypes)) {
 			for (const type of jsonLdTypes) {
 				rewrites.push({
