@@ -1,5 +1,6 @@
 {
     "comment": "Specific terms used by the Federated Catalogue",
+    "comment2": "Gaia-X terms are defined here due to an incorrect @type in some of them",
     "@context": {
         "@version": 1.1,
 
@@ -8,7 +9,7 @@
         "schema": "https://schema.org/",
 
         "DataSpaceConnector": "fed-cat:DataSpaceConnector",
-        
+
         "maintainer": {
             "@id": "idsa:maintainer",
             "@type": "@id"
@@ -45,6 +46,11 @@
         "issuer": "https://www.w3.org/2018/credentials#issuer",
         "validFrom": "https://www.w3.org/2018/credentials#validFrom",
         "validUntil": "https://www.w3.org/2018/credentials#validUntil",
-        "evidence": "https://www.w3.org/2018/credentials#evidence"
+        "evidence": "https://www.w3.org/2018/credentials#evidence",
+
+        "legalAddress": "https://w3id.org/gaia-x/development#legalAddress",
+        "registrationNumber": "https://w3id.org/gaia-x/development#registrationNumber",
+        "endpoint": "https://w3id.org/gaia-x/development#endpoint",
+        "servicePolicy": "https://w3id.org/gaia-x/development#servicePolicy"
     }
 }
