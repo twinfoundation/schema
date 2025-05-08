@@ -1,11 +1,10 @@
 {
-    "comment": "Specific terms used by the Federated Catalogue",    
+    "comment": "Specific terms used by the Federated Catalogue",
     "@context": {
         "@version": 1.1,
         "fed-cat": "https://schema.twindev.org/federated-catalogue/",
         "idsa": "https://w3id.org/idsa/core/",
         "schema": "https://schema.org/",
-
         "DataSpaceConnector": "fed-cat:DataSpaceConnector",
         "maintainer": {
             "@id": "idsa:maintainer",
@@ -38,6 +37,10 @@
         "identity": {
             "@id": "fed-cat:identity",
             "@type": "schema:URL"
-        }
+        },
+        "issuer": "https://www.w3.org/2018/credentials#issuer",
+        "validFrom": "https://www.w3.org/2018/credentials#validFrom",
+        "validUntil": "https://www.w3.org/2018/credentials#validUntil",
+        "evidence": "https://www.w3.org/2018/credentials#evidence"
     }
 }
