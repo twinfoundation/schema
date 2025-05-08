@@ -7,7 +7,6 @@
 		"id": "@id",
 		"type": "@type",
 		"BlobStorageEntry": "https://schema.twindev.org/blob-storage/BlobStorageEntry",
-		"BlobStorageEntryList": "https://schema.twindev.org/blob-storage/BlobStorageEntryList",
 		"blobSize": {
 			"@id": "twin-blob-storage:blobSize",
 			"@type": "schema:Number"
@@ -15,10 +14,6 @@
 		"fileExtension": {
 			"@id": "twin-blob-storage:fileExtension",
 			"@type": "schema:Text"
-		},
-		"entries": {
-			"@id": "twin-blob-storage:entries",
-			"@container": "@list"
 		},
 		"metadata": {
 			"@id": "twin-blob-storage:metadata"

@@ -35,18 +35,6 @@
 			"@id": "twin-documents:attestationId",
 			"@type": "schema:identifier"
 		},
-		"documents": {
-			"@id": "twin-documents:documents",
-			"@container": "@list"
-		},
-		"revisions": {
-			"@id": "twin-documents:revisions",
-			"@container": "@list"
-		},
-		"revisionCursor": {
-			"@id": "twin-documents:revisionCursor",
-			"@type": "schema:Text"
-		},
 		"extractedData": {
 			"@id": "twin-documents:extractedData",
 			"@type": "@json"

@@ -9,21 +9,6 @@
 		"type": "@type",
 		"AuditableItemStream": "twin-ais:AuditableItemStream",
 		"AuditableItemStreamEntry": "twin-ais:AuditableItemStreamEntry",
-		"AuditableItemStreamList": "twin-ais:AuditableItemStreamList",
-		"AuditableItemStreamEntryList": "twin-ais:AuditableItemStreamEntryList",
-		"AuditableItemStreamEntryObjectList": "twin-ais:AuditableItemStreamEntryObjectList",
-		"itemStreams": {
-			"@id": "twin-ais:itemStreams",
-			"@container": "@list"
-		},
-		"entries": {
-			"@id": "twin-ais:entries",
-			"@container": "@list"
-		},
-		"entryObjects": {
-			"@id": "twin-ais:entryObjects",
-			"@container": "@list"
-		},
 		"entryObject": {
 			"@id": "twin-ais:entryObject",
 			"@type": "@json"

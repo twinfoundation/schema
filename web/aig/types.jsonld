@@ -33,10 +33,6 @@
 			"@id": "twin-aig:patches",
 			"@container": "@list"
 		},
-		"vertices": {
-			"@id": "twin-aig:vertices",
-			"@container": "@list"
-		},
 		"resourceObject": {
 			"@id": "twin-aig:resourceObject",
 			"@type": "@json"
