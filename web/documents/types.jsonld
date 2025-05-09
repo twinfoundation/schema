@@ -4,6 +4,7 @@
 		"@protected": true,
 		"twin-documents": "https://schema.twindev.org/documents/",
 		"schema": "http://schema.org/",
+		"twin-aig": "https://schema.twindev.org/aig/",
 		"id": "@id",
 		"type": "@type",
 		"Document": "twin-documents:Document",
@@ -38,6 +39,10 @@
 		"extractedData": {
 			"@id": "twin-documents:extractedData",
 			"@type": "@json"
+		},
+		"edges": {
+			"@id": "twin-aig:edges",
+			"@container": "@set"
 		}
 	}
 }
