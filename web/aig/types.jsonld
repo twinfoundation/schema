@@ -15,23 +15,23 @@
 		"AuditableItemGraphPatchOperation": "twin-aig:AuditableItemGraphPatchOperation",
 		"aliases": {
 			"@id": "twin-aig:aliases",
-			"@container": "@list"
+			"@container": "@set"
 		},
 		"edges": {
 			"@id": "twin-aig:edges",
-			"@container": "@list"
+			"@container": "@set"
 		},
 		"resources": {
 			"@id": "twin-aig:resources",
-			"@container": "@list"
+			"@container": "@set"
 		},
 		"changesets": {
 			"@id": "twin-aig:changesets",
-			"@container": "@list"
+			"@container": "@set"
 		},
 		"patches": {
 			"@id": "twin-aig:patches",
-			"@container": "@list"
+			"@container": "@set"
 		},
 		"resourceObject": {
 			"@id": "twin-aig:resourceObject",
@@ -46,7 +46,7 @@
 		},
 		"edgeRelationships": {
 			"@id": "twin-aig:edgeRelationships",
-			"@container": "@list"
+			"@container": "@set"
 		},
 		"aliasFormat": {
 			"@id": "twin-aig:aliasFormat",
