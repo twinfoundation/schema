@@ -31,7 +31,7 @@
             "@type": "@id"
         },
         "pullDataEndpoint": {
-            "@id": "fed-cat:pushActivityEndpoint",
+            "@id": "fed-cat:pullDataEndpoint",
             "@type": "@id"
         },
         "offeredResource": {
