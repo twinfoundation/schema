@@ -70,6 +70,7 @@
 	},
 	{
 		"repo": "federated-catalogue",
+		"packages": ["federated-catalogue-models"],
 		"title": "Federated Catalogue",
 		"namespace": "federated-catalogue",
 		"description": "Defines terms not covered by the Gaia-X, IDSA or other Vocabularies."

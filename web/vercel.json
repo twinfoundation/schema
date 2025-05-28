@@ -406,6 +406,17 @@
 				}
 			],
 			"destination": "https://schema.twindev.org/federated-catalogue/types.jsonld"
+		},
+		{
+			"source": "/federated-catalogue/:path*",
+			"missing": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "application/ld\\+json.*"
+				}
+			],
+			"destination": "https://schema.twindev.org/federated-catalogue/:path*.json"
 		}
 	]
 }
