@@ -29,6 +29,10 @@
 		"state": {
 			"@id": "twin-ais:state",
 			"@type": "schema:Text"
+		},
+		"entries": {
+			"@id": "twin-ais:entries",
+			"@container": "@set"
 		}
 	}
 }
