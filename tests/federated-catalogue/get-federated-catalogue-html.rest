@@ -1,0 +1,4 @@
+### Gets the JSON Schema representation of the Federated Catalogue
+
+GET https://schema.twindev.org/federated-catalogue/
+Accept: text/html
