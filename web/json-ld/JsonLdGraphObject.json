@@ -15,13 +15,23 @@
 			]
 		},
 		"@index": {
-			"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
+			"type": "string"
 		},
 		"@id": {
-			"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
+			"anyOf": [
+				{
+					"type": "string"
+				},
+				{
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				}
+			]
 		},
 		"@context": {
-			"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
+			"$ref": "https://schema.twindev.org/json-ld/JsonLdContextDefinitionRoot"
 		}
 	},
 	"required": ["@graph"],

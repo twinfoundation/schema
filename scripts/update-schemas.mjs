@@ -44,11 +44,13 @@ async function run() {
 				for (const pkg of packages) {
 					const packagePath = path.resolve(path.join('../', schema.repo, 'packages', pkg));
 					process.stdout.write(`   Package: ${packagePath}\n`);
-					const tsToOpenApi = await loadJson(path.join(packagePath, 'ts-to-schema.json'));
-					types.push(...tsToOpenApi.types);
+					const tsToSchema = await loadJson(path.join(packagePath, 'ts-to-schema.json'));
+					types.push(...tsToSchema.types.map(t => typeSourceToType(t)));
 
 					process.stdout.write(`      Copying types\n`);
-					for (const type of tsToOpenApi.types) {
+					for (const typeSource of tsToSchema.types) {
+						const type = typeSourceToType(typeSource);
+
 						const sourcePath = path.join(
 							packagePath,
 							'src',
@@ -222,6 +224,17 @@ function stripInterface(typeString) {
 	}
 
 	return typeString;
+}
+
+/**
+ * Convert a type source to a type.
+ * @param typeSource The source type to convert.
+ * @returns The converted type.
+ */
+function typeSourceToType(typeSource) {
+	const typeSourceParts = typeSource.split('/');
+	const camelCaseType = typeSourceParts[typeSourceParts.length - 1].replace(/(\.d)?\.ts$/, '');
+	return camelCaseType[0].toUpperCase() + camelCaseType.slice(1);
 }
 
 run().catch(err => {

@@ -5,19 +5,20 @@
 			"additionalProperties": false,
 			"properties": {
 				"@value": {
-					"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
+					"type": ["null", "boolean", "number", "string"]
 				},
 				"@language": {
-					"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
+					"type": "string"
 				},
 				"@direction": {
-					"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
+					"type": ["string", "null"],
+					"enum": ["ltr", "rtl", null]
 				},
 				"@index": {
-					"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
+					"type": "string"
 				},
 				"@context": {
-					"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
+					"$ref": "https://schema.twindev.org/json-ld/JsonLdContextDefinitionRoot"
 				}
 			},
 			"required": ["@value"]
@@ -27,16 +28,16 @@
 			"additionalProperties": false,
 			"properties": {
 				"@value": {
-					"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
+					"type": ["null", "boolean", "number", "string"]
 				},
 				"@type": {
-					"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
+					"type": "string"
 				},
 				"@index": {
-					"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
+					"type": "string"
 				},
 				"@context": {
-					"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
+					"$ref": "https://schema.twindev.org/json-ld/JsonLdContextDefinitionRoot"
 				}
 			},
 			"required": ["@type", "@value"]
@@ -48,7 +49,16 @@
 				"@value": {
 					"anyOf": [
 						{
-							"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
+							"type": "null"
+						},
+						{
+							"type": "boolean"
+						},
+						{
+							"type": "number"
+						},
+						{
+							"type": "string"
 						},
 						{
 							"$ref": "https://schema.twindev.org/json-ld/JsonLdJsonObject"
@@ -63,10 +73,10 @@
 					"const": "@json"
 				},
 				"@index": {
-					"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
+					"type": "string"
 				},
 				"@context": {
-					"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
+					"$ref": "https://schema.twindev.org/json-ld/JsonLdContextDefinitionRoot"
 				}
 			},
 			"required": ["@type", "@value"]

@@ -2,10 +2,20 @@
 	"type": "object",
 	"properties": {
 		"@list": {
-			"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
+			"anyOf": [
+				{
+					"$ref": "https://schema.twindev.org/json-ld/JsonLdListOrSetItem"
+				},
+				{
+					"type": "array",
+					"items": {
+						"$ref": "https://schema.twindev.org/json-ld/JsonLdListOrSetItem"
+					}
+				}
+			]
 		},
 		"@index": {
-			"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
+			"type": "string"
 		}
 	},
 	"required": ["@list"],
