@@ -8,7 +8,7 @@
 import path from 'node:path';
 import FastGlob from 'fast-glob';
 import { loadJson, saveJson } from './common.mjs';
-import { readFile, unlink, writeFile } from 'node:fs/promises';
+import { mkdir, readFile, unlink, writeFile } from 'node:fs/promises';
 
 /**
  * Execute the process.
@@ -30,6 +30,8 @@ async function run() {
 
 		const outputPath = path.join('web', schema.namespace);
 		process.stdout.write(`Schema: ${schema.title}\n`);
+
+		await mkdir(outputPath, { recursive: true });
 
 		if (hasTypes) {
 			if (types.length === 0) {
@@ -124,16 +126,22 @@ async function generateTypesPage(schema, types) {
 		template = template.replace(/\${jsonSchemas}/g, jsonSchemas);
 	}
 
-	const jsonLdList = (schema.jsonLdTypes ?? ['types'])
-		.map(
-			t =>
-				`<li><a href="./${t}.jsonld">https://schema.twindev.org/${schema.namespace}/${t}.jsonld</a></li>`
-		)
-		.join('');
+	const allTypes = schema.jsonLdTypes ?? ['types'];
 
-	const jsonLd = `<h2>JSON-LD</h2><br /><ul>${jsonLdList}</ul>`;
+	let jsonLdOutput = '';
+	if (allTypes.length > 0) {
+		const jsonLdList = allTypes
+			.map(
+				t =>
+					`<li><a href="./${t}.jsonld">https://schema.twindev.org/${schema.namespace}/${t}.jsonld</a></li>`
+			)
+			.join('');
 
-	template = template.replace(/\${jsonLd}/g, jsonLd);
+		jsonLdOutput = `<h2>JSON-LD</h2><br /><ul>${jsonLdList}</ul>`;
+	} else if (schema.jsonLdLink) {
+		jsonLdOutput = `<h2>JSON-LD</h2><br /><a href="${schema.jsonLdLink}" target="_blank">${schema.jsonLdLink}</a>`;
+	}
+	template = template.replace(/\${jsonLd}/g, jsonLdOutput);
 
 	return template;
 }

@@ -30,6 +30,14 @@
 		"namespace": "did"
 	},
 	{
+		"repo": "standards",
+		"packages": ["standards-w3c-odrl"],
+		"title": "ODRL",
+		"namespace": "odrl",
+		"jsonLdTypes": [],
+		"jsonLdLink": "https://www.w3.org/ns/odrl.jsonld"
+	},
+	{
 		"repo": "document-management",
 		"packages": ["document-management-models"],
 		"title": "Documents",

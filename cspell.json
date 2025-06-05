@@ -1,5 +1,11 @@
 {
-	"ignorePaths": ["*.jsonld", "commitlint.config.mjs", "schemas.json", "vercel.json"],
+	"ignorePaths": [
+		"*.jsonld",
+		"commitlint.config.mjs",
+		"schemas.json",
+		"vercel.json",
+		"web/**/*.json"
+	],
 	"words": [
 		"Stiftung",
 		"cryptosuite",
@@ -9,6 +15,7 @@
 		"multibase",
 		"multikey",
 		"dcmi",
-		"idsa"
+		"idsa",
+		"odrl"
 	]
 }

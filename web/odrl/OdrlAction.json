@@ -1,0 +1,135 @@
+{
+	"type": "object",
+	"properties": {
+		"@context": {
+			"$ref": "https://schema.twindev.org/odrl/JsonLdContextDefinitionRoot"
+		},
+		"@id": {
+			"type": "string",
+			"description": "Direct action identifier. Used in simple action references."
+		},
+		"@included": {
+			"$ref": "https://schema.twindev.org/odrl/JsonLdIncludedBlock"
+		},
+		"@graph": {
+			"anyOf": [
+				{
+					"$ref": "https://schema.twindev.org/odrl/JsonLdNodeObject"
+				},
+				{
+					"type": "array",
+					"items": {
+						"$ref": "https://schema.twindev.org/odrl/JsonLdNodeObject"
+					}
+				}
+			]
+		},
+		"@nest": {
+			"anyOf": [
+				{
+					"$ref": "https://schema.twindev.org/odrl/JsonLdJsonObject"
+				},
+				{
+					"type": "array",
+					"items": {
+						"$ref": "https://schema.twindev.org/odrl/JsonLdJsonObject"
+					}
+				}
+			]
+		},
+		"@type": {
+			"anyOf": [
+				{
+					"type": "string"
+				},
+				{
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				}
+			]
+		},
+		"@reverse": {
+			"type": "object",
+			"additionalProperties": {
+				"type": "string"
+			}
+		},
+		"@index": {
+			"type": "string"
+		},
+		"rdf:value": {
+			"type": "object",
+			"properties": {
+				"@id": {
+					"type": "string"
+				}
+			},
+			"required": ["@id"],
+			"additionalProperties": false,
+			"description": "The value/identifier of the action. Used in complex action definitions."
+		},
+		"refinement": {
+			"anyOf": [
+				{
+					"$ref": "https://schema.twindev.org/odrl/OdrlConstraint"
+				},
+				{
+					"$ref": "https://schema.twindev.org/odrl/OdrlLogicalConstraint"
+				},
+				{
+					"type": "array",
+					"items": {
+						"anyOf": [
+							{
+								"$ref": "https://schema.twindev.org/odrl/OdrlConstraint"
+							},
+							{
+								"$ref": "https://schema.twindev.org/odrl/OdrlLogicalConstraint"
+							}
+						]
+					}
+				}
+			],
+			"description": "Refinements applied to the action."
+		},
+		"includedIn": {
+			"$ref": "https://schema.twindev.org/odrl/ActionType",
+			"description": "Reference to the action this action is included in."
+		},
+		"implies": {
+			"type": "array",
+			"items": {
+				"$ref": "https://schema.twindev.org/odrl/ActionType"
+			},
+			"description": "References to actions this action implies."
+		}
+	},
+	"additionalProperties": {
+		"anyOf": [
+			{
+				"$ref": "https://schema.twindev.org/odrl/JsonLdNodePrimitive"
+			},
+			{
+				"$ref": "https://schema.twindev.org/odrl/JsonLdLanguageMap"
+			},
+			{
+				"$ref": "https://schema.twindev.org/odrl/JsonLdIndexMap"
+			},
+			{
+				"$ref": "https://schema.twindev.org/odrl/JsonLdIncludedBlock"
+			},
+			{
+				"$ref": "https://schema.twindev.org/odrl/JsonLdIdMap"
+			},
+			{
+				"$ref": "https://schema.twindev.org/odrl/JsonLdTypeMap"
+			},
+			{
+				"type": "array"
+			}
+		]
+	},
+	"description": "Interface for ODRL Actions."
+}

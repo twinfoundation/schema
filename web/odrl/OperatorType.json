@@ -1,0 +1,20 @@
+{
+	"type": "string",
+	"enum": [
+		"eq",
+		"gt",
+		"gteq",
+		"lt",
+		"lteq",
+		"neq",
+		"isA",
+		"hasPart",
+		"isPartOf",
+		"isAllOf",
+		"isAnyOf",
+		"isNoneOf",
+		"locTimeEq",
+		"locTimeGteq"
+	],
+	"description": "The types for ODRL Operators."
+}

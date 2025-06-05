@@ -1,0 +1,5 @@
+{
+	"type": "string",
+	"enum": ["and", "or", "xone", "andSequence"],
+	"description": "The types for ODRL Logical Constraints."
+}

@@ -1,0 +1,5 @@
+{
+	"type": "string",
+	"enum": ["Policy", "Set", "Offer", "Agreement"],
+	"description": "The types for ODRL Policies."
+}

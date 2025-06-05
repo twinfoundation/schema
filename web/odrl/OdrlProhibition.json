@@ -1,0 +1,190 @@
+{
+	"type": "object",
+	"properties": {
+		"@context": {
+			"$ref": "https://schema.twindev.org/odrl/JsonLdContextDefinitionRoot"
+		},
+		"@id": {
+			"anyOf": [
+				{
+					"type": "string"
+				},
+				{
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				}
+			]
+		},
+		"@included": {
+			"$ref": "https://schema.twindev.org/odrl/JsonLdIncludedBlock"
+		},
+		"@graph": {
+			"anyOf": [
+				{
+					"$ref": "https://schema.twindev.org/odrl/JsonLdNodeObject"
+				},
+				{
+					"type": "array",
+					"items": {
+						"$ref": "https://schema.twindev.org/odrl/JsonLdNodeObject"
+					}
+				}
+			]
+		},
+		"@nest": {
+			"anyOf": [
+				{
+					"$ref": "https://schema.twindev.org/odrl/JsonLdJsonObject"
+				},
+				{
+					"type": "array",
+					"items": {
+						"$ref": "https://schema.twindev.org/odrl/JsonLdJsonObject"
+					}
+				}
+			]
+		},
+		"@type": {
+			"anyOf": [
+				{
+					"type": "string"
+				},
+				{
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				}
+			]
+		},
+		"@reverse": {
+			"type": "object",
+			"additionalProperties": {
+				"type": "string"
+			}
+		},
+		"@index": {
+			"type": "string"
+		},
+		"uid": {
+			"type": "string",
+			"description": "Optional unique identifier for the rule."
+		},
+		"action": {
+			"anyOf": [
+				{
+					"$ref": "https://schema.twindev.org/odrl/ActionType"
+				},
+				{
+					"$ref": "https://schema.twindev.org/odrl/OdrlAction"
+				},
+				{
+					"type": "array",
+					"items": {
+						"anyOf": [
+							{
+								"$ref": "https://schema.twindev.org/odrl/ActionType"
+							},
+							{
+								"$ref": "https://schema.twindev.org/odrl/OdrlAction"
+							}
+						]
+					}
+				}
+			],
+			"description": "The action associated with the rule."
+		},
+		"target": {
+			"anyOf": [
+				{
+					"type": "string"
+				},
+				{
+					"$ref": "https://schema.twindev.org/odrl/OdrlAsset"
+				},
+				{
+					"type": "array",
+					"items": {
+						"anyOf": [
+							{
+								"type": "string"
+							},
+							{
+								"$ref": "https://schema.twindev.org/odrl/OdrlAsset"
+							}
+						]
+					}
+				}
+			],
+			"description": "The target asset for the rule."
+		},
+		"assigner": {
+			"anyOf": [
+				{
+					"type": "string"
+				},
+				{
+					"$ref": "https://schema.twindev.org/odrl/OdrlParty"
+				}
+			],
+			"description": "The assigner of the rule."
+		},
+		"assignee": {
+			"anyOf": [
+				{
+					"type": "string"
+				},
+				{
+					"$ref": "https://schema.twindev.org/odrl/OdrlParty"
+				}
+			],
+			"description": "The assignee of the rule."
+		},
+		"constraint": {
+			"type": "array",
+			"items": {
+				"$ref": "https://schema.twindev.org/odrl/OdrlConstraint"
+			},
+			"description": "Constraints applied to the rule."
+		},
+		"summary": {
+			"type": "string",
+			"description": "Additional relation sub-properties as defined in ODRL profiles. For example, 'summary' in profile \"http://example.com/odrl:profile:03\" indicates where the output should be stored."
+		},
+		"remedy": {
+			"type": "array",
+			"items": {
+				"$ref": "https://schema.twindev.org/odrl/OdrlDuty"
+			},
+			"description": "The remedies that must be fulfilled if prohibition is violated."
+		}
+	},
+	"additionalProperties": {
+		"anyOf": [
+			{
+				"$ref": "https://schema.twindev.org/odrl/JsonLdNodePrimitive"
+			},
+			{
+				"$ref": "https://schema.twindev.org/odrl/JsonLdLanguageMap"
+			},
+			{
+				"$ref": "https://schema.twindev.org/odrl/JsonLdIndexMap"
+			},
+			{
+				"$ref": "https://schema.twindev.org/odrl/JsonLdIncludedBlock"
+			},
+			{
+				"$ref": "https://schema.twindev.org/odrl/JsonLdIdMap"
+			},
+			{
+				"$ref": "https://schema.twindev.org/odrl/JsonLdTypeMap"
+			},
+			{
+				"type": "array"
+			}
+		]
+	},
+	"description": "Interface for Prohibition Rules."
+}

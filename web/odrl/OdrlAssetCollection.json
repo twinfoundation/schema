@@ -1,0 +1,120 @@
+{
+	"type": "object",
+	"properties": {
+		"@context": {
+			"$ref": "https://schema.twindev.org/odrl/JsonLdContextDefinitionRoot"
+		},
+		"@id": {
+			"anyOf": [
+				{
+					"type": "string"
+				},
+				{
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				}
+			]
+		},
+		"@included": {
+			"$ref": "https://schema.twindev.org/odrl/JsonLdIncludedBlock"
+		},
+		"@graph": {
+			"anyOf": [
+				{
+					"$ref": "https://schema.twindev.org/odrl/JsonLdNodeObject"
+				},
+				{
+					"type": "array",
+					"items": {
+						"$ref": "https://schema.twindev.org/odrl/JsonLdNodeObject"
+					}
+				}
+			]
+		},
+		"@nest": {
+			"anyOf": [
+				{
+					"$ref": "https://schema.twindev.org/odrl/JsonLdJsonObject"
+				},
+				{
+					"type": "array",
+					"items": {
+						"$ref": "https://schema.twindev.org/odrl/JsonLdJsonObject"
+					}
+				}
+			]
+		},
+		"@type": {
+			"type": "string",
+			"description": "The type of the asset. Can be used to specify additional type information."
+		},
+		"@reverse": {
+			"type": "object",
+			"additionalProperties": {
+				"type": "string"
+			}
+		},
+		"@index": {
+			"type": "string"
+		},
+		"uid": {
+			"type": "string",
+			"description": "The unique identifier for the asset. Should be an IRI."
+		},
+		"partOf": {
+			"anyOf": [
+				{
+					"type": "string"
+				},
+				{
+					"$ref": "https://schema.twindev.org/odrl/OdrlAssetCollection"
+				}
+			],
+			"description": "Reference to the asset collection this asset is part of. Used to identify an AssetCollection that this Asset is a member of."
+		},
+		"hasPolicy": {
+			"type": "string",
+			"description": "Reference to the policy that governs this asset. Used to identify the Policy that governs this Asset."
+		},
+		"source": {
+			"type": "string",
+			"description": "Reference to the source of the asset collection. Must be an IRI that references the AssetCollection."
+		},
+		"refinement": {
+			"type": "array",
+			"items": {
+				"$ref": "https://schema.twindev.org/odrl/OdrlConstraint"
+			},
+			"description": "Refinements applied to the asset collection. Used to specify the refinement context under which to identify individual Asset(s) of the complete collection. The refinement applies to the characteristics of each member of the collection (not the resource as a whole)."
+		}
+	},
+	"required": ["source"],
+	"additionalProperties": {
+		"anyOf": [
+			{
+				"$ref": "https://schema.twindev.org/odrl/JsonLdNodePrimitive"
+			},
+			{
+				"$ref": "https://schema.twindev.org/odrl/JsonLdLanguageMap"
+			},
+			{
+				"$ref": "https://schema.twindev.org/odrl/JsonLdIndexMap"
+			},
+			{
+				"$ref": "https://schema.twindev.org/odrl/JsonLdIncludedBlock"
+			},
+			{
+				"$ref": "https://schema.twindev.org/odrl/JsonLdIdMap"
+			},
+			{
+				"$ref": "https://schema.twindev.org/odrl/JsonLdTypeMap"
+			},
+			{
+				"type": "array"
+			}
+		]
+	},
+	"description": "Interface for ODRL Asset Collections. An AssetCollection is a single resource representing a set of member resources, where all members of the set will be the subject of the Rule."
+}
