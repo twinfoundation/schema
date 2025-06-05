@@ -6,20 +6,20 @@
 			"description": "The context for the policy. Must include \"https://www.w3.org/ns/odrl.jsonld\""
 		},
 		"@id": {
-			"$ref": "https://schema.twindev.org/odrl/JsonLdKeyword"
+			"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
 		},
 		"@included": {
-			"$ref": "https://schema.twindev.org/odrl/JsonLdKeyword"
+			"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
 		},
 		"@graph": {
 			"anyOf": [
 				{
-					"$ref": "https://schema.twindev.org/odrl/JsonLdNodeObject"
+					"$ref": "https://schema.twindev.org/json-ld/JsonLdNodeObject"
 				},
 				{
 					"type": "array",
 					"items": {
-						"$ref": "https://schema.twindev.org/odrl/JsonLdNodeObject"
+						"$ref": "https://schema.twindev.org/json-ld/JsonLdNodeObject"
 					}
 				}
 			]
@@ -27,12 +27,12 @@
 		"@nest": {
 			"anyOf": [
 				{
-					"$ref": "https://schema.twindev.org/odrl/JsonLdJsonObject"
+					"$ref": "https://schema.twindev.org/json-ld/JsonLdJsonObject"
 				},
 				{
 					"type": "array",
 					"items": {
-						"$ref": "https://schema.twindev.org/odrl/JsonLdJsonObject"
+						"$ref": "https://schema.twindev.org/json-ld/JsonLdJsonObject"
 					}
 				}
 			]
@@ -44,11 +44,11 @@
 		"@reverse": {
 			"type": "object",
 			"additionalProperties": {
-				"$ref": "https://schema.twindev.org/odrl/JsonLdKeyword"
+				"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
 			}
 		},
 		"@index": {
-			"$ref": "https://schema.twindev.org/odrl/JsonLdKeyword"
+			"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
 		},
 		"uid": {
 			"type": "string",
@@ -182,22 +182,22 @@
 	"additionalProperties": {
 		"anyOf": [
 			{
-				"$ref": "https://schema.twindev.org/odrl/JsonLdNodePrimitive"
+				"$ref": "https://schema.twindev.org/json-ld/JsonLdNodePrimitive"
 			},
 			{
-				"$ref": "https://schema.twindev.org/odrl/JsonLdLanguageMap"
+				"$ref": "https://schema.twindev.org/json-ld/JsonLdLanguageMap"
 			},
 			{
-				"$ref": "https://schema.twindev.org/odrl/JsonLdIndexMap"
+				"$ref": "https://schema.twindev.org/json-ld/JsonLdIndexMap"
 			},
 			{
-				"$ref": "https://schema.twindev.org/odrl/JsonLdIncludedBlock"
+				"$ref": "https://schema.twindev.org/json-ld/JsonLdIncludedBlock"
 			},
 			{
-				"$ref": "https://schema.twindev.org/odrl/JsonLdIdMap"
+				"$ref": "https://schema.twindev.org/json-ld/JsonLdIdMap"
 			},
 			{
-				"$ref": "https://schema.twindev.org/odrl/JsonLdTypeMap"
+				"$ref": "https://schema.twindev.org/json-ld/JsonLdTypeMap"
 			},
 			{
 				"type": "array"

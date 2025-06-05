@@ -2,7 +2,7 @@
 	"type": "object",
 	"properties": {
 		"@context": {
-			"$ref": "https://schema.twindev.org/odrl/JsonLdContextDefinitionRoot"
+			"$ref": "https://schema.twindev.org/json-ld/JsonLdContextDefinitionRoot"
 		},
 		"@id": {
 			"anyOf": [
@@ -18,17 +18,17 @@
 			]
 		},
 		"@included": {
-			"$ref": "https://schema.twindev.org/odrl/JsonLdIncludedBlock"
+			"$ref": "https://schema.twindev.org/json-ld/JsonLdIncludedBlock"
 		},
 		"@graph": {
 			"anyOf": [
 				{
-					"$ref": "https://schema.twindev.org/odrl/JsonLdNodeObject"
+					"$ref": "https://schema.twindev.org/json-ld/JsonLdNodeObject"
 				},
 				{
 					"type": "array",
 					"items": {
-						"$ref": "https://schema.twindev.org/odrl/JsonLdNodeObject"
+						"$ref": "https://schema.twindev.org/json-ld/JsonLdNodeObject"
 					}
 				}
 			]
@@ -36,12 +36,12 @@
 		"@nest": {
 			"anyOf": [
 				{
-					"$ref": "https://schema.twindev.org/odrl/JsonLdJsonObject"
+					"$ref": "https://schema.twindev.org/json-ld/JsonLdJsonObject"
 				},
 				{
 					"type": "array",
 					"items": {
-						"$ref": "https://schema.twindev.org/odrl/JsonLdJsonObject"
+						"$ref": "https://schema.twindev.org/json-ld/JsonLdJsonObject"
 					}
 				}
 			]
@@ -157,22 +157,22 @@
 	"additionalProperties": {
 		"anyOf": [
 			{
-				"$ref": "https://schema.twindev.org/odrl/JsonLdNodePrimitive"
+				"$ref": "https://schema.twindev.org/json-ld/JsonLdNodePrimitive"
 			},
 			{
-				"$ref": "https://schema.twindev.org/odrl/JsonLdLanguageMap"
+				"$ref": "https://schema.twindev.org/json-ld/JsonLdLanguageMap"
 			},
 			{
-				"$ref": "https://schema.twindev.org/odrl/JsonLdIndexMap"
+				"$ref": "https://schema.twindev.org/json-ld/JsonLdIndexMap"
 			},
 			{
-				"$ref": "https://schema.twindev.org/odrl/JsonLdIncludedBlock"
+				"$ref": "https://schema.twindev.org/json-ld/JsonLdIncludedBlock"
 			},
 			{
-				"$ref": "https://schema.twindev.org/odrl/JsonLdIdMap"
+				"$ref": "https://schema.twindev.org/json-ld/JsonLdIdMap"
 			},
 			{
-				"$ref": "https://schema.twindev.org/odrl/JsonLdTypeMap"
+				"$ref": "https://schema.twindev.org/json-ld/JsonLdTypeMap"
 			},
 			{
 				"type": "array"

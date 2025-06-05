@@ -14,7 +14,7 @@
 				}
 			],
 			"additionalItems": {
-				"$ref": "https://schema.twindev.org/odrl/JsonLdContextDefinitionElement"
+				"$ref": "https://schema.twindev.org/json-ld/JsonLdContextDefinitionElement"
 			}
 		},
 		{
@@ -26,11 +26,11 @@
 					"const": "https://www.w3.org/ns/odrl/2/"
 				},
 				{
-					"$ref": "https://schema.twindev.org/odrl/JsonLdContextDefinitionElement"
+					"$ref": "https://schema.twindev.org/json-ld/JsonLdContextDefinitionElement"
 				}
 			],
 			"additionalItems": {
-				"$ref": "https://schema.twindev.org/odrl/JsonLdContextDefinitionElement"
+				"$ref": "https://schema.twindev.org/json-ld/JsonLdContextDefinitionElement"
 			}
 		},
 		{
@@ -38,7 +38,7 @@
 			"minItems": 2,
 			"items": [
 				{
-					"$ref": "https://schema.twindev.org/odrl/JsonLdContextDefinitionElement"
+					"$ref": "https://schema.twindev.org/json-ld/JsonLdContextDefinitionElement"
 				},
 				{
 					"type": "string",
@@ -46,7 +46,7 @@
 				}
 			],
 			"additionalItems": {
-				"$ref": "https://schema.twindev.org/odrl/JsonLdContextDefinitionElement"
+				"$ref": "https://schema.twindev.org/json-ld/JsonLdContextDefinitionElement"
 			}
 		}
 	],
