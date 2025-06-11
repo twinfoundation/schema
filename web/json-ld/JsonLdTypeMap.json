@@ -1,4 +1,7 @@
 {
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "https://schema.twindev.org/json-ld/JsonLdTypeMap",
+	"description": "A type map is used to associate an IRI with a value that allows easy programmatic access.",
 	"type": "object",
 	"additionalProperties": {
 		"anyOf": [
@@ -9,6 +12,5 @@
 				"$ref": "https://schema.twindev.org/json-ld/JsonLdNodeObject"
 			}
 		]
-	},
-	"description": "A type map is used to associate an IRI with a value that allows easy programmatic access."
+	}
 }

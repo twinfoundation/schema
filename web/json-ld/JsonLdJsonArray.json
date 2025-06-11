@@ -1,7 +1,12 @@
 {
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "https://schema.twindev.org/json-ld/JsonLdJsonArray",
+	"description": "JSON Type for array.",
 	"type": "array",
-	"items": {
-		"$ref": "https://schema.twindev.org/json-ld/JsonLdJsonValue"
-	},
-	"description": "JSON Type for array."
+	"items": false,
+	"prefixItems": [
+		{
+			"$ref": "https://schema.twindev.org/json-ld/JsonLdJsonValue"
+		}
+	]
 }

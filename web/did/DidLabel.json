@@ -1,4 +1,7 @@
 {
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "https://schema.twindev.org/did/DidLabel",
+	"description": "Interface describing a DID Label.",
 	"type": "object",
 	"properties": {
 		"@value": {
@@ -15,6 +18,5 @@
 		}
 	},
 	"required": ["@value", "@language"],
-	"additionalProperties": false,
-	"description": "Interface describing a DID Label."
+	"additionalProperties": false
 }

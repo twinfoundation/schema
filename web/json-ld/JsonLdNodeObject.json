@@ -1,4 +1,7 @@
 {
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "https://schema.twindev.org/json-ld/JsonLdNodeObject",
+	"description": "A node object represents zero or more properties of a node in the graph serialized by the JSON-LD document.",
 	"type": "object",
 	"additionalProperties": {
 		"anyOf": [
@@ -36,9 +39,12 @@
 				},
 				{
 					"type": "array",
-					"items": {
-						"type": "string"
-					}
+					"items": false,
+					"prefixItems": [
+						{
+							"type": "string"
+						}
+					]
 				}
 			]
 		},
@@ -52,9 +58,12 @@
 				},
 				{
 					"type": "array",
-					"items": {
-						"$ref": "https://schema.twindev.org/json-ld/JsonLdNodeObject"
-					}
+					"items": false,
+					"prefixItems": [
+						{
+							"$ref": "https://schema.twindev.org/json-ld/JsonLdNodeObject"
+						}
+					]
 				}
 			]
 		},
@@ -65,9 +74,12 @@
 				},
 				{
 					"type": "array",
-					"items": {
-						"$ref": "https://schema.twindev.org/json-ld/JsonLdJsonObject"
-					}
+					"items": false,
+					"prefixItems": [
+						{
+							"$ref": "https://schema.twindev.org/json-ld/JsonLdJsonObject"
+						}
+					]
 				}
 			]
 		},
@@ -78,9 +90,12 @@
 				},
 				{
 					"type": "array",
-					"items": {
-						"type": "string"
-					}
+					"items": false,
+					"prefixItems": [
+						{
+							"type": "string"
+						}
+					]
 				}
 			]
 		},
@@ -93,6 +108,5 @@
 		"@index": {
 			"type": "string"
 		}
-	},
-	"description": "A node object represents zero or more properties of a node in the graph serialized by the JSON-LD document."
+	}
 }

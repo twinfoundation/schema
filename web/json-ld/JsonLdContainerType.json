@@ -1,5 +1,7 @@
 {
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "https://schema.twindev.org/json-ld/JsonLdContainerType",
+	"description": "JSON-LD container types.",
 	"type": "string",
-	"enum": ["@language", "@index", "@id", "@graph", "@type"],
-	"description": "Helper Types"
+	"enum": ["@language", "@index", "@id", "@graph", "@type"]
 }

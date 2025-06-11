@@ -1,4 +1,7 @@
 {
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "https://schema.twindev.org/odrl/OdrlOffer",
+	"description": "Interface representing an ODRL Offer. An Offer requires an assigner (the party making the offer).",
 	"type": "object",
 	"properties": {
 		"@context": {
@@ -12,9 +15,12 @@
 				},
 				{
 					"type": "array",
-					"items": {
-						"type": "string"
-					}
+					"items": false,
+					"prefixItems": [
+						{
+							"type": "string"
+						}
+					]
 				}
 			]
 		},
@@ -28,9 +34,12 @@
 				},
 				{
 					"type": "array",
-					"items": {
-						"$ref": "https://schema.twindev.org/json-ld/JsonLdNodeObject"
-					}
+					"items": false,
+					"prefixItems": [
+						{
+							"$ref": "https://schema.twindev.org/json-ld/JsonLdNodeObject"
+						}
+					]
 				}
 			]
 		},
@@ -41,9 +50,12 @@
 				},
 				{
 					"type": "array",
-					"items": {
-						"$ref": "https://schema.twindev.org/json-ld/JsonLdJsonObject"
-					}
+					"items": false,
+					"prefixItems": [
+						{
+							"$ref": "https://schema.twindev.org/json-ld/JsonLdJsonObject"
+						}
+					]
 				}
 			]
 		},
@@ -72,9 +84,12 @@
 				},
 				{
 					"type": "array",
-					"items": {
-						"type": "string"
-					}
+					"items": false,
+					"prefixItems": [
+						{
+							"type": "string"
+						}
+					]
 				}
 			],
 			"description": "The profile(s) this policy conforms to. IRIs identifying the ODRL Profile(s)."
@@ -111,16 +126,19 @@
 				},
 				{
 					"type": "array",
-					"items": {
-						"anyOf": [
-							{
-								"type": "string"
-							},
-							{
-								"$ref": "https://schema.twindev.org/odrl/OdrlAsset"
-							}
-						]
-					}
+					"items": false,
+					"prefixItems": [
+						{
+							"anyOf": [
+								{
+									"type": "string"
+								},
+								{
+									"$ref": "https://schema.twindev.org/odrl/OdrlAsset"
+								}
+							]
+						}
+					]
 				}
 			],
 			"description": "The target asset for the rule."
@@ -135,16 +153,19 @@
 				},
 				{
 					"type": "array",
-					"items": {
-						"anyOf": [
-							{
-								"$ref": "https://schema.twindev.org/odrl/ActionType"
-							},
-							{
-								"$ref": "https://schema.twindev.org/odrl/OdrlAction"
-							}
-						]
-					}
+					"items": false,
+					"prefixItems": [
+						{
+							"anyOf": [
+								{
+									"$ref": "https://schema.twindev.org/odrl/ActionType"
+								},
+								{
+									"$ref": "https://schema.twindev.org/odrl/OdrlAction"
+								}
+							]
+						}
+					]
 				}
 			],
 			"description": "The action associated with the rule."
@@ -156,9 +177,12 @@
 				},
 				{
 					"type": "array",
-					"items": {
-						"type": "string"
-					}
+					"items": false,
+					"prefixItems": [
+						{
+							"type": "string"
+						}
+					]
 				}
 			],
 			"description": "The parent policy(ies) this policy inherits from. IRIs identifying the parent Policy(ies)."
@@ -169,24 +193,33 @@
 		},
 		"permission": {
 			"type": "array",
-			"items": {
-				"$ref": "https://schema.twindev.org/odrl/OdrlPermission"
-			},
-			"description": "The permissions in the policy. At least one of permission, prohibition, or obligation must be present."
+			"items": false,
+			"description": "The permissions in the policy. At least one of permission, prohibition, or obligation must be present.",
+			"prefixItems": [
+				{
+					"$ref": "https://schema.twindev.org/odrl/OdrlPermission"
+				}
+			]
 		},
 		"prohibition": {
 			"type": "array",
-			"items": {
-				"$ref": "https://schema.twindev.org/odrl/OdrlProhibition"
-			},
-			"description": "The prohibitions in the policy. At least one of permission, prohibition, or obligation must be present."
+			"items": false,
+			"description": "The prohibitions in the policy. At least one of permission, prohibition, or obligation must be present.",
+			"prefixItems": [
+				{
+					"$ref": "https://schema.twindev.org/odrl/OdrlProhibition"
+				}
+			]
 		},
 		"obligation": {
 			"type": "array",
-			"items": {
-				"$ref": "https://schema.twindev.org/odrl/OdrlDuty"
-			},
-			"description": "The obligations in the policy. At least one of permission, prohibition, or obligation must be present."
+			"items": false,
+			"description": "The obligations in the policy. At least one of permission, prohibition, or obligation must be present.",
+			"prefixItems": [
+				{
+					"$ref": "https://schema.twindev.org/odrl/OdrlDuty"
+				}
+			]
 		}
 	},
 	"required": ["@context", "@type", "assigner", "uid"],
@@ -214,6 +247,5 @@
 				"type": "array"
 			}
 		]
-	},
-	"description": "Interface representing an ODRL Offer. An Offer requires an assigner (the party making the offer)."
+	}
 }

@@ -1,4 +1,7 @@
 {
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "https://schema.twindev.org/json-ld/JsonLdNodePrimitive",
+	"description": "A node primitive is a JSON-LD value which is not one of the defined NodeObject properties.",
 	"anyOf": [
 		{
 			"type": "null"
@@ -27,6 +30,5 @@
 		{
 			"$ref": "https://schema.twindev.org/json-ld/JsonLdSetObject"
 		}
-	],
-	"description": "A node primitive is a JSON-LD value which is not one of the defined NodeObject properties."
+	]
 }

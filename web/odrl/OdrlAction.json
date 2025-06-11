@@ -1,4 +1,7 @@
 {
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "https://schema.twindev.org/odrl/OdrlAction",
+	"description": "Interface for ODRL Actions.",
 	"type": "object",
 	"properties": {
 		"@context": {
@@ -18,9 +21,12 @@
 				},
 				{
 					"type": "array",
-					"items": {
-						"$ref": "https://schema.twindev.org/json-ld/JsonLdNodeObject"
-					}
+					"items": false,
+					"prefixItems": [
+						{
+							"$ref": "https://schema.twindev.org/json-ld/JsonLdNodeObject"
+						}
+					]
 				}
 			]
 		},
@@ -31,9 +37,12 @@
 				},
 				{
 					"type": "array",
-					"items": {
-						"$ref": "https://schema.twindev.org/json-ld/JsonLdJsonObject"
-					}
+					"items": false,
+					"prefixItems": [
+						{
+							"$ref": "https://schema.twindev.org/json-ld/JsonLdJsonObject"
+						}
+					]
 				}
 			]
 		},
@@ -44,9 +53,12 @@
 				},
 				{
 					"type": "array",
-					"items": {
-						"type": "string"
-					}
+					"items": false,
+					"prefixItems": [
+						{
+							"type": "string"
+						}
+					]
 				}
 			]
 		},
@@ -80,16 +92,19 @@
 				},
 				{
 					"type": "array",
-					"items": {
-						"anyOf": [
-							{
-								"$ref": "https://schema.twindev.org/odrl/OdrlConstraint"
-							},
-							{
-								"$ref": "https://schema.twindev.org/odrl/OdrlLogicalConstraint"
-							}
-						]
-					}
+					"items": false,
+					"prefixItems": [
+						{
+							"anyOf": [
+								{
+									"$ref": "https://schema.twindev.org/odrl/OdrlConstraint"
+								},
+								{
+									"$ref": "https://schema.twindev.org/odrl/OdrlLogicalConstraint"
+								}
+							]
+						}
+					]
 				}
 			],
 			"description": "Refinements applied to the action."
@@ -100,10 +115,13 @@
 		},
 		"implies": {
 			"type": "array",
-			"items": {
-				"$ref": "https://schema.twindev.org/odrl/ActionType"
-			},
-			"description": "References to actions this action implies."
+			"items": false,
+			"description": "References to actions this action implies.",
+			"prefixItems": [
+				{
+					"$ref": "https://schema.twindev.org/odrl/ActionType"
+				}
+			]
 		}
 	},
 	"additionalProperties": {
@@ -130,6 +148,5 @@
 				"type": "array"
 			}
 		]
-	},
-	"description": "Interface for ODRL Actions."
+	}
 }

@@ -1,4 +1,7 @@
 {
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "https://schema.twindev.org/odrl/OperatorType",
+	"description": "The types for ODRL Operators.",
 	"type": "string",
 	"enum": [
 		"eq",
@@ -15,6 +18,5 @@
 		"isNoneOf",
 		"locTimeEq",
 		"locTimeGteq"
-	],
-	"description": "The types for ODRL Operators."
+	]
 }

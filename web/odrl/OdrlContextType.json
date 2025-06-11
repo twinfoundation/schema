@@ -1,4 +1,7 @@
 {
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "https://schema.twindev.org/odrl/OdrlContextType",
+	"description": "The ODRL JSON-LD context type.",
 	"anyOf": [
 		{
 			"type": "string",
@@ -6,21 +9,11 @@
 		},
 		{
 			"type": "array",
-			"minItems": 1,
-			"items": [
-				{
-					"type": "string",
-					"const": "https://www.w3.org/ns/odrl/2/"
-				}
-			],
-			"additionalItems": {
-				"$ref": "https://schema.twindev.org/json-ld/JsonLdContextDefinitionElement"
-			}
-		},
-		{
-			"type": "array",
 			"minItems": 2,
-			"items": [
+			"items": {
+				"$ref": "https://schema.twindev.org/json-ld/JsonLdContextDefinitionElement"
+			},
+			"prefixItems": [
 				{
 					"type": "string",
 					"const": "https://www.w3.org/ns/odrl/2/"
@@ -28,15 +21,15 @@
 				{
 					"$ref": "https://schema.twindev.org/json-ld/JsonLdContextDefinitionElement"
 				}
-			],
-			"additionalItems": {
-				"$ref": "https://schema.twindev.org/json-ld/JsonLdContextDefinitionElement"
-			}
+			]
 		},
 		{
 			"type": "array",
 			"minItems": 2,
-			"items": [
+			"items": {
+				"$ref": "https://schema.twindev.org/json-ld/JsonLdContextDefinitionElement"
+			},
+			"prefixItems": [
 				{
 					"$ref": "https://schema.twindev.org/json-ld/JsonLdContextDefinitionElement"
 				},
@@ -44,11 +37,7 @@
 					"type": "string",
 					"const": "https://www.w3.org/ns/odrl/2/"
 				}
-			],
-			"additionalItems": {
-				"$ref": "https://schema.twindev.org/json-ld/JsonLdContextDefinitionElement"
-			}
+			]
 		}
-	],
-	"description": "The ODRL JSON-LD context type."
+	]
 }

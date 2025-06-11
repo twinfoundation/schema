@@ -1,4 +1,7 @@
 {
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "https://schema.twindev.org/json-ld/JsonLdJsonValue",
+	"description": "JSON Value.",
 	"anyOf": [
 		{
 			"$ref": "https://schema.twindev.org/json-ld/JsonLdJsonPrimitive"
@@ -9,6 +12,5 @@
 		{
 			"$ref": "https://schema.twindev.org/json-ld/JsonLdJsonObject"
 		}
-	],
-	"description": "JSON Value."
+	]
 }

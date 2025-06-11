@@ -1,4 +1,7 @@
 {
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "https://schema.twindev.org/did/DidTypes",
+	"description": "The types for DIDs.",
 	"type": "string",
 	"enum": [
 		"VerifiableCredential",
@@ -7,6 +10,5 @@
 		"JsonWebKey2020",
 		"LinkedDomains",
 		"Multikey"
-	],
-	"description": "The types for DIDs."
+	]
 }

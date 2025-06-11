@@ -1,5 +1,7 @@
 {
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "https://schema.twindev.org/odrl/PolicyType",
+	"description": "The types for ODRL Policies.",
 	"type": "string",
-	"enum": ["Policy", "Set", "Offer", "Agreement"],
-	"description": "The types for ODRL Policies."
+	"enum": ["Policy", "Set", "Offer", "Agreement"]
 }

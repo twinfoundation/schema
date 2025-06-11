@@ -1,4 +1,7 @@
 {
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "https://schema.twindev.org/json-ld/JsonLdIndexMap",
+	"description": "An index map allows keys that have no semantic meaning, but should be preserved regardless, to be used in JSON-LD documents.",
 	"type": "object",
 	"additionalProperties": {
 		"anyOf": [
@@ -7,11 +10,13 @@
 			},
 			{
 				"type": "array",
-				"items": {
-					"$ref": "https://schema.twindev.org/json-ld/JsonLdIndexMapItem"
-				}
+				"items": false,
+				"prefixItems": [
+					{
+						"$ref": "https://schema.twindev.org/json-ld/JsonLdIndexMapItem"
+					}
+				]
 			}
 		]
-	},
-	"description": "An index map allows keys that have no semantic meaning, but should be preserved regardless, to be used in JSON-LD documents."
+	}
 }

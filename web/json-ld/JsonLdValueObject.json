@@ -1,4 +1,7 @@
 {
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "https://schema.twindev.org/json-ld/JsonLdValueObject",
+	"description": "A value object is used to explicitly associate a type or a language with a value to create a typed value or a language-tagged string and possibly associate a base direction.",
 	"anyOf": [
 		{
 			"type": "object",
@@ -81,6 +84,5 @@
 			},
 			"required": ["@type", "@value"]
 		}
-	],
-	"description": "A value object is used to explicitly associate a type or a language with a value to create a typed value or a language-tagged string and possibly associate a base direction."
+	]
 }

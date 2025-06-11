@@ -1,4 +1,7 @@
 {
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "https://schema.twindev.org/json-ld/JsonLdExpandedTermDefinition",
+	"description": "An expanded term definition is used to describe the mapping between a term and its expanded identifier, as well as other properties of the value associated with the term when it is used as key in a node object.",
 	"anyOf": [
 		{
 			"type": "object",
@@ -11,9 +14,12 @@
 						},
 						{
 							"type": "array",
-							"items": {
-								"type": "string"
-							}
+							"items": false,
+							"prefixItems": [
+								{
+									"type": "string"
+								}
+							]
 						},
 						{
 							"type": "null"
@@ -38,21 +44,24 @@
 						},
 						{
 							"type": "array",
-							"items": {
-								"anyOf": [
-									{
-										"type": "string",
-										"const": "@list"
-									},
-									{
-										"type": "string",
-										"const": "@set"
-									},
-									{
-										"$ref": "https://schema.twindev.org/json-ld/JsonLdContainerType"
-									}
-								]
-							}
+							"items": false,
+							"prefixItems": [
+								{
+									"anyOf": [
+										{
+											"type": "string",
+											"const": "@list"
+										},
+										{
+											"type": "string",
+											"const": "@set"
+										},
+										{
+											"$ref": "https://schema.twindev.org/json-ld/JsonLdContainerType"
+										}
+									]
+								}
+							]
 						},
 						{
 							"$ref": "https://schema.twindev.org/json-ld/JsonLdContainerTypeArray"
@@ -120,6 +129,5 @@
 			},
 			"required": ["@reverse"]
 		}
-	],
-	"description": "An expanded term definition is used to describe the mapping between a term and its expanded identifier, as well as other properties of the value associated with the term when it is used as key in a node object."
+	]
 }

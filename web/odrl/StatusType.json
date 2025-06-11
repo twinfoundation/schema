@@ -1,5 +1,7 @@
 {
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "https://schema.twindev.org/odrl/StatusType",
+	"description": "The types for ODRL Status.",
 	"type": "string",
-	"enum": ["active", "inactive", "pending", "revoked"],
-	"description": "The types for ODRL Status."
+	"enum": ["active", "inactive", "pending", "revoked"]
 }

@@ -1,5 +1,7 @@
 {
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "https://schema.twindev.org/odrl/LogicalConstraintType",
+	"description": "The types for ODRL Logical Constraints.",
 	"type": "string",
-	"enum": ["and", "or", "xone", "andSequence"],
-	"description": "The types for ODRL Logical Constraints."
+	"enum": ["and", "or", "xone", "andSequence"]
 }

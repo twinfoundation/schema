@@ -1,4 +1,7 @@
 {
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "https://schema.twindev.org/did/DidDocumentVerificationMethod",
+	"description": "Interface describing a DID document verification method.",
 	"type": "object",
 	"properties": {
 		"@context": {
@@ -11,9 +14,12 @@
 				},
 				{
 					"type": "array",
-					"items": {
-						"type": "string"
-					}
+					"items": false,
+					"prefixItems": [
+						{
+							"type": "string"
+						}
+					]
 				}
 			]
 		},
@@ -27,9 +33,12 @@
 				},
 				{
 					"type": "array",
-					"items": {
-						"$ref": "https://schema.twindev.org/json-ld/JsonLdNodeObject"
-					}
+					"items": false,
+					"prefixItems": [
+						{
+							"$ref": "https://schema.twindev.org/json-ld/JsonLdNodeObject"
+						}
+					]
 				}
 			]
 		},
@@ -40,9 +49,12 @@
 				},
 				{
 					"type": "array",
-					"items": {
-						"$ref": "https://schema.twindev.org/json-ld/JsonLdJsonObject"
-					}
+					"items": false,
+					"prefixItems": [
+						{
+							"$ref": "https://schema.twindev.org/json-ld/JsonLdJsonObject"
+						}
+					]
 				}
 			]
 		},
@@ -53,9 +65,12 @@
 				},
 				{
 					"type": "array",
-					"items": {
-						"type": "string"
-					}
+					"items": false,
+					"prefixItems": [
+						{
+							"type": "string"
+						}
+					]
 				}
 			]
 		},
@@ -122,9 +137,12 @@
 						},
 						{
 							"type": "array",
-							"items": {
-								"type": "string"
-							}
+							"items": false,
+							"prefixItems": [
+								{
+									"type": "string"
+								}
+							]
 						}
 					]
 				},
@@ -138,9 +156,12 @@
 						},
 						{
 							"type": "array",
-							"items": {
-								"$ref": "https://schema.twindev.org/json-ld/JsonLdNodeObject"
-							}
+							"items": false,
+							"prefixItems": [
+								{
+									"$ref": "https://schema.twindev.org/json-ld/JsonLdNodeObject"
+								}
+							]
 						}
 					]
 				},
@@ -151,9 +172,12 @@
 						},
 						{
 							"type": "array",
-							"items": {
-								"$ref": "https://schema.twindev.org/json-ld/JsonLdJsonObject"
-							}
+							"items": false,
+							"prefixItems": [
+								{
+									"$ref": "https://schema.twindev.org/json-ld/JsonLdJsonObject"
+								}
+							]
 						}
 					]
 				},
@@ -164,9 +188,12 @@
 						},
 						{
 							"type": "array",
-							"items": {
-								"type": "string"
-							}
+							"items": false,
+							"prefixItems": [
+								{
+									"type": "string"
+								}
+							]
 						}
 					]
 				},
@@ -189,10 +216,13 @@
 				},
 				"key_ops": {
 					"type": "array",
-					"items": {
-						"type": "string"
-					},
-					"description": "JWK \"key_ops\" (Key Operations) Parameter"
+					"items": false,
+					"description": "JWK \"key_ops\" (Key Operations) Parameter",
+					"prefixItems": [
+						{
+							"type": "string"
+						}
+					]
 				},
 				"ext": {
 					"type": "boolean",
@@ -204,10 +234,13 @@
 				},
 				"x5c": {
 					"type": "array",
-					"items": {
-						"type": "string"
-					},
-					"description": "JWK \"x5c\" (X.509 Certificate Chain) Parameter"
+					"items": false,
+					"description": "JWK \"x5c\" (X.509 Certificate Chain) Parameter",
+					"prefixItems": [
+						{
+							"type": "string"
+						}
+					]
 				},
 				"x5t": {
 					"type": "string",
@@ -306,6 +339,5 @@
 				"type": "array"
 			}
 		]
-	},
-	"description": "Interface describing a DID document verification method."
+	}
 }

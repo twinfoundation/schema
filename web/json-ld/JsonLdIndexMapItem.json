@@ -1,4 +1,7 @@
 {
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "https://schema.twindev.org/json-ld/JsonLdIndexMapItem",
+	"description": "The items that can be stored in an index map.",
 	"anyOf": [
 		{
 			"type": "null"
@@ -24,6 +27,5 @@
 		{
 			"$ref": "https://schema.twindev.org/json-ld/JsonLdSetObject"
 		}
-	],
-	"description": "The items that can be stored in an index map."
+	]
 }

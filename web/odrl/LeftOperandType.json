@@ -1,4 +1,7 @@
 {
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "https://schema.twindev.org/odrl/LeftOperandType",
+	"description": "The types for ODRL Data Types.",
 	"type": "string",
 	"enum": [
 		"absolutePosition",
@@ -33,6 +36,5 @@
 		"unitOfCount",
 		"version",
 		"virtualLocation"
-	],
-	"description": "The types for ODRL Data Types."
+	]
 }

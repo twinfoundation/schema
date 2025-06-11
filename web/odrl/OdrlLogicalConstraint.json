@@ -1,4 +1,7 @@
 {
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "https://schema.twindev.org/odrl/OdrlLogicalConstraint",
+	"description": "Interface for ODRL Logical Constraints. A Logical Constraint compares two or more existing Constraints by one logical operator. If the comparison returns a logical match, then the Logical Constraint is satisfied.",
 	"type": "object",
 	"properties": {
 		"@context": {
@@ -11,9 +14,12 @@
 				},
 				{
 					"type": "array",
-					"items": {
-						"type": "string"
-					}
+					"items": false,
+					"prefixItems": [
+						{
+							"type": "string"
+						}
+					]
 				}
 			]
 		},
@@ -27,9 +33,12 @@
 				},
 				{
 					"type": "array",
-					"items": {
-						"$ref": "https://schema.twindev.org/json-ld/JsonLdNodeObject"
-					}
+					"items": false,
+					"prefixItems": [
+						{
+							"$ref": "https://schema.twindev.org/json-ld/JsonLdNodeObject"
+						}
+					]
 				}
 			]
 		},
@@ -40,9 +49,12 @@
 				},
 				{
 					"type": "array",
-					"items": {
-						"$ref": "https://schema.twindev.org/json-ld/JsonLdJsonObject"
-					}
+					"items": false,
+					"prefixItems": [
+						{
+							"$ref": "https://schema.twindev.org/json-ld/JsonLdJsonObject"
+						}
+					]
 				}
 			]
 		},
@@ -53,9 +65,12 @@
 				},
 				{
 					"type": "array",
-					"items": {
-						"type": "string"
-					}
+					"items": false,
+					"prefixItems": [
+						{
+							"type": "string"
+						}
+					]
 				}
 			]
 		},
@@ -77,16 +92,19 @@
 			"properties": {
 				"@list": {
 					"type": "array",
-					"items": {
-						"type": "object",
-						"properties": {
-							"@id": {
-								"type": "string"
-							}
-						},
-						"required": ["@id"],
-						"additionalProperties": false
-					}
+					"items": false,
+					"prefixItems": [
+						{
+							"type": "object",
+							"properties": {
+								"@id": {
+									"type": "string"
+								}
+							},
+							"required": ["@id"],
+							"additionalProperties": false
+						}
+					]
 				}
 			},
 			"required": ["@list"],
@@ -98,16 +116,19 @@
 			"properties": {
 				"@list": {
 					"type": "array",
-					"items": {
-						"type": "object",
-						"properties": {
-							"@id": {
-								"type": "string"
-							}
-						},
-						"required": ["@id"],
-						"additionalProperties": false
-					}
+					"items": false,
+					"prefixItems": [
+						{
+							"type": "object",
+							"properties": {
+								"@id": {
+									"type": "string"
+								}
+							},
+							"required": ["@id"],
+							"additionalProperties": false
+						}
+					]
 				}
 			},
 			"required": ["@list"],
@@ -119,16 +140,19 @@
 			"properties": {
 				"@list": {
 					"type": "array",
-					"items": {
-						"type": "object",
-						"properties": {
-							"@id": {
-								"type": "string"
-							}
-						},
-						"required": ["@id"],
-						"additionalProperties": false
-					}
+					"items": false,
+					"prefixItems": [
+						{
+							"type": "object",
+							"properties": {
+								"@id": {
+									"type": "string"
+								}
+							},
+							"required": ["@id"],
+							"additionalProperties": false
+						}
+					]
 				}
 			},
 			"required": ["@list"],
@@ -140,16 +164,19 @@
 			"properties": {
 				"@list": {
 					"type": "array",
-					"items": {
-						"type": "object",
-						"properties": {
-							"@id": {
-								"type": "string"
-							}
-						},
-						"required": ["@id"],
-						"additionalProperties": false
-					}
+					"items": false,
+					"prefixItems": [
+						{
+							"type": "object",
+							"properties": {
+								"@id": {
+									"type": "string"
+								}
+							},
+							"required": ["@id"],
+							"additionalProperties": false
+						}
+					]
 				}
 			},
 			"required": ["@list"],
@@ -181,6 +208,5 @@
 				"type": "array"
 			}
 		]
-	},
-	"description": "Interface for ODRL Logical Constraints. A Logical Constraint compares two or more existing Constraints by one logical operator. If the comparison returns a logical match, then the Logical Constraint is satisfied."
+	}
 }

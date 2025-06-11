@@ -1,4 +1,7 @@
 {
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "https://schema.twindev.org/odrl/OdrlRule",
+	"description": "Base interface for ODRL Rules.",
 	"type": "object",
 	"properties": {
 		"@context": {
@@ -11,9 +14,12 @@
 				},
 				{
 					"type": "array",
-					"items": {
-						"type": "string"
-					}
+					"items": false,
+					"prefixItems": [
+						{
+							"type": "string"
+						}
+					]
 				}
 			]
 		},
@@ -27,9 +33,12 @@
 				},
 				{
 					"type": "array",
-					"items": {
-						"$ref": "https://schema.twindev.org/json-ld/JsonLdNodeObject"
-					}
+					"items": false,
+					"prefixItems": [
+						{
+							"$ref": "https://schema.twindev.org/json-ld/JsonLdNodeObject"
+						}
+					]
 				}
 			]
 		},
@@ -40,9 +49,12 @@
 				},
 				{
 					"type": "array",
-					"items": {
-						"$ref": "https://schema.twindev.org/json-ld/JsonLdJsonObject"
-					}
+					"items": false,
+					"prefixItems": [
+						{
+							"$ref": "https://schema.twindev.org/json-ld/JsonLdJsonObject"
+						}
+					]
 				}
 			]
 		},
@@ -53,9 +65,12 @@
 				},
 				{
 					"type": "array",
-					"items": {
-						"type": "string"
-					}
+					"items": false,
+					"prefixItems": [
+						{
+							"type": "string"
+						}
+					]
 				}
 			]
 		},
@@ -82,16 +97,19 @@
 				},
 				{
 					"type": "array",
-					"items": {
-						"anyOf": [
-							{
-								"$ref": "https://schema.twindev.org/odrl/ActionType"
-							},
-							{
-								"$ref": "https://schema.twindev.org/odrl/OdrlAction"
-							}
-						]
-					}
+					"items": false,
+					"prefixItems": [
+						{
+							"anyOf": [
+								{
+									"$ref": "https://schema.twindev.org/odrl/ActionType"
+								},
+								{
+									"$ref": "https://schema.twindev.org/odrl/OdrlAction"
+								}
+							]
+						}
+					]
 				}
 			],
 			"description": "The action associated with the rule."
@@ -106,16 +124,19 @@
 				},
 				{
 					"type": "array",
-					"items": {
-						"anyOf": [
-							{
-								"type": "string"
-							},
-							{
-								"$ref": "https://schema.twindev.org/odrl/OdrlAsset"
-							}
-						]
-					}
+					"items": false,
+					"prefixItems": [
+						{
+							"anyOf": [
+								{
+									"type": "string"
+								},
+								{
+									"$ref": "https://schema.twindev.org/odrl/OdrlAsset"
+								}
+							]
+						}
+					]
 				}
 			],
 			"description": "The target asset for the rule."
@@ -144,10 +165,13 @@
 		},
 		"constraint": {
 			"type": "array",
-			"items": {
-				"$ref": "https://schema.twindev.org/odrl/OdrlConstraint"
-			},
-			"description": "Constraints applied to the rule."
+			"items": false,
+			"description": "Constraints applied to the rule.",
+			"prefixItems": [
+				{
+					"$ref": "https://schema.twindev.org/odrl/OdrlConstraint"
+				}
+			]
 		},
 		"summary": {
 			"type": "string",
@@ -178,6 +202,5 @@
 				"type": "array"
 			}
 		]
-	},
-	"description": "Base interface for ODRL Rules."
+	}
 }

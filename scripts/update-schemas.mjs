@@ -218,7 +218,18 @@ async function createRewriteRules(schemas) {
 		}
 	}
 	const rewritesPath = path.join('web', 'vercel.json');
-	await saveJson(rewritesPath, { rewrites });
+	await saveJson(rewritesPath, {
+		headers: [
+			{
+				source: '/(.*)',
+				headers: [
+					{ key: 'Access-Control-Allow-Origin', value: '*' },
+					{ key: 'Access-Control-Allow-Headers', value: 'Content-Type,Accept' }
+				]
+			}
+		],
+		rewrites
+	});
 }
 
 /**

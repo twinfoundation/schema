@@ -1,4 +1,7 @@
 {
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "https://schema.twindev.org/json-ld/JsonLdContextDefinition",
+	"description": "A context definition defines a local context in a node object.",
 	"type": "object",
 	"properties": {
 		"@base": {
@@ -54,6 +57,5 @@
 				"$ref": "https://schema.twindev.org/json-ld/JsonLdExpandedTermDefinition"
 			}
 		]
-	},
-	"description": "A context definition defines a local context in a node object."
+	}
 }

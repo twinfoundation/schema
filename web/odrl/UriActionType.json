@@ -1,4 +1,7 @@
 {
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "https://schema.twindev.org/odrl/UriActionType",
+	"description": "The types for ODRL Actions. URI action types (for use with rdf:value/@id)   The types for ODRL Actions. Simple action types (for direct string usage)",
 	"type": "string",
 	"enum": [
 		"odrl:use",
@@ -52,6 +55,5 @@
 		"odrl:translate",
 		"odrl:uninstall",
 		"odrl:watermark"
-	],
-	"description": "The types for ODRL Actions. URI action types (for use with rdf:value/@id)   The types for ODRL Actions. Simple action types (for direct string usage)"
+	]
 }

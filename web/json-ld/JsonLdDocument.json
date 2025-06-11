@@ -1,13 +1,19 @@
 {
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "https://schema.twindev.org/json-ld/JsonLdDocument",
+	"description": "A JSON-LD document MUST be valid JSON text as described in [RFC8259], or some format that can be represented in the JSON-LD internal representation that is equivalent to valid JSON text.",
 	"anyOf": [
 		{
 			"$ref": "https://schema.twindev.org/json-ld/JsonLdNodeObject"
 		},
 		{
 			"type": "array",
-			"items": {
-				"$ref": "https://schema.twindev.org/json-ld/JsonLdNodeObject"
-			}
+			"items": false,
+			"prefixItems": [
+				{
+					"$ref": "https://schema.twindev.org/json-ld/JsonLdNodeObject"
+				}
+			]
 		},
 		{
 			"type": "object",
@@ -25,22 +31,24 @@
 						},
 						{
 							"type": "array",
-							"items": {
-								"anyOf": [
-									{
-										"$ref": "https://schema.twindev.org/json-ld/JsonLdValueObject"
-									},
-									{
-										"$ref": "https://schema.twindev.org/json-ld/JsonLdNodeObject"
-									}
-								]
-							}
+							"items": false,
+							"prefixItems": [
+								{
+									"anyOf": [
+										{
+											"$ref": "https://schema.twindev.org/json-ld/JsonLdValueObject"
+										},
+										{
+											"$ref": "https://schema.twindev.org/json-ld/JsonLdNodeObject"
+										}
+									]
+								}
+							]
 						}
 					]
 				}
 			},
 			"additionalProperties": false
 		}
-	],
-	"description": "A JSON-LD document MUST be valid JSON text as described in [RFC8259], or some format that can be represented in the JSON-LD internal representation that is equivalent to valid JSON text."
+	]
 }
