@@ -1,10 +1,17 @@
 {
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "https://schema.twindev.org/ais/AuditableItemStream",
+	"description": "Interface describing an auditable item stream.",
 	"type": "object",
 	"properties": {
 		"@context": {
 			"type": "array",
 			"minItems": 2,
-			"items": [
+			"items": {
+				"$ref": "https://schema.twindev.org/json-ld/JsonLdContextDefinitionElement"
+			},
+			"description": "JSON-LD Context.",
+			"prefixItems": [
 				{
 					"type": "string",
 					"const": "https://schema.twindev.org/ais/"
@@ -13,11 +20,7 @@
 					"type": "string",
 					"const": "https://schema.twindev.org/common/"
 				}
-			],
-			"additionalItems": {
-				"$ref": "https://schema.twindev.org/json-ld/JsonLdContextDefinitionElement"
-			},
-			"description": "JSON-LD Context."
+			]
 		},
 		"type": {
 			"type": "string",
@@ -58,10 +61,13 @@
 		},
 		"entries": {
 			"type": "array",
-			"items": {
-				"$ref": "https://schema.twindev.org/ais/AuditableItemStreamEntry"
-			},
-			"description": "Entries in the stream."
+			"items": false,
+			"description": "Entries in the stream.",
+			"prefixItems": [
+				{
+					"$ref": "https://schema.twindev.org/ais/AuditableItemStreamEntry"
+				}
+			]
 		},
 		"cursor": {
 			"type": "string",
@@ -81,6 +87,5 @@
 		"userIdentity",
 		"immutableInterval"
 	],
-	"additionalProperties": false,
-	"description": "Interface describing an auditable item stream."
+	"additionalProperties": false
 }

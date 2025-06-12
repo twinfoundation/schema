@@ -1,10 +1,17 @@
 {
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "https://schema.twindev.org/aig/AuditableItemGraphChangeset",
+	"description": "Interface describing a set of changes to the vertex.",
 	"type": "object",
 	"properties": {
 		"@context": {
 			"type": "array",
 			"minItems": 2,
-			"items": [
+			"items": {
+				"$ref": "https://schema.twindev.org/json-ld/JsonLdContextDefinitionElement"
+			},
+			"description": "JSON-LD Context.",
+			"prefixItems": [
 				{
 					"type": "string",
 					"const": "https://schema.twindev.org/aig/"
@@ -13,11 +20,7 @@
 					"type": "string",
 					"const": "https://schema.twindev.org/common/"
 				}
-			],
-			"additionalItems": {
-				"$ref": "https://schema.twindev.org/json-ld/JsonLdContextDefinitionElement"
-			},
-			"description": "JSON-LD Context."
+			]
 		},
 		"type": {
 			"type": "string",
@@ -38,10 +41,13 @@
 		},
 		"patches": {
 			"type": "array",
-			"items": {
-				"$ref": "https://schema.twindev.org/aig/AuditableItemGraphPatchOperation"
-			},
-			"description": "The patches in the changeset."
+			"items": false,
+			"description": "The patches in the changeset.",
+			"prefixItems": [
+				{
+					"$ref": "https://schema.twindev.org/aig/AuditableItemGraphPatchOperation"
+				}
+			]
 		},
 		"proofId": {
 			"type": "string",
@@ -53,6 +59,5 @@
 		}
 	},
 	"required": ["@context", "type", "id", "dateCreated", "userIdentity", "patches"],
-	"additionalProperties": false,
-	"description": "Interface describing a set of changes to the vertex."
+	"additionalProperties": false
 }

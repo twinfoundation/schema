@@ -1,4 +1,7 @@
 {
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "https://schema.twindev.org/aig/AuditableItemGraphVertex",
+	"description": "Interface describing an auditable item graph vertex.",
 	"type": "object",
 	"properties": {
 		"id": {
@@ -20,7 +23,11 @@
 		"@context": {
 			"type": "array",
 			"minItems": 2,
-			"items": [
+			"items": {
+				"$ref": "https://schema.twindev.org/json-ld/JsonLdContextDefinitionElement"
+			},
+			"description": "JSON-LD Context.",
+			"prefixItems": [
 				{
 					"type": "string",
 					"const": "https://schema.twindev.org/aig/"
@@ -29,11 +36,7 @@
 					"type": "string",
 					"const": "https://schema.twindev.org/common/"
 				}
-			],
-			"additionalItems": {
-				"$ref": "https://schema.twindev.org/json-ld/JsonLdContextDefinitionElement"
-			},
-			"description": "JSON-LD Context."
+			]
 		},
 		"type": {
 			"type": "string",
@@ -50,31 +53,43 @@
 		},
 		"aliases": {
 			"type": "array",
-			"items": {
-				"$ref": "https://schema.twindev.org/aig/AuditableItemGraphAlias"
-			},
-			"description": "Alternative aliases that can be used to identify the vertex."
+			"items": false,
+			"description": "Alternative aliases that can be used to identify the vertex.",
+			"prefixItems": [
+				{
+					"$ref": "https://schema.twindev.org/aig/AuditableItemGraphAlias"
+				}
+			]
 		},
 		"resources": {
 			"type": "array",
-			"items": {
-				"$ref": "https://schema.twindev.org/aig/AuditableItemGraphResource"
-			},
-			"description": "The resources attached to the vertex."
+			"items": false,
+			"description": "The resources attached to the vertex.",
+			"prefixItems": [
+				{
+					"$ref": "https://schema.twindev.org/aig/AuditableItemGraphResource"
+				}
+			]
 		},
 		"edges": {
 			"type": "array",
-			"items": {
-				"$ref": "https://schema.twindev.org/aig/AuditableItemGraphEdge"
-			},
-			"description": "Edges connected to the vertex."
+			"items": false,
+			"description": "Edges connected to the vertex.",
+			"prefixItems": [
+				{
+					"$ref": "https://schema.twindev.org/aig/AuditableItemGraphEdge"
+				}
+			]
 		},
 		"changesets": {
 			"type": "array",
-			"items": {
-				"$ref": "https://schema.twindev.org/aig/AuditableItemGraphChangeset"
-			},
-			"description": "Changesets for the vertex."
+			"items": false,
+			"description": "Changesets for the vertex.",
+			"prefixItems": [
+				{
+					"$ref": "https://schema.twindev.org/aig/AuditableItemGraphChangeset"
+				}
+			]
 		},
 		"verified": {
 			"type": "boolean",
@@ -82,6 +97,5 @@
 		}
 	},
 	"required": ["@context", "id", "type"],
-	"additionalProperties": false,
-	"description": "Interface describing an auditable item graph vertex."
+	"additionalProperties": false
 }

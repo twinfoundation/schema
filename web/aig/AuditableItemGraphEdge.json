@@ -1,4 +1,7 @@
 {
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "https://schema.twindev.org/aig/AuditableItemGraphEdge",
+	"description": "Interface describing an edge between two vertices in an auditable item graph.",
 	"type": "object",
 	"properties": {
 		"id": {
@@ -26,15 +29,15 @@
 				{
 					"type": "array",
 					"minItems": 1,
-					"items": [
+					"items": {
+						"$ref": "https://schema.twindev.org/json-ld/JsonLdContextDefinitionElement"
+					},
+					"prefixItems": [
 						{
 							"type": "string",
 							"const": "https://schema.twindev.org/aig/"
 						}
-					],
-					"additionalItems": {
-						"$ref": "https://schema.twindev.org/json-ld/JsonLdContextDefinitionElement"
-					}
+					]
 				}
 			],
 			"description": "JSON-LD Context."
@@ -50,13 +53,15 @@
 		},
 		"edgeRelationships": {
 			"type": "array",
-			"items": {
-				"type": "string"
-			},
-			"description": "The relationships between the two vertices."
+			"items": false,
+			"description": "The relationships between the two vertices.",
+			"prefixItems": [
+				{
+					"type": "string"
+				}
+			]
 		}
 	},
 	"required": ["@context", "id", "type", "edgeRelationships"],
-	"additionalProperties": false,
-	"description": "Interface describing an edge between two vertices in an auditable item graph."
+	"additionalProperties": false
 }

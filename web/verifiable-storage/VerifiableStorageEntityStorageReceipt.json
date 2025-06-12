@@ -1,4 +1,7 @@
 {
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "https://schema.twindev.org/verifiable-storage/VerifiableStorageEntityStorageReceipt",
+	"description": "Receipt for the entity storage Verifiable Storage connector.",
 	"type": "object",
 	"properties": {
 		"@context": {
@@ -17,6 +20,5 @@
 		}
 	},
 	"required": ["@context", "type", "entityStorageId"],
-	"additionalProperties": false,
-	"description": "Receipt for the entity storage Verifiable Storage connector."
+	"additionalProperties": false
 }
