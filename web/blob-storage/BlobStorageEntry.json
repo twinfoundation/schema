@@ -51,6 +51,10 @@
 			"type": "string",
 			"description": "The mime type for the blob."
 		},
+		"isEncrypted": {
+			"type": "boolean",
+			"description": "Indicates if the blob is encrypted."
+		},
 		"fileExtension": {
 			"type": "string",
 			"description": "The extension."
