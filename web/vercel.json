@@ -225,6 +225,28 @@
 			"destination": "https://schema.twindev.org/odrl/:path*.json"
 		},
 		{
+			"source": "/gaia-x/",
+			"has": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "text/html.*"
+				}
+			],
+			"destination": "https://schema.twindev.org/gaia-x/types.html"
+		},
+		{
+			"source": "/gaia-x/:path*",
+			"missing": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "application/ld\\+json.*"
+				}
+			],
+			"destination": "https://schema.twindev.org/gaia-x/:path*.json"
+		},
+		{
 			"source": "/documents/",
 			"has": [
 				{

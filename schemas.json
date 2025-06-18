@@ -38,6 +38,14 @@
 		"jsonLdLink": "https://www.w3.org/ns/odrl.jsonld"
 	},
 	{
+		"repo": "standards",
+		"packages": ["standards-gaia-x"],
+		"title": "Gaia-X",
+		"namespace": "gaia-x",
+		"jsonLdTypes": [],
+		"jsonLdLink": "https://w3id.org/gaia-x/development"
+	},
+	{
 		"repo": "document-management",
 		"packages": ["document-management-models"],
 		"title": "Documents",
