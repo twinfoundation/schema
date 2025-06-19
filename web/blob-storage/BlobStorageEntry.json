@@ -55,6 +55,10 @@
 			"type": "boolean",
 			"description": "Indicates if the blob is encrypted."
 		},
+		"compression": {
+			"$ref": "https://schema.twindev.org/blob-storage/BlobStorageCompressionType",
+			"description": "The type of compression used for the blob, if not set it is not stored with compression."
+		},
 		"fileExtension": {
 			"type": "string",
 			"description": "The extension."

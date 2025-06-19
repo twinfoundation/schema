@@ -1,0 +1,7 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "https://schema.twindev.org/blob-storage/BlobStorageCompressionType",
+	"description": "The types of compression for blob storage data.",
+	"type": "string",
+	"enum": ["gzip", "deflate"]
+}
