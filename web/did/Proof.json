@@ -1,0 +1,13 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "https://schema.twindev.org/did/Proof",
+	"description": "Interface describing a proof.",
+	"anyOf": [
+		{
+			"$ref": "https://schema.twindev.org/did/DataIntegrityProof"
+		},
+		{
+			"$ref": "https://schema.twindev.org/did/JsonWebSignature2020Proof"
+		}
+	]
+}
