@@ -170,83 +170,6 @@
 			"destination": "https://schema.twindev.org/blob-storage/:path*.json"
 		},
 		{
-			"source": "/did/",
-			"has": [
-				{
-					"type": "header",
-					"key": "Accept",
-					"value": "text/html.*"
-				}
-			],
-			"destination": "https://schema.twindev.org/did/types.html"
-		},
-		{
-			"source": "/did/",
-			"has": [
-				{
-					"type": "header",
-					"key": "Accept",
-					"value": "application/ld\\+json.*"
-				}
-			],
-			"destination": "https://schema.twindev.org/did/types.jsonld"
-		},
-		{
-			"source": "/did/:path*",
-			"missing": [
-				{
-					"type": "header",
-					"key": "Accept",
-					"value": "application/ld\\+json.*"
-				}
-			],
-			"destination": "https://schema.twindev.org/did/:path*.json"
-		},
-		{
-			"source": "/odrl/",
-			"has": [
-				{
-					"type": "header",
-					"key": "Accept",
-					"value": "text/html.*"
-				}
-			],
-			"destination": "https://schema.twindev.org/odrl/types.html"
-		},
-		{
-			"source": "/odrl/:path*",
-			"missing": [
-				{
-					"type": "header",
-					"key": "Accept",
-					"value": "application/ld\\+json.*"
-				}
-			],
-			"destination": "https://schema.twindev.org/odrl/:path*.json"
-		},
-		{
-			"source": "/gaia-x/",
-			"has": [
-				{
-					"type": "header",
-					"key": "Accept",
-					"value": "text/html.*"
-				}
-			],
-			"destination": "https://schema.twindev.org/gaia-x/types.html"
-		},
-		{
-			"source": "/gaia-x/:path*",
-			"missing": [
-				{
-					"type": "header",
-					"key": "Accept",
-					"value": "application/ld\\+json.*"
-				}
-			],
-			"destination": "https://schema.twindev.org/gaia-x/:path*.json"
-		},
-		{
 			"source": "/documents/",
 			"has": [
 				{
@@ -278,39 +201,6 @@
 				}
 			],
 			"destination": "https://schema.twindev.org/documents/:path*.json"
-		},
-		{
-			"source": "/json-ld/",
-			"has": [
-				{
-					"type": "header",
-					"key": "Accept",
-					"value": "text/html.*"
-				}
-			],
-			"destination": "https://schema.twindev.org/json-ld/types.html"
-		},
-		{
-			"source": "/json-ld/",
-			"has": [
-				{
-					"type": "header",
-					"key": "Accept",
-					"value": "application/ld\\+json.*"
-				}
-			],
-			"destination": "https://schema.twindev.org/json-ld/types.jsonld"
-		},
-		{
-			"source": "/json-ld/:path*",
-			"missing": [
-				{
-					"type": "header",
-					"key": "Accept",
-					"value": "application/ld\\+json.*"
-				}
-			],
-			"destination": "https://schema.twindev.org/json-ld/:path*.json"
 		},
 		{
 			"source": "/immutable-proof/",
@@ -379,6 +269,39 @@
 			"destination": "https://schema.twindev.org/verifiable-storage/:path*.json"
 		},
 		{
+			"source": "/federated-catalogue/",
+			"has": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "text/html.*"
+				}
+			],
+			"destination": "https://schema.twindev.org/federated-catalogue/types.html"
+		},
+		{
+			"source": "/federated-catalogue/",
+			"has": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "application/ld\\+json.*"
+				}
+			],
+			"destination": "https://schema.twindev.org/federated-catalogue/types.jsonld"
+		},
+		{
+			"source": "/federated-catalogue/:path*",
+			"missing": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "application/ld\\+json.*"
+				}
+			],
+			"destination": "https://schema.twindev.org/federated-catalogue/:path*.json"
+		},
+		{
 			"source": "/framework/",
 			"has": [
 				{
@@ -412,6 +335,149 @@
 			"destination": "https://schema.twindev.org/framework/:path*.json"
 		},
 		{
+			"source": "/json-ld/",
+			"has": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "text/html.*"
+				}
+			],
+			"destination": "https://schema.twindev.org/json-ld/types.html"
+		},
+		{
+			"source": "/json-ld/",
+			"has": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "application/ld\\+json.*"
+				}
+			],
+			"destination": "https://schema.twindev.org/json-ld/types.jsonld"
+		},
+		{
+			"source": "/json-ld/:path*",
+			"missing": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "application/ld\\+json.*"
+				}
+			],
+			"destination": "https://schema.twindev.org/json-ld/:path*.json"
+		},
+		{
+			"source": "/w3c-did/",
+			"has": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "text/html.*"
+				}
+			],
+			"destination": "https://schema.twindev.org/w3c-did/types.html"
+		},
+		{
+			"source": "/w3c-did/",
+			"has": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "application/ld\\+json.*"
+				}
+			],
+			"destination": "https://schema.twindev.org/w3c-did/types.jsonld"
+		},
+		{
+			"source": "/w3c-did/:path*",
+			"missing": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "application/ld\\+json.*"
+				}
+			],
+			"destination": "https://schema.twindev.org/w3c-did/:path*.json"
+		},
+		{
+			"source": "/w3c-odrl/",
+			"has": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "text/html.*"
+				}
+			],
+			"destination": "https://schema.twindev.org/w3c-odrl/types.html"
+		},
+		{
+			"source": "/w3c-odrl/:path*",
+			"missing": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "application/ld\\+json.*"
+				}
+			],
+			"destination": "https://schema.twindev.org/w3c-odrl/:path*.json"
+		},
+		{
+			"source": "/w3c-activity-streams/",
+			"has": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "text/html.*"
+				}
+			],
+			"destination": "https://schema.twindev.org/w3c-activity-streams/types.html"
+		},
+		{
+			"source": "/w3c-activity-streams/",
+			"has": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "application/ld\\+json.*"
+				}
+			],
+			"destination": "https://schema.twindev.org/w3c-activity-streams/types.jsonld"
+		},
+		{
+			"source": "/w3c-activity-streams/:path*",
+			"missing": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "application/ld\\+json.*"
+				}
+			],
+			"destination": "https://schema.twindev.org/w3c-activity-streams/:path*.json"
+		},
+		{
+			"source": "/gaia-x/",
+			"has": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "text/html.*"
+				}
+			],
+			"destination": "https://schema.twindev.org/gaia-x/types.html"
+		},
+		{
+			"source": "/gaia-x/:path*",
+			"missing": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "application/ld\\+json.*"
+				}
+			],
+			"destination": "https://schema.twindev.org/gaia-x/:path*.json"
+		},
+		{
 			"source": "/dublin-core/",
 			"has": [
 				{
@@ -443,39 +509,6 @@
 				}
 			],
 			"destination": "https://schema.twindev.org/dublin-core/dcmitype.jsonld"
-		},
-		{
-			"source": "/federated-catalogue/",
-			"has": [
-				{
-					"type": "header",
-					"key": "Accept",
-					"value": "text/html.*"
-				}
-			],
-			"destination": "https://schema.twindev.org/federated-catalogue/types.html"
-		},
-		{
-			"source": "/federated-catalogue/",
-			"has": [
-				{
-					"type": "header",
-					"key": "Accept",
-					"value": "application/ld\\+json.*"
-				}
-			],
-			"destination": "https://schema.twindev.org/federated-catalogue/types.jsonld"
-		},
-		{
-			"source": "/federated-catalogue/:path*",
-			"missing": [
-				{
-					"type": "header",
-					"key": "Accept",
-					"value": "application/ld\\+json.*"
-				}
-			],
-			"destination": "https://schema.twindev.org/federated-catalogue/:path*.json"
 		}
 	]
 }

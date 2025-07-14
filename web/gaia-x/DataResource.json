@@ -88,18 +88,18 @@
 			"type": "string",
 			"description": "Subject Id"
 		},
+		"name": {
+			"type": "string",
+			"description": "The Resource Name"
+		},
+		"description": {
+			"type": "string",
+			"description": "Description of the Gaia-X entity."
+		},
 		"type": {
 			"type": "string",
 			"const": "DataResource",
 			"description": "Subject type"
-		},
-		"description": {
-			"type": "string",
-			"description": "Description"
-		},
-		"name": {
-			"type": "string",
-			"description": "The Resource Name"
 		},
 		"exposedThrough": {
 			"anyOf": [
@@ -232,7 +232,7 @@
 		"producedBy": {
 			"anyOf": [
 				{
-					"$ref": "https://schema.twindev.org/gaia-x/Participant"
+					"$ref": "https://schema.twindev.org/gaia-x/LegalPerson"
 				},
 				{
 					"type": "string"
@@ -247,7 +247,7 @@
 		"copyrightOwnedBy": {
 			"anyOf": [
 				{
-					"$ref": "https://schema.twindev.org/gaia-x/Participant"
+					"$ref": "https://schema.twindev.org/gaia-x/LegalPerson"
 				},
 				{
 					"type": "string"
@@ -256,20 +256,33 @@
 			"description": "Copyright owner"
 		},
 		"resourcePolicy": {
-			"$ref": "https://schema.twindev.org/gaia-x/ObjectOrArray%3CIJsonLdNodeObject%3E",
-			"description": "ODRL Policy"
+			"description": "Object or array data type",
+			"anyOf": [
+				{
+					"$ref": "https://schema.twindev.org/json-ld/JsonLdNodeObject"
+				},
+				{
+					"type": "array",
+					"items": false,
+					"prefixItems": [
+						{
+							"$ref": "https://schema.twindev.org/json-ld/JsonLdNodeObject"
+						}
+					]
+				}
+			]
 		}
 	},
 	"required": [
 		"@context",
-		"id",
-		"type",
-		"name",
-		"exposedThrough",
-		"producedBy",
-		"license",
 		"copyrightOwnedBy",
-		"resourcePolicy"
+		"exposedThrough",
+		"id",
+		"license",
+		"name",
+		"producedBy",
+		"resourcePolicy",
+		"type"
 	],
 	"additionalProperties": {
 		"anyOf": [

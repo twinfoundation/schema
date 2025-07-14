@@ -1,0 +1,152 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "https://schema.twindev.org/w3c-odrl/OdrlAction",
+	"description": "Interface for ODRL Actions.",
+	"type": "object",
+	"properties": {
+		"@context": {
+			"$ref": "https://schema.twindev.org/json-ld/JsonLdContextDefinitionRoot"
+		},
+		"@id": {
+			"type": "string",
+			"description": "Direct action identifier. Used in simple action references."
+		},
+		"@included": {
+			"$ref": "https://schema.twindev.org/json-ld/JsonLdIncludedBlock"
+		},
+		"@graph": {
+			"anyOf": [
+				{
+					"$ref": "https://schema.twindev.org/json-ld/JsonLdNodeObject"
+				},
+				{
+					"type": "array",
+					"items": false,
+					"prefixItems": [
+						{
+							"$ref": "https://schema.twindev.org/json-ld/JsonLdNodeObject"
+						}
+					]
+				}
+			]
+		},
+		"@nest": {
+			"anyOf": [
+				{
+					"$ref": "https://schema.twindev.org/json-ld/JsonLdJsonObject"
+				},
+				{
+					"type": "array",
+					"items": false,
+					"prefixItems": [
+						{
+							"$ref": "https://schema.twindev.org/json-ld/JsonLdJsonObject"
+						}
+					]
+				}
+			]
+		},
+		"@type": {
+			"anyOf": [
+				{
+					"type": "string"
+				},
+				{
+					"type": "array",
+					"items": false,
+					"prefixItems": [
+						{
+							"type": "string"
+						}
+					]
+				}
+			]
+		},
+		"@reverse": {
+			"type": "object",
+			"additionalProperties": {
+				"type": "string"
+			}
+		},
+		"@index": {
+			"type": "string"
+		},
+		"rdf:value": {
+			"type": "object",
+			"properties": {
+				"@id": {
+					"type": "string"
+				}
+			},
+			"required": ["@id"],
+			"additionalProperties": false,
+			"description": "The value/identifier of the action. Used in complex action definitions."
+		},
+		"refinement": {
+			"anyOf": [
+				{
+					"$ref": "https://schema.twindev.org/w3c-odrl/OdrlConstraint"
+				},
+				{
+					"$ref": "https://schema.twindev.org/w3c-odrl/OdrlLogicalConstraint"
+				},
+				{
+					"type": "array",
+					"items": false,
+					"prefixItems": [
+						{
+							"anyOf": [
+								{
+									"$ref": "https://schema.twindev.org/w3c-odrl/OdrlConstraint"
+								},
+								{
+									"$ref": "https://schema.twindev.org/w3c-odrl/OdrlLogicalConstraint"
+								}
+							]
+						}
+					]
+				}
+			],
+			"description": "Refinements applied to the action."
+		},
+		"includedIn": {
+			"$ref": "https://schema.twindev.org/w3c-odrl/ActionType",
+			"description": "Reference to the action this action is included in."
+		},
+		"implies": {
+			"type": "array",
+			"items": false,
+			"description": "References to actions this action implies.",
+			"prefixItems": [
+				{
+					"$ref": "https://schema.twindev.org/w3c-odrl/ActionType"
+				}
+			]
+		}
+	},
+	"additionalProperties": {
+		"anyOf": [
+			{
+				"$ref": "https://schema.twindev.org/json-ld/JsonLdNodePrimitive"
+			},
+			{
+				"$ref": "https://schema.twindev.org/json-ld/JsonLdLanguageMap"
+			},
+			{
+				"$ref": "https://schema.twindev.org/json-ld/JsonLdIndexMap"
+			},
+			{
+				"$ref": "https://schema.twindev.org/json-ld/JsonLdIncludedBlock"
+			},
+			{
+				"$ref": "https://schema.twindev.org/json-ld/JsonLdIdMap"
+			},
+			{
+				"$ref": "https://schema.twindev.org/json-ld/JsonLdTypeMap"
+			},
+			{
+				"type": "array"
+			}
+		]
+	}
+}

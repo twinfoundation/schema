@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"$id": "https://schema.twindev.org/gaia-x/ServiceOffering",
-	"description": "A Service offering",
+	"$id": "https://schema.twindev.org/gaia-x/LegalPerson",
+	"description": "A Legal Person as defined by Gaia-X.",
 	"type": "object",
 	"properties": {
 		"@context": {
@@ -90,7 +90,7 @@
 		},
 		"name": {
 			"type": "string",
-			"description": "Name of the Service Offering."
+			"description": "Human readable Name."
 		},
 		"description": {
 			"type": "string",
@@ -98,17 +98,30 @@
 		},
 		"type": {
 			"type": "string",
-			"const": "ServiceOffering",
-			"description": "Type"
+			"const": "LegalPerson",
+			"description": "JSON-LD type."
 		},
-		"providedBy": {
-			"anyOf": [
-				{
-					"type": "string"
-				},
-				{
-					"$ref": "https://schema.twindev.org/gaia-x/LegalPerson"
-				},
+		"registrationNumber": {
+			"$ref": "https://schema.twindev.org/gaia-x/RegistrationNumber",
+			"description": "The legal registration number."
+		},
+		"legalName": {
+			"type": "string",
+			"description": "The legal name."
+		},
+		"legalAddress": {
+			"$ref": "https://schema.twindev.org/gaia-x/Address",
+			"description": "Legal Address"
+		},
+		"headquartersAddress": {
+			"$ref": "https://schema.twindev.org/gaia-x/Address",
+			"description": "Headquarters address."
+		},
+		"parentOrganizationOf": {
+			"type": "array",
+			"items": false,
+			"description": "Parent organization.",
+			"prefixItems": [
 				{
 					"type": "object",
 					"additionalProperties": {
@@ -154,12 +167,9 @@
 								},
 								{
 									"type": "array",
-									"items": false,
-									"prefixItems": [
-										{
-											"type": "string"
-										}
-									]
+									"items": {
+										"type": "string"
+									}
 								}
 							]
 						},
@@ -173,12 +183,9 @@
 								},
 								{
 									"type": "array",
-									"items": false,
-									"prefixItems": [
-										{
-											"$ref": "https://schema.twindev.org/json-ld/JsonLdNodeObject"
-										}
-									]
+									"items": {
+										"$ref": "https://schema.twindev.org/json-ld/JsonLdNodeObject"
+									}
 								}
 							]
 						},
@@ -189,12 +196,9 @@
 								},
 								{
 									"type": "array",
-									"items": false,
-									"prefixItems": [
-										{
-											"$ref": "https://schema.twindev.org/json-ld/JsonLdJsonObject"
-										}
-									]
+									"items": {
+										"$ref": "https://schema.twindev.org/json-ld/JsonLdJsonObject"
+									}
 								}
 							]
 						},
@@ -205,12 +209,9 @@
 								},
 								{
 									"type": "array",
-									"items": false,
-									"prefixItems": [
-										{
-											"type": "string"
-										}
-									]
+									"items": {
+										"type": "string"
+									}
 								}
 							]
 						},
@@ -226,46 +227,13 @@
 					},
 					"required": ["id", "type"]
 				}
-			],
-			"description": "Participant that provides the offering"
-		},
-		"servicePolicy": {
-			"description": "Object or array data type",
-			"anyOf": [
-				{
-					"$ref": "https://schema.twindev.org/json-ld/JsonLdNodeObject"
-				},
-				{
-					"type": "array",
-					"items": false,
-					"prefixItems": [
-						{
-							"$ref": "https://schema.twindev.org/json-ld/JsonLdNodeObject"
-						}
-					]
-				}
 			]
 		},
-		"aggregationOfResources": {
-			"anyOf": [
-				{
-					"type": "array",
-					"items": false,
-					"prefixItems": [
-						{
-							"type": "string"
-						}
-					]
-				},
-				{
-					"type": "array",
-					"items": false,
-					"prefixItems": [
-						{
-							"$ref": "https://schema.twindev.org/gaia-x/DataResource"
-						}
-					]
-				},
+		"subOrganizationOf": {
+			"type": "array",
+			"items": false,
+			"description": "Sub organization of.",
+			"prefixItems": [
 				{
 					"type": "object",
 					"additionalProperties": {
@@ -299,7 +267,7 @@
 						},
 						"type": {
 							"type": "string",
-							"const": "DataResource"
+							"const": "LegalPerson"
 						},
 						"@context": {
 							"$ref": "https://schema.twindev.org/json-ld/JsonLdContextDefinitionRoot"
@@ -311,12 +279,9 @@
 								},
 								{
 									"type": "array",
-									"items": false,
-									"prefixItems": [
-										{
-											"type": "string"
-										}
-									]
+									"items": {
+										"type": "string"
+									}
 								}
 							]
 						},
@@ -330,12 +295,9 @@
 								},
 								{
 									"type": "array",
-									"items": false,
-									"prefixItems": [
-										{
-											"$ref": "https://schema.twindev.org/json-ld/JsonLdNodeObject"
-										}
-									]
+									"items": {
+										"$ref": "https://schema.twindev.org/json-ld/JsonLdNodeObject"
+									}
 								}
 							]
 						},
@@ -346,12 +308,9 @@
 								},
 								{
 									"type": "array",
-									"items": false,
-									"prefixItems": [
-										{
-											"$ref": "https://schema.twindev.org/json-ld/JsonLdJsonObject"
-										}
-									]
+									"items": {
+										"$ref": "https://schema.twindev.org/json-ld/JsonLdJsonObject"
+									}
 								}
 							]
 						},
@@ -362,12 +321,9 @@
 								},
 								{
 									"type": "array",
-									"items": false,
-									"prefixItems": [
-										{
-											"type": "string"
-										}
-									]
+									"items": {
+										"type": "string"
+									}
 								}
 							]
 						},
@@ -383,15 +339,10 @@
 					},
 					"required": ["id", "type"]
 				}
-			],
-			"description": "Resources aggregated It is supported different representations, inline, by reference both providing the URI or a partial JSON-LD Node object"
-		},
-		"endpoint": {
-			"$ref": "https://schema.twindev.org/gaia-x/Endpoint",
-			"description": "The endpoint"
+			]
 		}
 	},
-	"required": ["@context", "endpoint", "id", "name", "providedBy", "servicePolicy", "type"],
+	"required": ["@context", "id", "legalAddress", "legalName", "registrationNumber", "type"],
 	"additionalProperties": {
 		"anyOf": [
 			{

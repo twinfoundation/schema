@@ -1,0 +1,179 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "https://schema.twindev.org/w3c-odrl/OdrlConstraint",
+	"description": "Interface for ODRL Constraints.",
+	"type": "object",
+	"properties": {
+		"@context": {
+			"$ref": "https://schema.twindev.org/json-ld/JsonLdContextDefinitionRoot"
+		},
+		"@id": {
+			"anyOf": [
+				{
+					"type": "string"
+				},
+				{
+					"type": "array",
+					"items": false,
+					"prefixItems": [
+						{
+							"type": "string"
+						}
+					]
+				}
+			]
+		},
+		"@included": {
+			"$ref": "https://schema.twindev.org/json-ld/JsonLdIncludedBlock"
+		},
+		"@graph": {
+			"anyOf": [
+				{
+					"$ref": "https://schema.twindev.org/json-ld/JsonLdNodeObject"
+				},
+				{
+					"type": "array",
+					"items": false,
+					"prefixItems": [
+						{
+							"$ref": "https://schema.twindev.org/json-ld/JsonLdNodeObject"
+						}
+					]
+				}
+			]
+		},
+		"@nest": {
+			"anyOf": [
+				{
+					"$ref": "https://schema.twindev.org/json-ld/JsonLdJsonObject"
+				},
+				{
+					"type": "array",
+					"items": false,
+					"prefixItems": [
+						{
+							"$ref": "https://schema.twindev.org/json-ld/JsonLdJsonObject"
+						}
+					]
+				}
+			]
+		},
+		"@type": {
+			"anyOf": [
+				{
+					"type": "string"
+				},
+				{
+					"type": "array",
+					"items": false,
+					"prefixItems": [
+						{
+							"type": "string"
+						}
+					]
+				}
+			]
+		},
+		"@reverse": {
+			"type": "object",
+			"additionalProperties": {
+				"type": "string"
+			}
+		},
+		"@index": {
+			"type": "string"
+		},
+		"uid": {
+			"type": "string",
+			"description": "Optional unique identifier for the constraint."
+		},
+		"leftOperand": {
+			"anyOf": [
+				{
+					"type": "string"
+				},
+				{
+					"$ref": "https://schema.twindev.org/w3c-odrl/LeftOperandType"
+				}
+			],
+			"description": "The left operand of the constraint."
+		},
+		"operator": {
+			"$ref": "https://schema.twindev.org/w3c-odrl/OperatorType",
+			"description": "The operator of the constraint."
+		},
+		"rightOperand": {
+			"anyOf": [
+				{
+					"type": "string"
+				},
+				{
+					"type": "object",
+					"properties": {
+						"@value": {
+							"type": "string"
+						},
+						"@type": {
+							"type": "string"
+						}
+					},
+					"required": ["@value"],
+					"additionalProperties": false
+				},
+				{
+					"type": "object",
+					"properties": {
+						"@id": {
+							"type": "string"
+						}
+					},
+					"required": ["@id"],
+					"additionalProperties": false
+				}
+			],
+			"description": "The right operand of the constraint. value with optional"
+		},
+		"rightOperandReference": {
+			"type": "string",
+			"description": "Reference to the right operand."
+		},
+		"dataType": {
+			"type": "string",
+			"description": "The data type of the right operand."
+		},
+		"unit": {
+			"type": "string",
+			"description": "The unit for the right operand value."
+		},
+		"status": {
+			"$ref": "https://schema.twindev.org/w3c-odrl/StatusType",
+			"description": "The status value for comparison."
+		}
+	},
+	"required": ["leftOperand", "operator"],
+	"additionalProperties": {
+		"anyOf": [
+			{
+				"$ref": "https://schema.twindev.org/json-ld/JsonLdNodePrimitive"
+			},
+			{
+				"$ref": "https://schema.twindev.org/json-ld/JsonLdLanguageMap"
+			},
+			{
+				"$ref": "https://schema.twindev.org/json-ld/JsonLdIndexMap"
+			},
+			{
+				"$ref": "https://schema.twindev.org/json-ld/JsonLdIncludedBlock"
+			},
+			{
+				"$ref": "https://schema.twindev.org/json-ld/JsonLdIdMap"
+			},
+			{
+				"$ref": "https://schema.twindev.org/json-ld/JsonLdTypeMap"
+			},
+			{
+				"type": "array"
+			}
+		]
+	}
+}

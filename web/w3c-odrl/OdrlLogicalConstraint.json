@@ -1,0 +1,212 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "https://schema.twindev.org/w3c-odrl/OdrlLogicalConstraint",
+	"description": "Interface for ODRL Logical Constraints. A Logical Constraint compares two or more existing Constraints by one logical operator. If the comparison returns a logical match, then the Logical Constraint is satisfied.",
+	"type": "object",
+	"properties": {
+		"@context": {
+			"$ref": "https://schema.twindev.org/json-ld/JsonLdContextDefinitionRoot"
+		},
+		"@id": {
+			"anyOf": [
+				{
+					"type": "string"
+				},
+				{
+					"type": "array",
+					"items": false,
+					"prefixItems": [
+						{
+							"type": "string"
+						}
+					]
+				}
+			]
+		},
+		"@included": {
+			"$ref": "https://schema.twindev.org/json-ld/JsonLdIncludedBlock"
+		},
+		"@graph": {
+			"anyOf": [
+				{
+					"$ref": "https://schema.twindev.org/json-ld/JsonLdNodeObject"
+				},
+				{
+					"type": "array",
+					"items": false,
+					"prefixItems": [
+						{
+							"$ref": "https://schema.twindev.org/json-ld/JsonLdNodeObject"
+						}
+					]
+				}
+			]
+		},
+		"@nest": {
+			"anyOf": [
+				{
+					"$ref": "https://schema.twindev.org/json-ld/JsonLdJsonObject"
+				},
+				{
+					"type": "array",
+					"items": false,
+					"prefixItems": [
+						{
+							"$ref": "https://schema.twindev.org/json-ld/JsonLdJsonObject"
+						}
+					]
+				}
+			]
+		},
+		"@type": {
+			"anyOf": [
+				{
+					"type": "string"
+				},
+				{
+					"type": "array",
+					"items": false,
+					"prefixItems": [
+						{
+							"type": "string"
+						}
+					]
+				}
+			]
+		},
+		"@reverse": {
+			"type": "object",
+			"additionalProperties": {
+				"type": "string"
+			}
+		},
+		"@index": {
+			"type": "string"
+		},
+		"uid": {
+			"type": "string",
+			"description": "Optional unique identifier for the logical constraint. Must be an IRI."
+		},
+		"and": {
+			"type": "object",
+			"properties": {
+				"@list": {
+					"type": "array",
+					"items": false,
+					"prefixItems": [
+						{
+							"type": "object",
+							"properties": {
+								"@id": {
+									"type": "string"
+								}
+							},
+							"required": ["@id"],
+							"additionalProperties": false
+						}
+					]
+				}
+			},
+			"required": ["@list"],
+			"additionalProperties": false,
+			"description": "AND operator - all constraints must be satisfied."
+		},
+		"or": {
+			"type": "object",
+			"properties": {
+				"@list": {
+					"type": "array",
+					"items": false,
+					"prefixItems": [
+						{
+							"type": "object",
+							"properties": {
+								"@id": {
+									"type": "string"
+								}
+							},
+							"required": ["@id"],
+							"additionalProperties": false
+						}
+					]
+				}
+			},
+			"required": ["@list"],
+			"additionalProperties": false,
+			"description": "OR operator - at least one constraint must be satisfied."
+		},
+		"xone": {
+			"type": "object",
+			"properties": {
+				"@list": {
+					"type": "array",
+					"items": false,
+					"prefixItems": [
+						{
+							"type": "object",
+							"properties": {
+								"@id": {
+									"type": "string"
+								}
+							},
+							"required": ["@id"],
+							"additionalProperties": false
+						}
+					]
+				}
+			},
+			"required": ["@list"],
+			"additionalProperties": false,
+			"description": "XOR operator - exactly one constraint must be satisfied."
+		},
+		"andSequence": {
+			"type": "object",
+			"properties": {
+				"@list": {
+					"type": "array",
+					"items": false,
+					"prefixItems": [
+						{
+							"type": "object",
+							"properties": {
+								"@id": {
+									"type": "string"
+								}
+							},
+							"required": ["@id"],
+							"additionalProperties": false
+						}
+					]
+				}
+			},
+			"required": ["@list"],
+			"additionalProperties": false,
+			"description": "AND Sequence operator - all constraints must be satisfied in order."
+		}
+	},
+	"additionalProperties": {
+		"anyOf": [
+			{
+				"$ref": "https://schema.twindev.org/json-ld/JsonLdNodePrimitive"
+			},
+			{
+				"$ref": "https://schema.twindev.org/json-ld/JsonLdLanguageMap"
+			},
+			{
+				"$ref": "https://schema.twindev.org/json-ld/JsonLdIndexMap"
+			},
+			{
+				"$ref": "https://schema.twindev.org/json-ld/JsonLdIncludedBlock"
+			},
+			{
+				"$ref": "https://schema.twindev.org/json-ld/JsonLdIdMap"
+			},
+			{
+				"$ref": "https://schema.twindev.org/json-ld/JsonLdTypeMap"
+			},
+			{
+				"type": "array"
+			}
+		]
+	}
+}

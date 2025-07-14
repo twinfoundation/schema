@@ -1,7 +1,0 @@
-{
-	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"$id": "https://schema.twindev.org/did/DidCryptoSuites",
-	"description": "The types for DID Proof crypto suites.",
-	"type": "string",
-	"enum": ["eddsa-jcs-2022", "eddsa-rdfc-2022"]
-}

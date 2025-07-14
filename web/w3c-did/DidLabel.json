@@ -1,0 +1,22 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "https://schema.twindev.org/w3c-did/DidLabel",
+	"description": "Interface describing a DID Label.",
+	"type": "object",
+	"properties": {
+		"@value": {
+			"type": "string",
+			"description": "The value for the label."
+		},
+		"@language": {
+			"type": "string",
+			"description": "The language for the label."
+		},
+		"@direction": {
+			"type": "string",
+			"description": "The direction of the label."
+		}
+	},
+	"required": ["@value", "@language"],
+	"additionalProperties": false
+}
