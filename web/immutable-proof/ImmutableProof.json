@@ -52,7 +52,7 @@
 			"description": "The verifiable storage id for where the proof is stored."
 		},
 		"proof": {
-			"$ref": "https://schema.twindev.org/did/DataIntegrityProof",
+			"$ref": "https://schema.twindev.org/w3c-did/DataIntegrityProof",
 			"description": "The proof which can be undefined if it has not yet been issued."
 		},
 		"immutableReceipt": {
