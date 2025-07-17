@@ -215,6 +215,17 @@ async function createRewriteRules(schemas) {
 				],
 				destination: `https://schema.twindev.org/${rewriteName}/:path*.json`
 			});
+			rewrites.push({
+				source: `/${rewriteName}/:path*`,
+				missing: [
+					{
+						type: 'header',
+						key: 'Accept',
+						value: 'application/json'
+					}
+				],
+				destination: `https://schema.twindev.org/${rewriteName}/:path*.json`
+			});
 		}
 	}
 	const rewritesPath = path.join('web', 'vercel.json');

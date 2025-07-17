@@ -71,6 +71,17 @@
 			"destination": "https://schema.twindev.org/aig/:path*.json"
 		},
 		{
+			"source": "/aig/:path*",
+			"missing": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "application/json"
+				}
+			],
+			"destination": "https://schema.twindev.org/aig/:path*.json"
+		},
+		{
 			"source": "/ais/",
 			"has": [
 				{
@@ -99,6 +110,17 @@
 					"type": "header",
 					"key": "Accept",
 					"value": "application/ld\\+json.*"
+				}
+			],
+			"destination": "https://schema.twindev.org/ais/:path*.json"
+		},
+		{
+			"source": "/ais/:path*",
+			"missing": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "application/json"
 				}
 			],
 			"destination": "https://schema.twindev.org/ais/:path*.json"
@@ -137,6 +159,17 @@
 			"destination": "https://schema.twindev.org/attestation/:path*.json"
 		},
 		{
+			"source": "/attestation/:path*",
+			"missing": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "application/json"
+				}
+			],
+			"destination": "https://schema.twindev.org/attestation/:path*.json"
+		},
+		{
 			"source": "/blob-storage/",
 			"has": [
 				{
@@ -165,6 +198,17 @@
 					"type": "header",
 					"key": "Accept",
 					"value": "application/ld\\+json.*"
+				}
+			],
+			"destination": "https://schema.twindev.org/blob-storage/:path*.json"
+		},
+		{
+			"source": "/blob-storage/:path*",
+			"missing": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "application/json"
 				}
 			],
 			"destination": "https://schema.twindev.org/blob-storage/:path*.json"
@@ -203,6 +247,17 @@
 			"destination": "https://schema.twindev.org/documents/:path*.json"
 		},
 		{
+			"source": "/documents/:path*",
+			"missing": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "application/json"
+				}
+			],
+			"destination": "https://schema.twindev.org/documents/:path*.json"
+		},
+		{
 			"source": "/immutable-proof/",
 			"has": [
 				{
@@ -231,6 +286,17 @@
 					"type": "header",
 					"key": "Accept",
 					"value": "application/ld\\+json.*"
+				}
+			],
+			"destination": "https://schema.twindev.org/immutable-proof/:path*.json"
+		},
+		{
+			"source": "/immutable-proof/:path*",
+			"missing": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "application/json"
 				}
 			],
 			"destination": "https://schema.twindev.org/immutable-proof/:path*.json"
@@ -269,6 +335,17 @@
 			"destination": "https://schema.twindev.org/verifiable-storage/:path*.json"
 		},
 		{
+			"source": "/verifiable-storage/:path*",
+			"missing": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "application/json"
+				}
+			],
+			"destination": "https://schema.twindev.org/verifiable-storage/:path*.json"
+		},
+		{
 			"source": "/federated-catalogue/",
 			"has": [
 				{
@@ -297,6 +374,17 @@
 					"type": "header",
 					"key": "Accept",
 					"value": "application/ld\\+json.*"
+				}
+			],
+			"destination": "https://schema.twindev.org/federated-catalogue/:path*.json"
+		},
+		{
+			"source": "/federated-catalogue/:path*",
+			"missing": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "application/json"
 				}
 			],
 			"destination": "https://schema.twindev.org/federated-catalogue/:path*.json"
@@ -335,6 +423,17 @@
 			"destination": "https://schema.twindev.org/framework/:path*.json"
 		},
 		{
+			"source": "/framework/:path*",
+			"missing": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "application/json"
+				}
+			],
+			"destination": "https://schema.twindev.org/framework/:path*.json"
+		},
+		{
 			"source": "/json-ld/",
 			"has": [
 				{
@@ -363,6 +462,17 @@
 					"type": "header",
 					"key": "Accept",
 					"value": "application/ld\\+json.*"
+				}
+			],
+			"destination": "https://schema.twindev.org/json-ld/:path*.json"
+		},
+		{
+			"source": "/json-ld/:path*",
+			"missing": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "application/json"
 				}
 			],
 			"destination": "https://schema.twindev.org/json-ld/:path*.json"
@@ -401,6 +511,17 @@
 			"destination": "https://schema.twindev.org/w3c-did/:path*.json"
 		},
 		{
+			"source": "/w3c-did/:path*",
+			"missing": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "application/json"
+				}
+			],
+			"destination": "https://schema.twindev.org/w3c-did/:path*.json"
+		},
+		{
 			"source": "/w3c-odrl/",
 			"has": [
 				{
@@ -418,6 +539,17 @@
 					"type": "header",
 					"key": "Accept",
 					"value": "application/ld\\+json.*"
+				}
+			],
+			"destination": "https://schema.twindev.org/w3c-odrl/:path*.json"
+		},
+		{
+			"source": "/w3c-odrl/:path*",
+			"missing": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "application/json"
 				}
 			],
 			"destination": "https://schema.twindev.org/w3c-odrl/:path*.json"
@@ -456,6 +588,17 @@
 			"destination": "https://schema.twindev.org/w3c-activity-streams/:path*.json"
 		},
 		{
+			"source": "/w3c-activity-streams/:path*",
+			"missing": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "application/json"
+				}
+			],
+			"destination": "https://schema.twindev.org/w3c-activity-streams/:path*.json"
+		},
+		{
 			"source": "/gaia-x/",
 			"has": [
 				{
@@ -476,6 +619,50 @@
 				}
 			],
 			"destination": "https://schema.twindev.org/gaia-x/:path*.json"
+		},
+		{
+			"source": "/gaia-x/:path*",
+			"missing": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "application/json"
+				}
+			],
+			"destination": "https://schema.twindev.org/gaia-x/:path*.json"
+		},
+		{
+			"source": "/unece/",
+			"has": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "text/html.*"
+				}
+			],
+			"destination": "https://schema.twindev.org/unece/types.html"
+		},
+		{
+			"source": "/unece/:path*",
+			"missing": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "application/ld\\+json.*"
+				}
+			],
+			"destination": "https://schema.twindev.org/unece/:path*.json"
+		},
+		{
+			"source": "/unece/:path*",
+			"missing": [
+				{
+					"type": "header",
+					"key": "Accept",
+					"value": "application/json"
+				}
+			],
+			"destination": "https://schema.twindev.org/unece/:path*.json"
 		},
 		{
 			"source": "/dublin-core/",

@@ -92,6 +92,14 @@
 		"jsonLdLink": "https://w3id.org/gaia-x/development"
 	},
 	{
+		"repo": "standards",
+		"packages": ["standards-unece"],
+		"title": "UNECE",
+		"namespace": "unece",
+		"jsonLdTypes": [],
+		"jsonLdLink": "https://vocabulary.uncefact.org/"
+	},
+	{
 		"title": "Dublin Core",
 		"namespace": "dublin-core",
 		"jsonLdTypes": ["terms", "dcmitype"],
